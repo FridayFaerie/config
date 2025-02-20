@@ -78,6 +78,7 @@
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
+  environment.variables.EDITOR = "nixCats";
 
   hardware = {
     graphics.enable = true;
@@ -160,8 +161,11 @@ systemd.services.greetd.serviceConfig = {
     mpv
     git
     busybox
+
+    #usefuls
     yazi
     typst
+    sioyek
 
 
     # Smaller terminal things
