@@ -201,6 +201,7 @@ systemd.services.greetd.serviceConfig = {
     prismlauncher
     legcord
     qutebrowser
+    inkscape
 
 
   ];
