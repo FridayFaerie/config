@@ -72,7 +72,8 @@
     };};}];
   };
   fonts.packages = with pkgs; [
-    pkgs.nerd-fonts.jetbrains-mono
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
   ];
 
   environment.sessionVariables = {
@@ -171,15 +172,11 @@ systemd.services.greetd.serviceConfig = {
     # Smaller terminal things
     lolcat
     fortune
-    fastfetch
+    nitch
 
 
     # Hyprland things
-    pkgs.waybar
-    (pkgs.waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-      })
-    )
+    waybar
     rofi-wayland
     libnotify
     swaynotificationcenter
@@ -202,6 +199,7 @@ systemd.services.greetd.serviceConfig = {
     legcord
     qutebrowser
     inkscape
+    libreoffice
 
 
   ];
