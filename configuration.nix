@@ -65,6 +65,7 @@
   };
  
 # for dark theme
+  programs.dconf.enable = true;
   programs.dconf.profiles.user = {
     databases = [{ settings = {
     "org/gnome/desktop/interface" = {
@@ -79,7 +80,7 @@
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
-  environment.variables.EDITOR = "nixCats";
+  environment.variables.EDITOR = "nvim";
 
   hardware = {
     graphics.enable = true;
@@ -154,8 +155,8 @@ systemd.services.greetd.serviceConfig = {
     #pkgs.home-manager
 
     # Terminal things
+    vim
     kitty
-    neovim
     btop
     tldr
     wlsunset
@@ -170,9 +171,10 @@ systemd.services.greetd.serviceConfig = {
 
 
     # Smaller terminal things
-    lolcat
+    clolcat
     fortune
     nitch
+    leaf
 
 
     # Hyprland things
