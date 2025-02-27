@@ -137,7 +137,7 @@ systemd.services.greetd.serviceConfig = {
   users.users.friday = {
     isNormalUser = true;
     description = "friday";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers"];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" "audio"];
     packages = with pkgs; [];
   };
 
@@ -171,6 +171,10 @@ systemd.services.greetd.serviceConfig = {
 
 
     # Smaller terminal things
+    # neo
+    # lavat
+    # asciiquarium
+    #globe-cli
     clolcat
     fortune
     nitch
