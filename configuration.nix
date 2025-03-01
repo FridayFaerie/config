@@ -158,7 +158,7 @@ systemd.services.greetd.serviceConfig = {
     vim
     kitty
     btop
-    tldr
+    tealdeer
     wlsunset
     mpv
     git
@@ -167,7 +167,6 @@ systemd.services.greetd.serviceConfig = {
     #usefuls
     yazi
     typst
-    sioyek
 
 
     # Smaller terminal things
@@ -205,7 +204,7 @@ systemd.services.greetd.serviceConfig = {
     legcord
     qutebrowser
     inkscape
-    libreoffice
+    onlyoffice-desktopeditors
 
 
   ];
