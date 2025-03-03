@@ -163,6 +163,7 @@ systemd.services.greetd.serviceConfig = {
     mpv
     git
     busybox
+    ripgrep
 
     #usefuls
     yazi
