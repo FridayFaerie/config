@@ -164,6 +164,8 @@ systemd.services.greetd.serviceConfig = {
     git
     busybox
     ripgrep
+    wallust
+
 
     #usefuls
     yazi
