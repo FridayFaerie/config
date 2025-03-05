@@ -150,25 +150,21 @@ systemd.services.greetd.serviceConfig = {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # Dotfiles manager
-    stow
-    #pkgs.home-manager
 
     # Terminal things
     vim
-    kitty
     btop
     tealdeer
     wlsunset
     mpv
     git
+    stow
     busybox
     ripgrep
     wallust
 
 
     #usefuls
-    yazi
     typst
 
 
@@ -198,6 +194,8 @@ systemd.services.greetd.serviceConfig = {
     pamixer
     brightnessctl
     networkmanagerapplet
+    yazi
+    kitty
 
 
     # Bigger programs
