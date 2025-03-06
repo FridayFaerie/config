@@ -172,7 +172,7 @@ systemd.services.greetd.serviceConfig = {
     # neo
     # lavat
     # asciiquarium
-    #globe-cli
+    # globe-cli
     clolcat
     fortune
     nitch
