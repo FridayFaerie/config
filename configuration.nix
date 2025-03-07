@@ -75,6 +75,10 @@
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
+
+    texlivePackages.fontawesome
+    roboto
+    source-sans
   ];
 
   environment.sessionVariables = {
