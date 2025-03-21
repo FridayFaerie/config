@@ -162,13 +162,15 @@ systemd.services.greetd.serviceConfig = {
     mpv
     git
     stow
-    busybox
     ripgrep
     wallust
+    wf-recorder
 
 
     #usefuls
     typst
+    clang
+    clang-tools
 
 
     # Smaller terminal things
@@ -219,6 +221,11 @@ systemd.services.greetd.serviceConfig = {
   virtualisation.spiceUSBRedirection.enable = true;
 
 
+  # for clangd to work
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
