@@ -34,7 +34,7 @@
 
   };
 
-  outputs = { self, nixpkgs, auto-cpufreq, ... }@inputs: 
+  outputs = { self, nixpkgs, auto-cpufreq, home-manager, ... }@inputs: 
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -65,8 +65,8 @@
       # Specify your home configuration modules here, for example,
       # the path to your home.nix.
       modules = [ 
-        ../home-manager/home.nix 
-        ../home-manager/wayland.nix
+        ./home-manager/home.nix 
+        ./home-manager/wayland.nix
       ];
 
       # Optionally use extraSpecialArgs
