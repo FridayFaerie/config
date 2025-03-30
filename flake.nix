@@ -53,7 +53,7 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit system inputs;};
       modules = [
-        ./configuration.nix
+        ./nixos/configuration.nix
         #inputs.home-manager.nixosModules.default
 	auto-cpufreq.nixosModules.default
       ];
