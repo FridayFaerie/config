@@ -9,10 +9,6 @@ in
   home.username = "friday";
   home.homeDirectory = "/home/friday";
 
-  home.shellAliases = {
-    g = "git";
-    "..." = "cd ../..";
-  };
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -116,7 +112,15 @@ in
   programs.starship = {
     enable = true;
     enableBashIntegration = true;
+  };
+
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+      g = "git";
+      testing = "echo testing";
     };
+  };
 
 
 
