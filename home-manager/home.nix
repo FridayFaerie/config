@@ -114,13 +114,6 @@ in
     enableBashIntegration = true;
   };
 
-  programs.bash = {
-    enable = true;
-    shellAliases = {
-      g = "git";
-      testing = "echo testing";
-    };
-  };
 
 
 
