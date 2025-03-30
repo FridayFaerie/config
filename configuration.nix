@@ -18,11 +18,11 @@
   system.autoUpgrade.enable = true;
   system.autoUpgrade.dates = "weekly";
   
-  # Automatic cleanup
-  nix.gc.automatic = true;
-  nix.gc.dates = "daily";
-  nix.gc.options = "--delete-older-than-10d";
-  nix.settings.auto-optimise-store = true;
+  # # Automatic cleanup
+  # nix.gc.automatic = true;
+  # nix.gc.dates = "daily";
+  # nix.gc.options = "--delete-older-than-10d";
+  # nix.settings.auto-optimise-store = true;
 
   # Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes"];
@@ -62,6 +62,15 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+  };
+
+
+# for nh
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/home/friday/config";
   };
  
 # for dark theme
@@ -155,10 +164,8 @@ systemd.services.greetd.serviceConfig = {
   environment.systemPackages = with pkgs; [
 
     # Terminal things
-    vim
     btop
     tealdeer
-    wlsunset
     mpv
     git
     stow
@@ -197,6 +204,7 @@ systemd.services.greetd.serviceConfig = {
     hyprcursor
     wlogout
     pamixer
+    hyprsunset
     brightnessctl
     networkmanagerapplet
     yazi
