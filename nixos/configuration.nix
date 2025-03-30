@@ -84,8 +84,9 @@
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
-
     texlivePackages.fontawesome
+    noto-fonts-cjk-sans
+
     roboto
     source-sans
   ];
