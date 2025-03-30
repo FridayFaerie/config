@@ -30,7 +30,7 @@
       url = "git+file:///home/friday/nix-inputs/quickshell/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
 
   };
 
