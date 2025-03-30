@@ -8,8 +8,10 @@ in
   # manage.
   home.username = "friday";
   home.homeDirectory = "/home/friday";
+
   home.shellAliases = {
-    testing = "echo 'success!!!'";
+    g = "git";
+    "..." = "cd ../..";
   };
 
   # This value determines the Home Manager release that your configuration is
