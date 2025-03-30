@@ -173,6 +173,7 @@ systemd.services.greetd.serviceConfig = {
     ripgrep
     wallust
     wf-recorder
+    busybox
 
 
     #usefuls
