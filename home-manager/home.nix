@@ -113,9 +113,20 @@ in
 
   programs.starship = {
     enable = true;
-    enableBashIntegration = true;
+    # enableBashIntegration = true;
+    enableZshIntegration = true;
   };
 
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+    };
+    history.size = 1000;
+  };
 
 
 
