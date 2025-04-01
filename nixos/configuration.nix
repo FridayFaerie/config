@@ -118,6 +118,8 @@
     };
   };
 
+  services.upower.enable = true;
+
 
 systemd.services.greetd.serviceConfig = {
   Type = "idle";

@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743051474,
-        "narHash": "sha256-HY+XkJmZXqNu7OomGcbBmaplT8pBQxqat9cVaCxAAkM=",
+        "lastModified": 1743325743,
+        "narHash": "sha256-p2ZlFUBy10SV0b2g8ZOWse01mgaeU4haZN+dgHcoN6U=",
         "owner": "AdnanHodzic",
         "repo": "auto-cpufreq",
-        "rev": "c6ba839f936786f305ec99e594608f6a9bd01a62",
+        "rev": "00be2a5d91832519823990deb7b87af85fc78017",
         "type": "github"
       },
       "original": {
@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743295846,
-        "narHash": "sha256-hKKz07d4RV9gzxzE5Qu3RQWX8a7XpzRrP5timoxoGRQ=",
+        "lastModified": 1743513930,
+        "narHash": "sha256-ExRQkfXHwHbf6nKgnwDB0vSNInUS16cubvEVm3PrHeQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "717030011980e9eb31eb8ce011261dd532bce92c",
+        "rev": "55cf1f16324e694c991e846ad5fc897f0f75ac64",
         "type": "github"
       },
       "original": {
@@ -48,11 +48,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743304170,
-        "narHash": "sha256-Uubdmv70uL32GlRkTs02j9R5q/4n02IDthqONyYMKR0=",
+        "lastModified": 1743517076,
+        "narHash": "sha256-fyXiipdd7P91kNWe9tBhcqt5Rgn7uU96y7tpUTg0UhY=",
         "ref": "refs/heads/master",
-        "rev": "f42a84d3b0d4f7d99ab874ecf50bbe96dd9f468a",
-        "revCount": 48,
+        "rev": "b2a798fe8c05a079451fc7a89159315800a650e9",
+        "revCount": 49,
         "type": "git",
         "url": "file:///home/friday/nix-inputs/nixCats/"
       },
@@ -63,11 +63,11 @@
     },
     "nixCats_2": {
       "locked": {
-        "lastModified": 1743301684,
-        "narHash": "sha256-jGUXgkWrMVrF1fYB94eR3OryqgpHY/LTzXYzAWBgfLI=",
+        "lastModified": 1743502617,
+        "narHash": "sha256-QVJMH7KJT5Ma4AphiiRXEkYDb9C59OKB+q+nCDhWrOo=",
         "owner": "BirdeeHub",
         "repo": "nixCats-nvim",
-        "rev": "1c14db23c67e849dd61743b6934808e10f63fdda",
+        "rev": "f0e00b9b3b370f4fc7558001f94b29b2ce75da9a",
         "type": "github"
       },
       "original": {
@@ -78,11 +78,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1743095683,
-        "narHash": "sha256-gWd4urRoLRe8GLVC/3rYRae1h+xfQzt09xOfb0PaHSk=",
+        "lastModified": 1743315132,
+        "narHash": "sha256-6hl6L/tRnwubHcA4pfUUtk542wn2Om+D4UnDhlDW9BE=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5e5402ecbcb27af32284d4a62553c019a3a49ea6",
+        "rev": "52faf482a3889b7619003c0daec593a1912fddc1",
         "type": "github"
       },
       "original": {
@@ -99,11 +99,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1742601284,
-        "narHash": "sha256-A3PIny0BhZirnUJfoVNDeDj91pdLxllmOz1nioLvqTM=",
+        "lastModified": 1743517088,
+        "narHash": "sha256-5tHJYSKeywdVWaKM8pMw7imw17QX86dIiQTYsg7+fCk=",
         "ref": "refs/heads/master",
-        "rev": "81eacbfce85ef496da726ec7d53af26c21f2a5ff",
-        "revCount": 490,
+        "rev": "83a3cc6af78e181c27e2cf271bb5450a4f23b8e6",
+        "revCount": 491,
         "type": "git",
         "url": "file:///home/friday/nix-inputs/quickshell/"
       },
@@ -129,11 +129,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743216975,
-        "narHash": "sha256-29xgm8F3DCcTNrQZ9V3Pwj6BkjalkKvGyjd+sF9/+3k=",
+        "lastModified": 1743463070,
+        "narHash": "sha256-x+A6Es0VkGyhp4ixhqg1Qi9iusLl7ioymqoe107L/Dg=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "165ee672e6b17a8bcc0a3fb51fab3f79715cc1f3",
+        "rev": "3c4f98e9504d3f94bbd303d428162665a0ade8d6",
         "type": "github"
       },
       "original": {

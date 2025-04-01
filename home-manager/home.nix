@@ -33,6 +33,7 @@ in
 
     pkgs.kdePackages.qtdeclarative
     pkgs.kdePackages.qt5compat
+    pkgs.kdePackages.kirigami.unwrapped
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -81,7 +82,7 @@ in
   home.sessionVariables = {
     EDITOR = "nixCats";
     MANPAGER = "nixCats +Man!";
-    QML2_IMPORT_PATH = "${custompkgs.quickshell.packages.${system}.default}/lib/qt-6/qml:${pkgs.qt6.qtdeclarative}/lib/qt-6/qml:${pkgs.qt6.qt5compat}/lib/qt-6/qml";
+    QML2_IMPORT_PATH = "${custompkgs.quickshell.packages.${system}.default}/lib/qt-6/qml:${pkgs.qt6.qtdeclarative}/lib/qt-6/qml:${pkgs.kdePackages.qt5compat}/lib/qt-6/qml:${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml";
   };
 
 
@@ -147,6 +148,7 @@ in
       "-i" "-w" "30" "-c" "15" "-d" "5"
     ];
   };
+
 
 
 }
