@@ -131,8 +131,8 @@ in
       ".." = "cd ..";
       "..." = "cd ../..";
       ":q" = "exit";
-      resys="pushd ~/config && git add . && git commit -m 'rebuilding system' && nh os switch /home/friday/config | popd";
-      rehome="pushd ~/config && git add . && git commit -m 'rebuilding home' | nh home switch /home/friday/config | popd";
+      resys="pushd ~/config && git add . && git commit -m 'rebuilding system' && nh os switch /home/friday/config || popd";
+      rehome="pushd ~/config && git add . && git commit -m 'rebuilding home' | nh home switch /home/friday/config || popd";
       reek="nh clean all";
       p="nix-shell -p";
       nvim="nixCats";
