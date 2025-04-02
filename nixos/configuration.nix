@@ -75,7 +75,7 @@
     xwayland.enable = true;
   };
 
-  programs.ladybird.enable = true;
+  # programs.ladybird.enable = true;
 
  
 # for dark theme
