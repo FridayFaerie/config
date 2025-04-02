@@ -328,6 +328,9 @@
             fallback = "clientside";
         };
       };
+      debug = {
+        disable_logs = false;
+      };
 
     };
   };

@@ -122,8 +122,28 @@ in
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    initContent = ''
+      source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
+      clear && leaf
+    '';
 
     shellAliases = {
+      ".." = "cd ..";
+      "..." = "cd ../..";
+      ":q" = "exit";
+      resys="cd ~/config && git add . && git commit -m 'rebuilding system' && nh os switch /home/friday/config";
+      rehome="cd ~/config && git add . && git commit -m 'rebuilding home' | nh home switch /home/friday/config";
+      reek="nh clean all";
+      p="nix-shell -p";
+      nvim="nixCats";
+      gitlog="git --no-pager log -n 20 --oneline --graph --all";
+      wally="bash ~/.config/scripts/switch_wallpaper.sh";
+      updatenvim="cd ~/nix-inputs/nixCats && git add . && git commit -m 'updating nixCats' && cd ~/config/ && nix flake update nixCats";
+      gitac="git add . && git commit -m";
+      gitconfri="git config --local user.email 'faeriethe@gmail.com' && git config --local user.name 'Friday'";
+      shl="nix-shell";
+      ter="cd ~/projects/ternary && shl";
+      qs="quickshell -p shell.qml";
     };
     history.size = 1000;
   };

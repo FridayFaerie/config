@@ -58,6 +58,8 @@
 # auto-cpufreq
   programs.auto-cpufreq.enable = true;
 
+  programs.zsh.enable = true;
+
 # Hyprland things
   programs.hyprland = {
     enable = true;
@@ -121,6 +123,7 @@
   services.upower.enable = true;
 
 
+
 systemd.services.greetd.serviceConfig = {
   Type = "idle";
   StandardInput = "tty";
@@ -148,6 +151,7 @@ systemd.services.greetd.serviceConfig = {
     variant = "";
   };
 
+  users.defaultUserShell = pkgs.zsh;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.friday = {
     isNormalUser = true;
