@@ -55,6 +55,15 @@
     LC_TELEPHONE = "en_GB.UTF-8";
     LC_TIME = "en_GB.UTF-8";
   };
+
+# for nh
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/home/friday/config";
+  };
+
 # auto-cpufreq
   programs.auto-cpufreq.enable = true;
 
@@ -66,14 +75,8 @@
     xwayland.enable = true;
   };
 
+  programs.ladybird.enable = true;
 
-# for nh
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/home/friday/config";
-  };
  
 # for dark theme
   programs.dconf.enable = true;
