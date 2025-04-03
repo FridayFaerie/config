@@ -172,7 +172,7 @@ systemd.services.greetd.serviceConfig = {
   users.users.friday = {
     isNormalUser = true;
     description = "friday";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" "audio"];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" "audio" "video"];
     packages = with pkgs; [];
   };
 
