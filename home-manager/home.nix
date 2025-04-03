@@ -123,6 +123,7 @@ in
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
+      set fish_greeting
       source ~/.config/scripts/alias.sh
       leaf
     '';
