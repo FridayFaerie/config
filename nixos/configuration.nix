@@ -155,7 +155,8 @@ systemd.services.greetd.serviceConfig = {
   };
 
   programs.fish.enable = true;
-  users.defaultUserShell = pkgs.fish;
+
+  users.defaultUserShell = pkgs.bash;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.friday = {
     isNormalUser = true;
