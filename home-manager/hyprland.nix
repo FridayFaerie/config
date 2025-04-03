@@ -136,7 +136,6 @@
         "$mainMod SHIFT, C, fullscreen, 0"
         "$mainMod, E, fullscreenstate, 0 3"
 
-        "$mainMod, O, exec, ~/.config/waybar/rebar.sh"
         
         # Move focus with mainMod + arrow keys
         "$mainMod, H, movefocus, l"

@@ -127,6 +127,7 @@
 
 
 
+
 systemd.services.greetd.serviceConfig = {
   Type = "idle";
   StandardInput = "tty";
@@ -203,7 +204,7 @@ systemd.services.greetd.serviceConfig = {
 
 
     # Hyprland things
-    waybar
+    # waybar
     rofi-wayland
     libnotify
     swaynotificationcenter

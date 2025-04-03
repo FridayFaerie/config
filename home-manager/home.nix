@@ -114,24 +114,29 @@ in
 
   programs.starship = {
     enable = true;
-    # enableBashIntegration = true;
+    enableBashIntegration = true;
     enableZshIntegration = true;
   };
 
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-    initContent = ''
-      source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-      source ~/.config/scripts/alias.sh
-      clear && leaf
-    '';
+  # programs.zsh = {
+  #   enable = true;
+  #   enableCompletion = true;
+  #   autosuggestion.enable = true;
+  #   syntaxHighlighting.enable = true;
+  #   initContent = ''
+  #     source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
+  #     source ~/.config/scripts/alias.sh
+  #     clear && leaf
+  #   '';
+  #
+  #   # shellAliases = {
+  #   # };
+  #   history.size = 1000;
+  # };
 
-    # shellAliases = {
-    # };
-    history.size = 1000;
+  programs.fish = {
+    enable = true;
+ 
   };
 
 
