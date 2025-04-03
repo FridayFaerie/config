@@ -137,7 +137,11 @@ in
 
   programs.fish = {
     enable = true;
- 
+    loginShellInit = ''
+      source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
+      source ~/.config/scripts/alias.sh
+      clear && leaf
+    '';
   };
 
 
