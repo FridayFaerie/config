@@ -117,23 +117,8 @@ in
     enableBashIntegration = true;
     # enableZshIntegration = true;
     enableFishIntegration = true;
+    enableTransience = true;
   };
-
-  # programs.zsh = {
-  #   enable = true;
-  #   enableCompletion = true;
-  #   autosuggestion.enable = true;
-  #   syntaxHighlighting.enable = true;
-  #   initContent = ''
-  #     source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  #     source ~/.config/scripts/alias.sh
-  #     clear && leaf
-  #   '';
-  #
-  #   # shellAliases = {
-  #   # };
-  #   history.size = 1000;
-  # };
 
   programs.fish = {
     enable = true;
