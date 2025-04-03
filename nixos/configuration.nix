@@ -67,7 +67,6 @@
 # auto-cpufreq
   programs.auto-cpufreq.enable = true;
 
-  programs.zsh.enable = true;
 
 # Hyprland things
   programs.hyprland = {
@@ -155,7 +154,8 @@ systemd.services.greetd.serviceConfig = {
     variant = "";
   };
 
-  users.defaultUserShell = pkgs.zsh;
+  programs.fish.enable = true;
+  users.defaultUserShell = pkgs.fish;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.friday = {
     isNormalUser = true;
