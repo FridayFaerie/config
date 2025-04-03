@@ -123,7 +123,6 @@ in
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
-      source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
       source ~/.config/scripts/alias.sh
       leaf
     '';
