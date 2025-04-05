@@ -193,7 +193,7 @@
       ];
 
 
-      windowrulev2 = [
+      windowrule = [
         # Ignore maximize requests from apps. You'll probably like this.
         "suppressevent maximize, class:.*"
         
