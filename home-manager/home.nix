@@ -123,10 +123,11 @@ in
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
-      set fish_greeting
+      function fish_greeting
+        leaf
+      end
       bind "/" expand-abbr or self-insert
       source ~/.config/scripts/alias.sh
-      leaf
     '';
   };
 
