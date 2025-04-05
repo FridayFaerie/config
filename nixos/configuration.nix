@@ -87,7 +87,7 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
-    # withUWSM = true;
+    withUWSM = true;
   };
 
   # programs.ladybird.enable = true;
@@ -125,33 +125,15 @@
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
 
-
-
-# # Greeter things from https://github.com/sjcobb2022/nixos-config/blob/29077cee1fc82c5296908f0594e28276dacbe0b0/hosts/common/optional/greetd.nix
-#   services.greetd = {
-#     enable = true;
-#     settings = {
-#       default_session = {
-#         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd Hyprland";
-#         user = "greeter";
-#       };
-#     };
-#   };
-#   systemd.services.greetd.serviceConfig = {
-#     Type = "idle";
-#     StandardInput = "tty";
-#     StandardOutput = "tty";
-#     StandardError = "journal";
-#     TTYReset = true;
-#     TTYVHangup = true;
-#     TTYVTDisallocate = true;
-#   };
-  services.displayManager = {
-    sddm = {
-      enable = true;
-      wayland.enable = true;
+  services.greetd = {
+    enable = true;
+    settings = rec {
+      initial_session = {
+        command = "${pkgs.hyprland}/bin/Hyprland";
+        user = "friday";
+      };
+      default_session = initial_session;
     };
-    autoLogin.user = "friday";
   };
 
 
