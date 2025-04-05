@@ -9,11 +9,9 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
-      inputs.nix-minecraft.nixosModules.minecraft-servers
     ];
 
   nixpkgs.overlays = [
-    inputs.nix-minecraft.overlay
   ];
 
   # Bootloader.
@@ -173,32 +171,6 @@
 # Enable automatic login for the user.
   services.getty.autologinUser = "friday";
 
-
-  services.minecraft-servers = {
-    enable = true;
-    eula = true;
-    servers = {
-      craftmine = {
-          enable = true;
-          package = pkgs.vanillaServers.vanilla-25w14craftmine;
-
-          openFirewall = true;
-          serverProperties = {
-            gamemode = "survival";
-            difficulty = "normal";
-            simulation-distance = 8;
-            level-seed = "4";
-
-            server-port = 43000;
-            white-list = true;
-          };
-
-          whitelist = {
-            AaronKingsley = "2093f6cc-6e2f-499b-ac26-6acc5ff792e7";
-          };
-      };
-    };
-  };
 
 
   programs.fish.enable = true;
