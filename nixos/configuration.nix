@@ -182,11 +182,15 @@
           enable = true;
           package = pkgs.vanillaServers.vanilla-25w14craftmine;
 
+          openFirewall = true;
           serverProperties = {
             gamemode = "survival";
             difficulty = "normal";
             simulation-distance = 8;
             level-seed = "4";
+
+            server-port = 25565;
+            white-list = true;
           };
 
           whitelist = {
