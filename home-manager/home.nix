@@ -29,9 +29,10 @@ in
     
     custompkgs.quickshell.packages.${system}.default
 
+    custompkgs.wl_shimeji.packages.${system}.default
+
     custom-packages.snitch.packages.${system}.default
 
-    custom-packages.wl_shimeji.packages.${system}.default
 
     pkgs.kdePackages.qtdeclarative
     pkgs.kdePackages.qt5compat
