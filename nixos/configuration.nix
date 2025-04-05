@@ -105,7 +105,7 @@
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
-    nerd-fonts.recursive
+    nerd-fonts.recursive-mono
     texlivePackages.fontawesome
     noto-fonts-cjk-sans
 
