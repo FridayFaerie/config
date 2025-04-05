@@ -180,7 +180,7 @@
     servers = {
       craftmine = {
           enable = true;
-          package = pkgs.vanillaServers.vanilla-25w14craftmine
+          package = pkgs.vanillaServers.vanilla-25w14craftmine;
 
           serverProperties = {
             gamemode = "survival";
