@@ -8,7 +8,13 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+
+      inputs.nix-minecraft.nixosModules.minecraft-servers
     ];
+
+  nixpkgs.overlays = [
+    inputs.nix-minecraft.overlay
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -137,17 +143,15 @@
   services.upower.enable = true;
 
 
-
-
-systemd.services.greetd.serviceConfig = {
-  Type = "idle";
-  StandardInput = "tty";
-  StandardOutput = "tty";
-  StandardError = "journal";
-  TTYReset = true;
-  TTYVHangup = true;
-  TTYVTDisallocate = true;
-};
+  systemd.services.greetd.serviceConfig = {
+    Type = "idle";
+    StandardInput = "tty";
+    StandardOutput = "tty";
+    StandardError = "journal";
+    TTYReset = true;
+    TTYVHangup = true;
+    TTYVTDisallocate = true;
+  };
 
 
 
@@ -166,6 +170,33 @@ systemd.services.greetd.serviceConfig = {
     variant = "";
   };
 
+# Enable automatic login for the user.
+  services.getty.autologinUser = "friday";
+
+
+  services.minecraft-servers = {
+    enable = true;
+    eula = true;
+    servers = {
+      craftmine = {
+          enable = true;
+          package = pkgs.vanillaServers.vanilla-25w14craftmine
+
+          serverProperties = {
+            gamemode = "survival";
+            difficulty = "normal";
+            simulation-distance = 8;
+            level-seed = "4";
+          };
+
+          whitelist = {
+            AaronKingsley = "hash";
+          };
+      };
+    };
+  };
+
+
   programs.fish.enable = true;
 
   users.defaultUserShell = pkgs.bash;
@@ -177,8 +208,6 @@ systemd.services.greetd.serviceConfig = {
     packages = with pkgs; [];
   };
 
-  # Enable automatic login for the user.
-  services.getty.autologinUser = "friday";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
