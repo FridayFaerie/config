@@ -31,6 +31,8 @@ in
 
     custom-packages.snitch.packages.${system}.default
 
+    custom-packages.wl_shimeji.packages.${system}.default
+
     pkgs.kdePackages.qtdeclarative
     pkgs.kdePackages.qt5compat
     pkgs.kdePackages.kirigami.unwrapped
