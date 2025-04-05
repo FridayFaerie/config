@@ -146,6 +146,13 @@
 #     TTYVHangup = true;
 #     TTYVTDisallocate = true;
 #   };
+  services.displayManager = {
+    sddm = {
+      enable = true;
+      wayland.enable = true;
+    };
+    autoLogin.user = "friday";
+  };
 
 
   services.upower.enable = true;
