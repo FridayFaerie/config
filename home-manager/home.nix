@@ -1,4 +1,4 @@
-{ config, pkgs, lib, custompkgs, custom-packages, ... }@inputs:
+{ config, pkgs, lib, localflakes, localbuilds, ... }@inputs:
 
 let
   system = "x86_64-linux";
@@ -23,15 +23,15 @@ in
   # environment.
   home.packages = [
 
-    custompkgs.nixCats.packages.${system}.nixCats
+    localflakes.nixCats.packages.${system}.nixCats
 
-    custompkgs.zen-browser.packages."${system}".default
+    localflakes.zen-browser.packages.${system}.default
     
-    custompkgs.quickshell.packages.${system}.default
+    localflakes.quickshell.packages.${system}.default
 
-    custompkgs.wl_shimeji.packages.${system}.default
+    localflakes.wl_shimeji.packages.${system}.default
 
-    custom-packages.snitch.packages.${system}.default
+    localbuilds.snitch.packages.${system}.default
 
 
     pkgs.kdePackages.qtdeclarative
@@ -86,7 +86,7 @@ in
   home.sessionVariables = {
     EDITOR = "nixCats";
     MANPAGER = "nixCats +Man!";
-    QML2_IMPORT_PATH = "${custompkgs.quickshell.packages.${system}.default}/lib/qt-6/qml:${pkgs.qt6.qtdeclarative}/lib/qt-6/qml:${pkgs.kdePackages.qt5compat}/lib/qt-6/qml:${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml";
+    QML2_IMPORT_PATH = "${localflakes.quickshell.packages.${system}.default}/lib/qt-6/qml:${pkgs.qt6.qtdeclarative}/lib/qt-6/qml:${pkgs.kdePackages.qt5compat}/lib/qt-6/qml:${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml";
   };
 
 

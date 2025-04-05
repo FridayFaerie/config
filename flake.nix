@@ -46,7 +46,7 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
 
-    custom-packages = {
+    localbuilds = {
       snitch = import ./packages/snitch.nix { inherit nixpkgs; };
     };
     # pkgs = import nixpkgs {
@@ -79,8 +79,8 @@
       # Optionally use extraSpecialArgs
       # to pass through arguments to home.nix
       extraSpecialArgs = { 
-        custompkgs =  inputs;
-        inherit custom-packages;
+        localflakes =  inputs;
+        inherit localbuilds;
       };
     };
   };
