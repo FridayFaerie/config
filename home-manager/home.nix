@@ -124,7 +124,7 @@ in
     enable = true;
     interactiveShellInit = ''
       set fish_greeting
-      bind tab expand-abbr or self-insert
+      bind \t expand-abbr or self-insert
       source ~/.config/scripts/alias.sh
       leaf
     '';
