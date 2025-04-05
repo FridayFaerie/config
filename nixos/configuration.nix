@@ -189,7 +189,7 @@
             simulation-distance = 8;
             level-seed = "4";
 
-            server-port = 25565;
+            server-port = 43000;
             white-list = true;
           };
 
