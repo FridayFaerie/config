@@ -206,6 +206,13 @@
         "fullscreenstate:0 3, title:(Typst Preview)(.*)"
         
         # for shimeji
+        "float, class:Shijima-Qt     "
+        "noblur, class:Shijima-Qt    "
+        # "nofocus, class:Shijima-Qt "
+        "noshadow, class:Shijima-Qt  "
+        "noborder, class:Shijima-Qt  "
+
+        # for shimeji
         "float, class:com-group_finity-mascot-Main   "
         "noblur, class:com-group_finity-mascot-Main  "
         # "nofocus, class:com-group_finity-mascot-Main "
