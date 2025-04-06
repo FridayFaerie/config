@@ -162,6 +162,9 @@
   services.getty.autologinUser = "friday";
 
 
+  services.flatpak.enable = true;
+
+
 
   programs.fish.enable = true;
 
