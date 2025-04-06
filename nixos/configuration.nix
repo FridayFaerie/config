@@ -131,6 +131,8 @@
       initial_session = {
         command = "${pkgs.hyprland}/bin/Hyprland";
         user = "friday";
+        # command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd Hyprland";
+        # user = "greeter";
       };
       default_session = initial_session;
     };
