@@ -164,11 +164,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743898183,
-        "narHash": "sha256-/voxKEjUZN0zz2tL8DBlZ2/qWKQ8nZJoHWy8gGAMK4E=",
+        "lastModified": 1743898522,
+        "narHash": "sha256-ZVSy2sULolLY3r+7bP6QZtSr5drr/KxYwzQQZd+Uce8=",
         "ref": "refs/heads/master",
-        "rev": "8fd7659559af3ac91f6eb39c8a035b2dc27db7d6",
-        "revCount": 9,
+        "rev": "8838c74898195d91d9ee60365e129346e6efddaf",
+        "revCount": 13,
         "type": "git",
         "url": "file:///home/friday/nix-inputs/wl_shimeji/"
       },
