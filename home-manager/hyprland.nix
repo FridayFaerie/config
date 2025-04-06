@@ -152,6 +152,8 @@
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
 
+	"$mainMod, 0, workspace, 10"
+	"$mainMod SHIFT, 0, movetoworkspace, 10"
 
       ]
       ++ (
