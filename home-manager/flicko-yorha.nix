@@ -14,7 +14,6 @@ in {
     imagemagick
     gnome-bluetooth
     libdbusmenu-gtk3
-    nerd-fonts
   ];
   wayland.windowManager.hyprland = {
     enable = true;
