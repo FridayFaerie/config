@@ -105,6 +105,7 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
     nerd-fonts.recursive-mono
+    cantarell-fonts
     texlivePackages.fontawesome
     noto-fonts-cjk-sans
 
