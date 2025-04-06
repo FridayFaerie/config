@@ -203,6 +203,12 @@
         # fakefullscreen for typst previews
         "fullscreenstate:0 3, title:(Typst Preview)(.*)"
         
+        # for shimeji
+        "float, class:com-group_finity-mascot-Main   "
+        "noblur, class:com-group_finity-mascot-Main  "
+        "nofocus, class:com-group_finity-mascot-Main "
+        "noshadow, class:com-group_finity-mascot-Main"
+        "noborder, class:com-group_finity-mascot-Main"
       ];
 
       "plugin:dynamic-cursors" = {

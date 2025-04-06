@@ -33,10 +33,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    wl_shimeji = {
-      url = "git+file:///home/friday/nix-inputs/wl_shimeji/";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
 
   };

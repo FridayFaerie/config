@@ -19,7 +19,6 @@ in
     
     localflakes.quickshell.packages.${system}.default
 
-    localflakes.wl_shimeji.packages.${system}.default
 
     localbuilds.snitch.packages.${system}.default
 
