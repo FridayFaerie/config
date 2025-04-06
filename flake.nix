@@ -69,7 +69,8 @@
       # the path to your home.nix.
       modules = [ 
         ./home-manager/home.nix 
-        ./home-manager/hyprland.nix
+        # ./home-manager/hyprland.nix
+        ./home-manager/flicko-yorha.nix
       ];
 
       # Optionally use extraSpecialArgs
