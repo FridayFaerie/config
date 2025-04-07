@@ -4,7 +4,10 @@
     plugins = [ pkgs.hyprlandPlugins.hypr-dynamic-cursors ];
     #extraConfig = "bind = $mainMod, S, submap, resize";
     settings = {
-      source = "~/.config/wallust/themes/hypr.conf";
+      source = [ 
+        "~/.config/wallust/themes/hypr.conf"
+        "~/.config/hypr/hyprland1.conf"
+      ];
 
       monitor = ",preferred,auto,1.333333";
       xwayland.force_zero_scaling = true;
