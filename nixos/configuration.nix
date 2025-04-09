@@ -242,6 +242,7 @@
     qutebrowser
     inkscape
     onlyoffice-desktopeditors
+    lutris-free
 
 
   ];
