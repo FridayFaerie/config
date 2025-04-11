@@ -12,7 +12,7 @@ let
 in 
 {
   packages = forAllSystems ({ pkgs }: {
-    default = pkgs.buildGo122Module rec {
+    default = pkgs.buildGoModule rec {
       pname = "snitch";
       version = "1.0.2";
       src = pkgs.fetchFromGitHub {
