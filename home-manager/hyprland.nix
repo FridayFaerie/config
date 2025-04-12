@@ -124,6 +124,7 @@
       bind = [
         "$mainMod, T, exec, $terminal"
         "$mainMod, Q, killactive,"
+        "$mainMod SHIFT, Q, forcekillactive,"
         "$mainMod, M, exit,"
         "$mainMod, F, exec, $fileManager"
         "$mainMod, V, togglefloating,"
