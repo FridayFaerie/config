@@ -33,6 +33,11 @@
       url = "git+file:///home/friday/nix-inputs/quickshell/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    kickstart = {
+      url = "git+file:///home/friday/.config/kickstart/";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
 
 

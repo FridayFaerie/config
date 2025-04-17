@@ -19,6 +19,7 @@ in
     
     localflakes.quickshell.packages.${system}.default
 
+    localflakes.kickstart.packages.${system}.kickstart
 
     localbuilds.snitch.packages.${system}.default
 
