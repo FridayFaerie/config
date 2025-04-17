@@ -293,7 +293,7 @@ in
 
     # Bigger programs
     firefox
-    signal-desktop
+    signal-desktop-source
     prismlauncher
     legcord
     qutebrowser
