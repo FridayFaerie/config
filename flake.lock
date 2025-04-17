@@ -61,9 +61,45 @@
         "type": "github"
       }
     },
-    "nixCats": {
+    "kickstart": {
       "inputs": {
-        "nixCats": "nixCats_2",
+        "nixCats": "nixCats",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1744859386,
+        "narHash": "sha256-914mKLxYcDJcDDfhrKI8ISxOvP98Sn1hAl6/ROf6/8s=",
+        "ref": "refs/heads/main",
+        "rev": "ed8de550abe4ec240a0b36ba3fd2db4750903550",
+        "revCount": 1,
+        "type": "git",
+        "url": "file:///home/friday/.config/kickstart/"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/friday/.config/kickstart/"
+      }
+    },
+    "nixCats": {
+      "locked": {
+        "lastModified": 1744750985,
+        "narHash": "sha256-VKM5v+N81m/DSh2bGniDucTIWOr3g/XfaFnc1lGRxe8=",
+        "owner": "BirdeeHub",
+        "repo": "nixCats-nvim",
+        "rev": "3867fbc32e446b5254583fb495b2f3dd5057a842",
+        "type": "github"
+      },
+      "original": {
+        "owner": "BirdeeHub",
+        "repo": "nixCats-nvim",
+        "type": "github"
+      }
+    },
+    "nixCats_2": {
+      "inputs": {
+        "nixCats": "nixCats_3",
         "nixpkgs": [
           "nixpkgs"
         ]
@@ -82,7 +118,7 @@
         "url": "file:///home/friday/nix-inputs/nixCats/"
       }
     },
-    "nixCats_2": {
+    "nixCats_3": {
       "locked": {
         "lastModified": 1743502617,
         "narHash": "sha256-QVJMH7KJT5Ma4AphiiRXEkYDb9C59OKB+q+nCDhWrOo=",
@@ -138,7 +174,8 @@
       "inputs": {
         "auto-cpufreq": "auto-cpufreq",
         "home-manager": "home-manager",
-        "nixCats": "nixCats",
+        "kickstart": "kickstart",
+        "nixCats": "nixCats_2",
         "nixpkgs": "nixpkgs",
         "quickshell": "quickshell",
         "zen-browser": "zen-browser"

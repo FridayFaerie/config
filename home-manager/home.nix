@@ -15,11 +15,9 @@ in
 
     localflakes.nixCats.packages.${system}.nixCats
 
-    localflakes.zen-browser.packages.${system}.default
+    # localflakes.zen-browser.packages.${system}.default
     
     localflakes.quickshell.packages.${system}.default
-
-    localflakes.kickstart.packages.${system}.kickstart
 
     localbuilds.snitch.packages.${system}.default
 
