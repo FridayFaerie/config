@@ -54,7 +54,7 @@
     # };
   in
   {
-    nixosConfigurations.friday = nixpkgs.lib.nixosSystem {
+    nixosConfigurations."friday" = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit system inputs;};
       modules = [
         ./nixos/configuration.nix
@@ -66,8 +66,6 @@
     homeConfigurations."friday" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
 
-      # Specify your home configuration modules here, for example,
-      # the path to your home.nix.
       modules = [ 
         ./home-manager/home.nix 
         ./home-manager/hyprland.nix
