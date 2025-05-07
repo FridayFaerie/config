@@ -28,7 +28,7 @@ in {
   fonts.fontconfig.enable = true;
 
   home.sessionPath = [
-    "/home/bun/.config/scripts/"
+    "$HOME/.config/scripts/"
   ];
 
   #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
