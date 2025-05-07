@@ -44,9 +44,9 @@ in {
     # lavat
     # asciiquarium
     # globe-cli
-    clolcat
-    fortune
-    nitch
+    # clolcat
+    # fortune
+    # nitch
     leaf
 
     #usefuls
@@ -178,7 +178,7 @@ in {
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "$HOME/config";
+    flake = "/home/friday/config";
   };
 
   programs.ssh.startAgent = true;
