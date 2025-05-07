@@ -3,15 +3,12 @@
 
   inputs = {
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?shallow=1&ref=nixos-unstable";
-    # altnixpkgs.url = "github:NixOS/nixpkgs/2631b0b7abce";
 
     nixpkgs = {
       url = "git+https://github.com/NixOS/nixpkgs?shallow=1&ref=nixos-unstable";
     };
 
     # nixos config things
-
     auto-cpufreq = {
       url = "github:AdnanHodzic/auto-cpufreq";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -93,13 +90,10 @@
       inherit pkgs;
 
       modules = [
-        # home-manager.nixosModules.default
         ./home-manager/home.nix
         ./home-manager/hyprland.nix
       ];
 
-      # Optionally use extraSpecialArgs
-      # to pass through arguments to home.nix
       extraSpecialArgs = {
         localflakes = inputs;
         inherit localbuilds;
@@ -113,8 +107,6 @@
         ./bun/home.nix
       ];
 
-      # Optionally use extraSpecialArgs
-      # to pass through arguments to home.nix
       extraSpecialArgs = {
         localflakes = inputs;
         inherit localbuilds;

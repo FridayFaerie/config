@@ -33,7 +33,7 @@ in {
   ];
 
   home.sessionPath = [
-    "/home/friday/.config/scripts/"
+    "$HOME/.config/scripts/"
   ];
 
   #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
@@ -46,7 +46,7 @@ in {
       + ":${pkgs.kdePackages.qt5compat}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.qtmultimedia}/lib/qt-6/qml";
-    CARGO_HOME = "/home/friday/.config/cargo/";
+    CARGO_HOME = "$HOME/.config/cargo/";
   };
 
   xdg.desktopEntries = {
