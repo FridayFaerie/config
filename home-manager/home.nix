@@ -59,12 +59,6 @@ in {
     };
   };
 
-  xdg.terminal-exec.settings = {
-    default = [
-      "kitty.desktop"
-    ];
-  };
-
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
