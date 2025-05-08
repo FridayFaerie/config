@@ -214,6 +214,7 @@ in {
     ];
   };
   fonts.packages = with pkgs; [
+    material-symbols
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
     nerd-fonts.recursive-mono
