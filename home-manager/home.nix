@@ -95,9 +95,6 @@ in {
     '';
   };
 
-  # home.pointerCursor.hyprcursor.enable = true;
-  # home.pointerCursor.hyprcursor.size = 20;
-
   home.pointerCursor = {
     enable = true;
     name = "catppuccin-latte-light-cursors";
@@ -115,11 +112,6 @@ in {
       name = "oomox-gruvbox-dark";
       package = pkgs.gruvbox-dark-icons-gtk;
     };
-    # cursorTheme = {
-    #   name = "Bibata-Modern-Ice";
-    #   package = pkgs.bibata-cursors;
-    #   size = 20;
-    # };
     theme = {
       name = "Colloid-Dark";
       package = pkgs.colloid-gtk-theme;
