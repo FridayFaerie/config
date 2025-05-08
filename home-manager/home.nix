@@ -40,6 +40,7 @@ in {
   home.sessionVariables = {
     EDITOR = "nixCats";
     MANPAGER = "nixCats +Man!";
+    TERMINAL = "kitty";
     QML2_IMPORT_PATH =
       "${localflakes.quickshell.packages.${system}.default}/lib/qt-6/qml"
       + ":${pkgs.qt6.qtdeclarative}/lib/qt-6/qml"
