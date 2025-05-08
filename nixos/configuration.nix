@@ -66,7 +66,6 @@ in {
     hyprlock
     hypridle
     hyprpaper
-    hyprcursor
     wlogout
     pamixer
     hyprsunset
