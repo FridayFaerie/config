@@ -76,6 +76,11 @@ in {
     };
   };
 
+  programs.kitty = {
+    enable = true;
+    themeFile = "Catppuccin-Macchiato";
+  };
+
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
