@@ -48,11 +48,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1746749852,
-        "narHash": "sha256-klpZe6OsLjboNBNxPa5Jf7TsU06DrEeB0UURkA+4KpE=",
+        "lastModified": 1746750199,
+        "narHash": "sha256-EYIUgK1koAGal/YS3E0Fegr8SjQmZ2sRbKoQJWRJsoU=",
         "ref": "refs/heads/master",
-        "rev": "7436d32f2db2915df8944d00efea3d5a0c86ff37",
-        "revCount": 1,
+        "rev": "1e9f7317cadad4d73be1b2bfcb992f2d0c1163d4",
+        "revCount": 2,
         "type": "git",
         "url": "file:/home/friday/nix-inputs/nixCats/"
       },
@@ -62,40 +62,21 @@
       }
     },
     "nixCats_2": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
       "locked": {
-        "lastModified": 1746510767,
-        "narHash": "sha256-0Pjx+XN//AH8xBwWCVoKVLADLvbfJ+2VsrXW5CbIQIo=",
+        "lastModified": 1745981676,
+        "narHash": "sha256-KGkNQbZaX+1KKBjUoltOby36+rH2CPNLFpm1blZ5Li4=",
         "owner": "BirdeeHub",
         "repo": "nixCats-nvim",
-        "rev": "8863bf55ff5c4045e82e468aa7a8e7969e8c921d",
+        "rev": "a4b78fc624b31b68536cdead4699c27bcb9e655a",
         "type": "github"
       },
       "original": {
         "owner": "BirdeeHub",
         "repo": "nixCats-nvim",
-        "rev": "8863bf55ff5c4045e82e468aa7a8e7969e8c921d",
         "type": "github"
       }
     },
     "nixpkgs": {
-      "locked": {
-        "lastModified": 1736012469,
-        "narHash": "sha256-/qlNWm/IEVVH7GfgAIyP6EsVZI6zjAx1cV5zNyrs+rI=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "8f3e1f807051e32d8c95cd12b9b421623850a34d",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "ref": "nixos-unstable",
-        "type": "indirect"
-      }
-    },
-    "nixpkgs_2": {
       "locked": {
         "lastModified": 1746663147,
         "narHash": "sha256-Ua0drDHawlzNqJnclTJGf87dBmaO/tn7iZ+TCkTRpRc=",
@@ -158,7 +139,7 @@
         "auto-cpufreq": "auto-cpufreq",
         "home-manager": "home-manager",
         "nixCats": "nixCats",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "programsdb": "programsdb",
         "quickshell": "quickshell"
       }
