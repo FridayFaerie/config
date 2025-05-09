@@ -19,7 +19,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixCats.url = "github:BirdeeHub/nixCats-nvim";
+    nixCats.url = "github:BirdeeHub/nixCats-nvim?rev=8863bf55ff5c4045e82e468aa7a8e7969e8c921d";
 
     # see :help nixCats.flake.inputs
     # If you want your plugin to be loaded by the standard overlay,
