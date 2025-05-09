@@ -28,7 +28,7 @@
     };
 
     nixCats = {
-      url = "./packages/nixCats/";
+      url = "git+file:/home/friday/nix-inputs/nixCats/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
