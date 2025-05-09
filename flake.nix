@@ -28,7 +28,7 @@
     };
 
     nixCats = {
-      url = "./packages/nixCats/";
+      url = "git+file:/home/friday/nix-inputs/nixCats/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -37,7 +37,10 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
-    programsdb.url = "github:wamserma/flake-programs-sqlite";
+    programsdb = {
+      url = "github:wamserma/flake-programs-sqlite";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
