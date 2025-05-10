@@ -35,7 +35,7 @@ in {
     stow
     ripgrep
     wallust
-    wl-screenrec
+    wf-recorder
     busybox
     cachix
 
