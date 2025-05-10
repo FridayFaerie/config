@@ -97,7 +97,7 @@
       modules = [
         ./home-manager/home.nix
         ./home-manager/hyprland.nix
-        textfox.homeManagerModules.default
+        inputs.textfox.homeManagerModules.default
       ];
 
       extraSpecialArgs = {
