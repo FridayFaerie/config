@@ -35,7 +35,7 @@ in {
     stow
     ripgrep
     wallust
-    wf-recorder
+    wl-screenrec
     busybox
     cachix
 
@@ -234,7 +234,12 @@ in {
   # https://nixos.wiki/wiki/Nvidia
   services.xserver.videoDrivers = ["nvidia"];
   hardware = {
-    graphics.enable = true;
+    graphics = {
+      enable = true;
+      extraPackages = with pkgs; [
+        intel-media-driver
+      ];
+    };
 
     nvidia = {
       # Modesetting is required.
