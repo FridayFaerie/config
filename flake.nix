@@ -42,7 +42,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    textfox.url = "github:adriankarlen/textfox";
+    # textfox.url = "github:adriankarlen/textfox";
   };
 
   outputs = {
@@ -97,7 +97,7 @@
       modules = [
         ./home-manager/home.nix
         ./home-manager/hyprland.nix
-        inputs.textfox.homeManagerModules.default
+        # inputs.textfox.homeManagerModules.default
       ];
 
       extraSpecialArgs = {
