@@ -136,4 +136,17 @@ in {
       "5"
     ];
   };
+
+  # textfox = {
+  #   enable = true;
+  #   profile = "Default";
+  #   config = {
+  #     extraConfig = ''
+  #       #tabbrowser-tabbox::before {
+  #         margin: -1.3rem 0rem;
+  #       }
+  #     '';
+  #     font.family = "Courier20, Courier13, Courier, monospace";
+  #   };
+  # };
 }
