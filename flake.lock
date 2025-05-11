@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1746892839,
-        "narHash": "sha256-0b9us0bIOgA1j/s/6zlxVyP3m97yAh0U+YwKayJ6mmU=",
+        "lastModified": 1746925690,
+        "narHash": "sha256-qbCIdIK3CEMfD+X9bMvp/ZLNxU722RV7zD7kUQS9OBg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "12e67385964d9c9304daa81d0ad5ba3b01fdd35e",
+        "rev": "de496c9ccb705ed76c1f23c2cad13e8970c37f0b",
         "type": "github"
       },
       "original": {
@@ -45,14 +45,16 @@
         "nixCats": "nixCats_2",
         "nixpkgs": [
           "nixpkgs"
-        ]
+        ],
+        "plugins-hlargs": "plugins-hlargs",
+        "plugins-neopywal-nvim": "plugins-neopywal-nvim"
       },
       "locked": {
-        "lastModified": 1746750199,
-        "narHash": "sha256-EYIUgK1koAGal/YS3E0Fegr8SjQmZ2sRbKoQJWRJsoU=",
-        "ref": "refs/heads/master",
-        "rev": "1e9f7317cadad4d73be1b2bfcb992f2d0c1163d4",
-        "revCount": 2,
+        "lastModified": 1746931034,
+        "narHash": "sha256-I22Bid4Gr+0coiopQfd7mWK4+C7jGx+YhHmOsZypgNM=",
+        "ref": "refs/heads/plugin",
+        "rev": "68ab981831d8b07a77bda03b55ffb48873ffef6b",
+        "revCount": 3,
         "type": "git",
         "url": "file:/home/friday/nix-inputs/nixCats/"
       },
@@ -93,6 +95,38 @@
         "url": "https://github.com/NixOS/nixpkgs"
       }
     },
+    "plugins-hlargs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1746790317,
+        "narHash": "sha256-aj3ownRZSXuuMM9AWU3pEewY4SY7IOYtAnFWXPUwfk0=",
+        "owner": "m-demare",
+        "repo": "hlargs.nvim",
+        "rev": "752927d9ebf753802bd4788e53c67a21b8e255cc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "m-demare",
+        "repo": "hlargs.nvim",
+        "type": "github"
+      }
+    },
+    "plugins-neopywal-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1744501005,
+        "narHash": "sha256-RLwxyGRmU1B8r6xO1YObF8qlNEj7qitNUArUlw092V8=",
+        "owner": "RedsXDD",
+        "repo": "neopywal.nvim",
+        "rev": "09188d79b45694141ec779d05cbcc75f994639d1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "RedsXDD",
+        "repo": "neopywal.nvim",
+        "type": "github"
+      }
+    },
     "programsdb": {
       "inputs": {
         "nixpkgs": [
@@ -101,11 +135,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1746901013,
-        "narHash": "sha256-aSO3+9UesehN8CnuaQBwExA/6fyF7Nj3ZxfOfae6HZw=",
+        "lastModified": 1746924100,
+        "narHash": "sha256-mBO4G0+mEPRtyw6ErDARZ2jyj4k7ICW/pbuMwUqUPTA=",
         "owner": "wamserma",
         "repo": "flake-programs-sqlite",
-        "rev": "5f723516a80b632793ed3493bfe4e87ba731b4ee",
+        "rev": "ec004bc190bc79baa43e47df5fc3e9002e757a9a",
         "type": "github"
       },
       "original": {
