@@ -15,7 +15,7 @@
     };
 
     nh = {
-      url = "github:nix-community/nh";
+      url = "github:nix-community/nh/consolidate-logic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
