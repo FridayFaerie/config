@@ -42,10 +42,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # textfox = {
-    #   url = "github:adriankarlen/textfox";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    textfox = {
+      url = "github:adriankarlen/textfox";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -98,9 +98,9 @@
       inherit pkgs;
 
       modules = [
-        ./home-manager/home.nix
         ./home-manager/hyprland.nix
-        # inputs.textfox.homeManagerModules.default
+        inputs.textfox.homeManagerModules.default
+        ./home-manager/home.nix
       ];
 
       extraSpecialArgs = {
