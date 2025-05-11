@@ -14,6 +14,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nh = {
+      url = "github:nix-community/nh";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Home-manager things
     quickshell = {
       url = "github:quickshell-mirror/quickshell";
@@ -42,10 +47,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # textfox = {
-    #   url = "github:adriankarlen/textfox";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    textfox = {
+      url = "github:adriankarlen/textfox";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -98,9 +103,9 @@
       inherit pkgs;
 
       modules = [
-        ./home-manager/home.nix
         ./home-manager/hyprland.nix
-        # inputs.textfox.homeManagerModules.default
+        inputs.textfox.homeManagerModules.default
+        ./home-manager/home.nix
       ];
 
       extraSpecialArgs = {
