@@ -22,6 +22,8 @@ in {
 
     localflakes.quickshell.packages.${system}.default
 
+    localflakes.nh.packages.${system}.default
+
     localbuilds.snitch.packages.${system}.default
 
     pkgs.kdePackages.qtdeclarative
