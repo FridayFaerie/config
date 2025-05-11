@@ -252,6 +252,10 @@ in {
     NIXOS_OZONE_WL = "1";
   };
 
+  environment.variables = {
+    EDITOR = "nixCats";
+  };
+
   # nvidia things
   # note: I'm using NVIDIA GeForce MX550
   # https://nixos.wiki/wiki/Nvidia
