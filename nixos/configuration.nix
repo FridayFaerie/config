@@ -95,31 +95,31 @@ in {
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # plymouth things - https://wiki.nixos.org/wiki/Plymouth
-  boot = {
-    plymouth = {
-      enable = true;
-      theme = "rings";
-      themePackages = with pkgs; [
-        (adi1090x-plymouth-themes.override {
-          selected_themes = ["rings"];
-        })
-      ];
-    };
-
-    # silent boot
-    consoleLogLevel = 3;
-    initrd.verbose = false;
-    kernelParams = [
-      "quiet"
-      "splash"
-      "boot.shell_on_fail"
-      "udev.log_priority=3"
-      "rd.systemd.show_status=auto"
-    ];
-    # hides OS choice for bootloaders
-    # loader.timeout = 0
-  };
+  # # plymouth things - https://wiki.nixos.org/wiki/Plymouth
+  # boot = {
+  #   plymouth = {
+  #     enable = true;
+  #     theme = "rings";
+  #     themePackages = with pkgs; [
+  #       (adi1090x-plymouth-themes.override {
+  #         selected_themes = ["rings"];
+  #       })
+  #     ];
+  #   };
+  #
+  #   # silent boot
+  #   consoleLogLevel = 3;
+  #   initrd.verbose = false;
+  #   kernelParams = [
+  #     "quiet"
+  #     "splash"
+  #     "boot.shell_on_fail"
+  #     "udev.log_priority=3"
+  #     "rd.systemd.show_status=auto"
+  #   ];
+  #   # hides OS choice for bootloaders
+  #   # loader.timeout = 0
+  # };
 
   # Automatic updating
   system.autoUpgrade.enable = true;
