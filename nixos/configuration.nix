@@ -321,8 +321,8 @@ in {
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd Hyprland";
         user = "greeter";
       };
-      # default_session = initial_session;
-      default_session = tuigreet_session;
+      default_session = initial_session;
+      # default_session = tuigreet_session;
     };
   };
 
