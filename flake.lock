@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1746925690,
-        "narHash": "sha256-qbCIdIK3CEMfD+X9bMvp/ZLNxU722RV7zD7kUQS9OBg=",
+        "lastModified": 1746950680,
+        "narHash": "sha256-tSEJ/8Tjtoy4yKbfMhIgKcSR/UJ4GjYlM4BT84+YKW8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "de496c9ccb705ed76c1f23c2cad13e8970c37f0b",
+        "rev": "6991569cb7cdde9891f52b43abe9916779df45b0",
         "type": "github"
       },
       "original": {
@@ -50,17 +50,17 @@
         "plugins-neopywal-nvim": "plugins-neopywal-nvim"
       },
       "locked": {
-        "lastModified": 1746931034,
-        "narHash": "sha256-I22Bid4Gr+0coiopQfd7mWK4+C7jGx+YhHmOsZypgNM=",
-        "ref": "refs/heads/plugin",
-        "rev": "68ab981831d8b07a77bda03b55ffb48873ffef6b",
-        "revCount": 3,
-        "type": "git",
-        "url": "file:/home/friday/nix-inputs/nixCats/"
+        "lastModified": 1746963408,
+        "narHash": "sha256-RPRlVpiSNHPMLnT/vpf4KcxN5CJCNY8y5YwhXNKCaZQ=",
+        "owner": "FridayFaerie",
+        "repo": "nixCats",
+        "rev": "9d316c885088cf1d85b174ea79102fd274e359f2",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:/home/friday/nix-inputs/nixCats/"
+        "owner": "FridayFaerie",
+        "repo": "nixCats",
+        "type": "github"
       }
     },
     "nixCats_2": {
@@ -135,11 +135,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1746924100,
-        "narHash": "sha256-mBO4G0+mEPRtyw6ErDARZ2jyj4k7ICW/pbuMwUqUPTA=",
+        "lastModified": 1746941291,
+        "narHash": "sha256-B9D7H5fTCCwPMbMGdzpCke3QaE3jaBgoiIRCI59zvmk=",
         "owner": "wamserma",
         "repo": "flake-programs-sqlite",
-        "rev": "ec004bc190bc79baa43e47df5fc3e9002e757a9a",
+        "rev": "a83362c766132392dd27d38e0afb72e5cfddb09b",
         "type": "github"
       },
       "original": {
