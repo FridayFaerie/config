@@ -33,7 +33,7 @@
     };
 
     nixCats = {
-      url = "git+file:/home/friday/nix-inputs/nixCats/";
+      url = "github:FridayFaerie/nixCats/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
