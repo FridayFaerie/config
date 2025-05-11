@@ -95,20 +95,19 @@ in {
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
 
-
-# plymouth things - https://wiki.nixos.org/wiki/Plymouth
+  # plymouth things - https://wiki.nixos.org/wiki/Plymouth
   boot = {
-    plymouth - {
+    plymouth = {
       enable = true;
       theme = "rings";
       themePackages = with pkgs; [
         (adi1090x-plymouth-themes.override {
-          selected_themes = [ "rings" ];
+          selected_themes = ["rings"];
         })
       ];
     };
 
-# silent boot
+    # silent boot
     consoleLogLevel = 3;
     initrd.verbose = false;
     kernelParams = [
@@ -121,10 +120,6 @@ in {
     # hides OS choice for bootloaders
     # loader.timeout = 0
   };
-
-
-
-
 
   # Automatic updating
   system.autoUpgrade.enable = true;
