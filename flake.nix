@@ -3,8 +3,7 @@
 
   inputs = {
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?shallow=1&ref=nixos-unstable";
-    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?shallow=1&ref=staging-next";
+    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?shallow=1&ref=nixos-unstable";
 
     # nixos config things
     auto-cpufreq = {
