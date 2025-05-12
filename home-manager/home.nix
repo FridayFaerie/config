@@ -94,6 +94,10 @@ in {
       end
       bind "/" expand-abbr or self-insert
       source ~/.config/scripts/alias.sh
+      function starship_transient_prompt_func
+        starship module character
+      end
+
     '';
   };
 

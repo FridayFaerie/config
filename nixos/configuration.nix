@@ -38,6 +38,7 @@ in {
     wl-screenrec
     busybox
     cachix
+    ovh-ttyrec
 
     # Smaller terminal things
     # neo
