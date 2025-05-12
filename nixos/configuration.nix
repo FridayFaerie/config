@@ -40,6 +40,9 @@ in {
     cachix
     ovh-ttyrec
 
+    # Larger terminal things
+    discordo
+
     # Smaller terminal things
     # neo
     # lavat
