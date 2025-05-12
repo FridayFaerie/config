@@ -38,7 +38,6 @@ in {
     wl-screenrec
     busybox
     cachix
-    ovh-ttyrec
 
     # Larger terminal things
     discordo
@@ -59,6 +58,7 @@ in {
     clang-tools
     home-manager
     nix-tree
+    ffmpeg
 
     ## Hyprland things
     # waybar
