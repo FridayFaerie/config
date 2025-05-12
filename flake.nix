@@ -77,7 +77,7 @@
     # };
   in {
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+      friday = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
           ./nixos/configuration.nix
