@@ -205,10 +205,6 @@ in {
 
   programs.ssh.startAgent = true;
 
-  # performance
-  services.thermald.enable = true;
-  services.auto-cpufreq.enable = true;
-
   # Hyprland things
   programs.hyprland = {
     enable = true;
@@ -314,6 +310,8 @@ in {
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
 
+  security.rtkit.enable = true;
+
   services.greetd = {
     enable = true;
     settings = rec {
@@ -330,27 +328,8 @@ in {
     };
   };
 
-  services.upower.enable = true;
-
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   # Enable automatic login for the user.
   services.getty.autologinUser = "friday";
-
-  # services.flatpak.enable = true;
 
   programs.fish.enable = true;
 
@@ -392,6 +371,28 @@ in {
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+
+  services.gpm.enable = true;
+
+  # performance
+  services.thermald.enable = true;
+  services.auto-cpufreq.enable = true;
+
+  services.upower.enable = true;
+
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
