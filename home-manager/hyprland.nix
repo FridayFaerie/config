@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     plugins = [pkgs.hyprlandPlugins.hypr-dynamic-cursors];
     #extraConfig = "bind = $mainMod, S, submap, resize";
     settings = {
