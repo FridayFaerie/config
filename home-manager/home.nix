@@ -6,7 +6,7 @@
   localbuilds,
   # altpkgs,
   ...
-} @ inputs: let
+}: let
   system = "x86_64-linux";
 in {
   home.username = "friday";
