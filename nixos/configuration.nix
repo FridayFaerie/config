@@ -215,7 +215,8 @@ in {
     xwayland.enable = true;
     withUWSM = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    # TODO: add this
+    # portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
   # programs.ladybird.enable = true;
@@ -314,7 +315,7 @@ in {
   };
 
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   security.rtkit.enable = true;
 
