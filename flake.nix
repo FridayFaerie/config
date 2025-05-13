@@ -111,7 +111,7 @@
       ];
 
       extraSpecialArgs = {
-        localflakes = inputs;
+        inherit inputs;
         inherit localbuilds;
       };
     };
@@ -124,7 +124,7 @@
       ];
 
       extraSpecialArgs = {
-        localflakes = inputs;
+        inherit inputs;
         inherit localbuilds;
       };
     };

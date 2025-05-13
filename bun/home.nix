@@ -2,7 +2,7 @@
   config,
   pkgs,
   lib,
-  localflakes,
+  inputs,
   localbuilds,
   # altpkgs,
   ...
@@ -16,7 +16,7 @@ in {
   home.stateVersion = "24.11";
 
   home.packages = [
-    localflakes.nixCats.packages.${system}.nixCats
+    inputs.nixCats.packages.${system}.nixCats
 
     localbuilds.snitch.packages.${system}.default
 

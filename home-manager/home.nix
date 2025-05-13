@@ -2,7 +2,7 @@
   config,
   pkgs,
   lib,
-  localflakes,
+  inputs,
   localbuilds,
   # altpkgs,
   ...
@@ -16,13 +16,13 @@ in {
   home.stateVersion = "24.11";
 
   home.packages = [
-    localflakes.nixCats.packages.${system}.nixCats
+    inputs.nixCats.packages.${system}.nixCats
 
-    # localflakes.zen-browser.packages.${system}.default
+    # inputs.zen-browser.packages.${system}.default
 
-    localflakes.quickshell.packages.${system}.default
+    inputs.quickshell.packages.${system}.default
 
-    localflakes.nh.packages.${system}.default
+    inputs.nh.packages.${system}.default
 
     localbuilds.snitch.packages.${system}.default
 
@@ -43,7 +43,7 @@ in {
     EDITOR = "nixCats";
     MANPAGER = "nixCats +Man!";
     QML2_IMPORT_PATH =
-      "${localflakes.quickshell.packages.${system}.default}/lib/qt-6/qml"
+      "${inputs.quickshell.packages.${system}.default}/lib/qt-6/qml"
       + ":${pkgs.qt6.qtdeclarative}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.qt5compat}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml"
