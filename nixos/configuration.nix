@@ -45,11 +45,11 @@ in {
     # Smaller terminal things
     # neo
     # lavat
-    # asciiquarium
+    asciiquarium
     # globe-cli
     # clolcat
     # fortune
-    nitch
+    # nitch
     leaf
 
     #usefuls
