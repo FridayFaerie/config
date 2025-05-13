@@ -44,9 +44,9 @@ in {
 
     # Smaller terminal things
     # neo
-    lavat
+    # lavat
     # asciiquarium
-    # globe-cli
+    globe-cli
     # clolcat
     # fortune
     # nitch
@@ -135,13 +135,6 @@ in {
   # nix.gc.options = "--delete-older-than-10d";
 
   nix.settings.auto-optimise-store = true;
-
-  # TODO: remove this line
-  # nix.settings.trusted-users = ["root" "friday"];
-  # nix.settings.trusted-public-keys = [
-  #   "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
-  #   "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-  # ];
 
   nix.settings = {
     substituters = [
