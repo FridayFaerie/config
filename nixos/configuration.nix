@@ -49,7 +49,7 @@ in {
     # globe-cli
     # clolcat
     # fortune
-    # nitch
+    nitch
     leaf
 
     #usefuls
