@@ -133,7 +133,7 @@ in {
   nix.settings.auto-optimise-store = true;
 
   nix.settings = {
-    substituters = [
+    extra-substituters = [
       "https://hyprland.cachix.org"
       "https://nix-community.cachix.org"
     ];
