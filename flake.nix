@@ -16,10 +16,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # no nixpkgs override for cache reasons
+    hyprland.url = "github:hyprwm/Hyprland";
 
     # Home-manager things
     quickshell = {

@@ -144,7 +144,7 @@ in {
   # ];
 
   nix.settings = {
-    extra-substituters = [
+    substituters = [
       "https://hyprland.cachix.org"
       "https://nix-community.cachix.org"
     ];
