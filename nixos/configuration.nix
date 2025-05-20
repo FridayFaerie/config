@@ -14,6 +14,10 @@
     export __VK_LAYER_NV_optimus=NVIDIA_only
     exec "$@"
   '';
+
+  # hyprlandpkgs = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+
+  system = pkgs.system;
 in {
   imports = [
     # Include the results of the hardware scan.
@@ -39,6 +43,9 @@ in {
     busybox
     cachix
 
+    # Larger terminal things
+    discordo
+
     # Smaller terminal things
     # neo
     # lavat
@@ -48,6 +55,7 @@ in {
     # fortune
     # nitch
     leaf
+    sl
 
     #usefuls
     typst
@@ -55,20 +63,32 @@ in {
     clang-tools
     home-manager
     nix-tree
+    ffmpeg
+    yt-dlp
 
     ## Hyprland things
+    hyprpaper
+    hypridle
+    hyprlock
+    hyprsunset
+    hyprshot
+    # inputs.hyprpaper.packages.${system}.hyprpaper
+    # inputs.hypridle.packages.${system}.hypridle
+    # inputs.hyprlock.packages.${system}.hyprlock
+    # inputs.hyprsunset.packages.${system}.hyprsunset
+    # (hyprshot.override {
+    #   hyprland = inputs.hyprland.packages.${system}.hyprland;
+    #   hyprpicker = inputs.hyprpicker.packages.${system}.hyprpicker;
+    # })
+
+    ## DE things
     # waybar
     rofi-wayland
     libnotify
     # swaynotificationcenter
-    hyprshot
     wl-clipboard
-    hyprlock
-    hypridle
-    hyprpaper
     wlogout
     pamixer
-    hyprsunset
     brightnessctl
     networkmanagerapplet
     yazi
@@ -95,59 +115,48 @@ in {
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # plymouth things - https://wiki.nixos.org/wiki/Plymouth
-  boot = {
-    plymouth = {
-      enable = true;
-      theme = "rings";
-      themePackages = with pkgs; [
-        (adi1090x-plymouth-themes.override {
-          selected_themes = ["rings"];
-        })
-      ];
-    };
-
-    # silent boot
-    consoleLogLevel = 3;
-    initrd.verbose = false;
-    kernelParams = [
-      "quiet"
-      "splash"
-      "boot.shell_on_fail"
-      "udev.log_priority=3"
-      "rd.systemd.show_status=auto"
-    ];
-    # hides OS choice for bootloaders
-    # loader.timeout = 0
-  };
+  # # plymouth things - https://wiki.nixos.org/wiki/Plymouth
+  # boot = {
+  #   plymouth = {
+  #     enable = true;
+  #     theme = "rings";
+  #     themePackages = with pkgs; [
+  #       (adi1090x-plymouth-themes.override {
+  #         selected_themes = ["rings"];
+  #       })
+  #     ];
+  #   };
+  #
+  #   # silent boot
+  #   consoleLogLevel = 3;
+  #   initrd.verbose = false;
+  #   kernelParams = [
+  #     "quiet"
+  #     "splash"
+  #     "boot.shell_on_fail"
+  #     "udev.log_priority=3"
+  #     "rd.systemd.show_status=auto"
+  #   ];
+  #   # hides OS choice for bootloaders
+  #   # loader.timeout = 0
+  # };
 
   # Automatic updating
   system.autoUpgrade.enable = true;
   system.autoUpgrade.dates = "weekly";
 
-  # # Automatic cleanup
-  # nix.gc.automatic = true;
-  # nix.gc.dates = "daily";
-  # nix.gc.options = "--delete-older-than-10d";
-
   nix.settings.auto-optimise-store = true;
 
-  nix.settings.trusted-users = ["root" "friday"];
-
-  nix.settings.trusted-public-keys = [
-    "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
-    "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-  ];
   nix.settings = {
-    extra-substituters = [
+    substituters = [
       "https://hyprland.cachix.org"
       "https://nix-community.cachix.org"
     ];
-    extra-trusted-substituters = [
+    trusted-substituters = [
       "https://hyprland.cachix.org"
       "https://nix-community.cachix.org"
     ];
-    extra-trusted-public-keys = [
+    trusted-public-keys = [
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
     ];
@@ -193,7 +202,7 @@ in {
   #   ];
   # };
 
-  programs.command-not-found.dbPath = inputs.programsdb.packages.${pkgs.stdenv.hostPlatform.system}.programs-sqlite;
+  programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
 
   # for nh
   # programs.nh = {
@@ -205,15 +214,13 @@ in {
 
   programs.ssh.startAgent = true;
 
-  # performance
-  services.thermald.enable = true;
-  services.auto-cpufreq.enable = true;
-
   # Hyprland things
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
     withUWSM = true;
+    package = inputs.hyprland.packages.${system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
   };
 
   # programs.ladybird.enable = true;
@@ -252,12 +259,22 @@ in {
     NIXOS_OZONE_WL = "1";
   };
 
+  environment.variables = {
+    EDITOR = "nixCats";
+  };
+
   # nvidia things
   # note: I'm using NVIDIA GeForce MX550
   # https://nixos.wiki/wiki/Nvidia
   services.xserver.videoDrivers = ["nvidia"];
   hardware = {
     graphics = {
+      # package = hyprlandpkgs.mesa;
+      #
+      # # # if you also want 32-bit support (e.g for Steam)
+      # # enable32Bit = true;
+      # # package32 = hyprlandpkgs.pkgsi686Linux.mesa;
+
       enable = true;
       extraPackages = with pkgs; [
         intel-media-driver
@@ -308,13 +325,16 @@ in {
   };
 
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+
+  security.rtkit.enable = true;
 
   services.greetd = {
     enable = true;
     settings = rec {
       initial_session = {
-        command = "${pkgs.hyprland}/bin/Hyprland";
+        command = "${inputs.hyprland.packages.${system}.hyprland}/bin/Hyprland";
+        # command = "${pkgs.hyprland}/bin/Hyprland";
         user = "friday";
       };
       tuigreet_session = {
@@ -326,27 +346,8 @@ in {
     };
   };
 
-  services.upower.enable = true;
-
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   # Enable automatic login for the user.
   services.getty.autologinUser = "friday";
-
-  # services.flatpak.enable = true;
 
   programs.fish.enable = true;
 
@@ -388,6 +389,28 @@ in {
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+
+  services.gpm.enable = true;
+
+  # performance
+  services.thermald.enable = true;
+  services.auto-cpufreq.enable = true;
+
+  services.upower.enable = true;
+
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

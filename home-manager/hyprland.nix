@@ -1,7 +1,16 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     enable = true;
-    plugins = [pkgs.hyprlandPlugins.hypr-dynamic-cursors];
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    plugins = [
+      # pkgs.hyprlandPlugins.hypr-dynamic-cursors
+      inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
+    ];
     #extraConfig = "bind = $mainMod, S, submap, resize";
     settings = {
       source = [
@@ -30,13 +39,6 @@
 
         resize_on_border = true;
         allow_tearing = false;
-
-        layout = "dwindle";
-      };
-
-      dwindle = {
-        pseudotile = true;
-        preserve_split = true;
       };
 
       master = {
@@ -95,8 +97,8 @@
           "$mainMod SHIFT, S, movetoworkspace, special:magic"
 
           # Scroll through existing workspaces with mainMod + scroll
-          "$mainMod, mouse_down, workspace, e+1"
-          "$mainMod, mouse_up, workspace, e-1"
+          "$mainMod, mouse_down, workspace, e-1"
+          "$mainMod, mouse_up, workspace, e+1"
 
           "$mainMod, 0, workspace, 10"
           "$mainMod SHIFT, 0, movetoworkspace, 10"

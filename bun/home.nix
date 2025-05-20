@@ -2,7 +2,7 @@
   config,
   pkgs,
   lib,
-  localflakes,
+  inputs,
   localbuilds,
   # altpkgs,
   ...
@@ -16,7 +16,7 @@ in {
   home.stateVersion = "24.11";
 
   home.packages = [
-    localflakes.nixCats.packages.${system}.nixCats
+    inputs.nixCats.packages.${system}.nixCats
 
     localbuilds.snitch.packages.${system}.default
 
@@ -76,11 +76,11 @@ in {
   home.pointerCursor = {
     enable = true;
     name = "catppuccin-latte-light-cursors";
-    size = 20;
+    size = 24;
     package = pkgs.catppuccin-cursors.latteLight;
     gtk.enable = true;
     hyprcursor.enable = true;
-    hyprcursor.size = 20;
+    hyprcursor.size = 24;
     x11.enable = true;
   };
 

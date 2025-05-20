@@ -2,11 +2,11 @@
   config,
   pkgs,
   lib,
-  localflakes,
+  inputs,
   localbuilds,
   # altpkgs,
   ...
-} @ inputs: let
+}: let
   system = "x86_64-linux";
 in {
   home.username = "friday";
@@ -16,13 +16,24 @@ in {
   home.stateVersion = "24.11";
 
   home.packages = [
-    localflakes.nixCats.packages.${system}.nixCats
+    inputs.nixCats.packages.${system}.nixCats
 
-    # localflakes.zen-browser.packages.${system}.default
+    inputs.quickshell.packages.${system}.default
+    # (inputs.quickshell.packages.${system}.default.override {
+    #   withJemalloc = true;
+    #   withQtSvg = true;
+    #   withWayland = true;
+    #   withX11 = false;
+    #   withPipewire = true;
+    #   withPam = true;
+    #   withHyprland = true;
+    #   withI3 = false;
+    # })
 
-    localflakes.quickshell.packages.${system}.default
+    # inputs.nh.packages.${system}.default
 
-    localflakes.nh.packages.${system}.default
+    # inputs.zen-browser.packages.${system}.default
+    # inputs.wl_shimeji.packages.${system}.default
 
     localbuilds.snitch.packages.${system}.default
 
@@ -43,11 +54,11 @@ in {
     EDITOR = "nixCats";
     MANPAGER = "nixCats +Man!";
     QML2_IMPORT_PATH =
-      "${localflakes.quickshell.packages.${system}.default}/lib/qt-6/qml"
+      "${inputs.quickshell.packages.${system}.default}/lib/qt-6/qml"
       + ":${pkgs.qt6.qtdeclarative}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.qt5compat}/lib/qt-6/qml"
-      + ":${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml"
-      + ":${pkgs.kdePackages.qtmultimedia}/lib/qt-6/qml";
+      + ":${pkgs.kdePackages.qtmultimedia}/lib/qt-6/qml"
+      + ":${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml";
     CARGO_HOME = "$HOME/.config/cargo/";
   };
 
@@ -84,7 +95,6 @@ in {
     enableTransience = true;
   };
 
-  # programs.fish.enable = true;
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
@@ -94,17 +104,23 @@ in {
       end
       bind "/" expand-abbr or self-insert
       source ~/.config/scripts/alias.sh
+      function starship_transient_prompt_func
+        starship module character
+      end
+
     '';
   };
+
+  programs.nh.enable = true;
 
   home.pointerCursor = {
     enable = true;
     name = "catppuccin-latte-light-cursors";
-    size = 20;
+    size = 24;
     package = pkgs.catppuccin-cursors.latteLight;
     gtk.enable = true;
     hyprcursor.enable = true;
-    hyprcursor.size = 20;
+    hyprcursor.size = 24;
     x11.enable = true;
   };
 
@@ -151,4 +167,6 @@ in {
   #     # font.family = "Courier20, Courier13, Courier, monospace";
   #   };
   # };
+
+  news.display = "silent";
 }

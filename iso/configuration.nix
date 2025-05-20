@@ -14,7 +14,7 @@
       writeShellScriptBin "nix-installer"
       ''
         #!/usr/bin/env bash
-        echo TODO: lmao
+        echo TODO: nixinstaller
       ''
     )
   ];

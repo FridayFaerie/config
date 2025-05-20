@@ -3,10 +3,7 @@
 
   inputs = {
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    nixpkgs = {
-      url = "git+https://github.com/NixOS/nixpkgs?shallow=1&ref=nixos-unstable";
-    };
+    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?shallow=1&ref=nixos-unstable";
 
     # nixos config things
     auto-cpufreq = {
@@ -14,10 +11,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nh = {
-      url = "github:nix-community/nh";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nh = {
+    #   url = "github:nix-community/nh";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     # Home-manager things
     quickshell = {
@@ -33,9 +30,15 @@
     };
 
     nixCats = {
-      url = "github:FridayFaerie/nixCats/";
+      # url = "github:FridayFaerie/nixCats/";
+      url = "github:FridayFaerie/nixCats";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # wl_shimeji = {
+    #   url = "path:/home/friday/nix-inputs/wl_shimeji";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     # zen-browser = {
     #   url = "github:0xc000022070/zen-browser-flake";
@@ -51,6 +54,76 @@
       url = "github:adriankarlen/textfox";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    ## HYPRLAND THINGS
+    # no nixpkgs override for cache reasons
+    hyprland.url = "github:hyprwm/Hyprland";
+
+    hypr-dynamic-cursors = {
+      url = "github:VirtCode/hypr-dynamic-cursors";
+      inputs.hyprland.follows = "hyprland";
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+    };
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+    };
+
+    #   hyprlock = {
+    #     url = "github:hyprwm/hyprlock";
+    #     inputs = {
+    #       nixpkgs.follows = "hyprland/nixpkgs";
+    #       hyprlang.follows = "hyprland/hyprlang";
+    #       hyprutils.follows = "hyprland/hyprutils";
+    #       hyprwayland-scanner.follows = "hyprland/hyprwayland-scanner";
+    #       hyprgraphics.follows = "hyprland/hyprgraphics";
+    #     };
+    #   };
+    #   hypridle = {
+    #     url = "github:hyprwm/hypridle";
+    #     inputs = {
+    #       nixpkgs.follows = "hyprland/nixpkgs";
+    #       hyprlang.follows = "hyprland/hyprlang";
+    #       hyprutils.follows = "hyprland/hyprutils";
+    #       hyprland-protocols.follows = "hyprland/hyprland-protocols";
+    #       hyprwayland-scanner.follows = "hyprland/hyprwayland-scanner";
+    #     };
+    #   };
+    #   hyprpicker = {
+    #     url = "github:hyprwm/hyprpicker";
+    #     inputs = {
+    #       nixpkgs.follows = "hyprland/nixpkgs";
+    #       hyprutils.follows = "hyprland/hyprutils";
+    #       hyprwayland-scanner.follows = "hyprland/hyprwayland-scanner";
+    #     };
+    #   };
+    #   hyprpaper = {
+    #     url = "github:hyprwm/hyprpaper";
+    #     inputs = {
+    #       nixpkgs.follows = "hyprland/nixpkgs";
+    #       hyprlang.follows = "hyprland/hyprlang";
+    #       hyprutils.follows = "hyprland/hyprutils";
+    #       hyprwayland-scanner.follows = "hyprland/hyprwayland-scanner";
+    #       hyprgraphics.follows = "hyprland/hyprgraphics";
+    #     };
+    #   };
+    # xdg-desktop-portal-hyprland = {
+    #   url = "github:hyprwm/xdg-desktop-portal-hyprland";
+    #   inputs = {
+    #     nixpkgs.follows = "hyprland/nixpkgs";
+    #     hyprutils.follows = "hyprland/hyprutils";
+    #     hyprlang.follows = "hyprland/hyprlang";
+    #   };
+    # };
+    #   hyprsunset = {
+    #     url = "github:hyprwm/hyprsunset";
+    #     inputs = {
+    #       nixpkgs.follows = "hyprland/nixpkgs";
+    #       hyprutils.follows = "hyprland/hyprutils";
+    #     };
+    #   };
   };
 
   outputs = {
@@ -77,7 +150,7 @@
     # };
   in {
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+      friday = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
           ./nixos/configuration.nix
@@ -109,7 +182,7 @@
       ];
 
       extraSpecialArgs = {
-        localflakes = inputs;
+        inherit inputs;
         inherit localbuilds;
       };
     };
@@ -122,7 +195,7 @@
       ];
 
       extraSpecialArgs = {
-        localflakes = inputs;
+        inherit inputs;
         inherit localbuilds;
       };
     };
