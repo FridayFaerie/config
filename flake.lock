@@ -98,11 +98,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1747565775,
-        "narHash": "sha256-B6jmKHUEX1jxxcdoYHl7RVaeohtAVup8o3nuVkzkloA=",
+        "lastModified": 1747688838,
+        "narHash": "sha256-FZq4/3OtGV/cti9Vccsy2tGSUrxTO4hkDF9oeGRTen4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "97118a310eb8e13bc1b9b12d67267e55b7bee6c8",
+        "rev": "45c2985644b60ab64de2a2d93a4d132ecb87cf66",
         "type": "github"
       },
       "original": {
@@ -433,11 +433,11 @@
         "plugins-neopywal-nvim": "plugins-neopywal-nvim"
       },
       "locked": {
-        "lastModified": 1747657679,
-        "narHash": "sha256-5e3RX9K9XSlj20aBcDu2/IaNj5AJ2u8+3HMtTwX99xA=",
+        "lastModified": 1747414630,
+        "narHash": "sha256-K9cFLrW+GX5AecwGWHuyXVOBT7kSinubhfYB9S59R7g=",
         "owner": "FridayFaerie",
         "repo": "nixCats",
-        "rev": "0d070ec0f13c9e27dab4a57a0e94c6edfa79defd",
+        "rev": "df3db5e6cddad2fa32d6c13fcd24d7d55b89d6f9",
         "type": "github"
       },
       "original": {
@@ -572,11 +572,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1747644415,
-        "narHash": "sha256-cR5uQbK9i3Exo8OvbaLxqpdphuPwbn9SF9K9FSiyomk=",
+        "lastModified": 1747737040,
+        "narHash": "sha256-ZXSq/uIoXDgc4gH8V7FKHodhrmhoBorrHCF3VVvttsE=",
         "owner": "wamserma",
         "repo": "flake-programs-sqlite",
-        "rev": "f4e008b3706a0878de2ec65279b901f9ef9c9020",
+        "rev": "7cbb1ae93aef3929672b335ce99541239e43c4dd",
         "type": "github"
       },
       "original": {
