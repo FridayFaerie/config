@@ -18,15 +18,7 @@ in {
   home.packages = [
     inputs.nixCats.packages.${system}.nixCats
 
-    # inputs.quickshell.packages.${system}.default
-    (inputs.quickshell.packages.${system}.default.overrideAttrs
-      (oldAttrs: {
-        buildInputs =
-          oldAttrs.buildInputs
-          ++ [
-            pkgs.kdePackages.kirigami.unwrapped
-          ];
-      }))
+    inputs.quickshell.packages.${system}.default
 
     # (inputs.quickshell.packages.${system}.default.override {
     #   withJemalloc = true;
