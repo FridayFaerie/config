@@ -24,6 +24,7 @@ in {
       buildInputs =
         oldAttrs.buildInputs
         ++ [
+          pkgs.kdePackages.kirigami.unwrapped
         ];
     })
 
