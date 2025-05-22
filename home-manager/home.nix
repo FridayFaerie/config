@@ -18,7 +18,16 @@ in {
   home.packages = [
     inputs.nixCats.packages.${system}.nixCats
 
-    inputs.quickshell.packages.${system}.default
+    # inputs.quickshell.packages.${system}.default
+    inputs.quickshell.packages.${system}.default.override
+    {
+      buildInputs =
+        (self: super: [
+          pkgs.kdePackages.kirigami.unwrapped
+        ])
+        ++ super.buildInputs;
+    }
+
     # (inputs.quickshell.packages.${system}.default.override {
     #   withJemalloc = true;
     #   withQtSvg = true;
