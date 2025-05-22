@@ -19,14 +19,13 @@ in {
     inputs.nixCats.packages.${system}.nixCats
 
     # inputs.quickshell.packages.${system}.default
-    inputs.quickshell.packages.${system}.default.override
-    {
+    inputs.quickshell.packages.${system}.default.overrideAttrs
+    (oldAttrs: {
       buildInputs =
-        (self: super: [
-          pkgs.kdePackages.kirigami.unwrapped
-        ])
-        ++ super.buildInputs;
-    }
+        oldAttrs.buildInputs
+        ++ [
+        ];
+    })
 
     # (inputs.quickshell.packages.${system}.default.override {
     #   withJemalloc = true;
