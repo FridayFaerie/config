@@ -248,6 +248,7 @@ in {
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
     nerd-fonts.recursive-mono
+    yasashisa-gothic
     cantarell-fonts
     texlivePackages.fontawesome
     noto-fonts-cjk-sans
