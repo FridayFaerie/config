@@ -42,6 +42,7 @@ in {
     wl-screenrec
     busybox
     cachix
+    dust
 
     # Larger terminal things
     discordo
