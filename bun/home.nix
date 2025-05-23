@@ -86,11 +86,6 @@ in {
 
   gtk = {
     enable = true;
-    # cursorTheme = {
-    #   name = "Bibata-Modern-Ice";
-    #   package = pkgs.bibata-cursors;
-    #   size = 20;
-    # };
 
     iconTheme = {
       name = "oomox-gruvbox-dark";

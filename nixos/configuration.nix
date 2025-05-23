@@ -47,7 +47,7 @@ in {
     # Larger terminal things
     discordo
 
-    # Smaller terminal things
+    # just-for-pretty terminal things
     # neo
     # lavat
     # asciiquarium
@@ -57,6 +57,7 @@ in {
     # nitch
     leaf
     sl
+    libcaca
 
     #usefuls
     typst
@@ -248,7 +249,6 @@ in {
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
     nerd-fonts.recursive-mono
-    yasashisa-gothic
     cantarell-fonts
     texlivePackages.fontawesome
     noto-fonts-cjk-sans
