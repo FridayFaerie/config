@@ -377,8 +377,6 @@ in {
     stdenv.cc.cc
   ];
 
-  programs.nano.enable = false;
-
   # documentation.man.generateCaches = false;
 
   # Some programs need SUID wrappers, can be configured further or are
