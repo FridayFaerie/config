@@ -19,6 +19,7 @@ in {
     inputs.nixCats.packages.${system}.nixCats
 
     inputs.quickshell.packages.${system}.default
+
     # (inputs.quickshell.packages.${system}.default.override {
     #   withJemalloc = true;
     #   withQtSvg = true;
@@ -41,6 +42,7 @@ in {
     pkgs.kdePackages.qtmultimedia
     pkgs.kdePackages.qt5compat
     pkgs.kdePackages.kirigami.unwrapped
+    pkgs.kdePackages.syntax-highlighting
 
     # (pkgs.writeShellScriptBin "my-hello" '' echo "Hello, ${config.home.username}!" '')
   ];
@@ -58,6 +60,7 @@ in {
       + ":${pkgs.qt6.qtdeclarative}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.qt5compat}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.qtmultimedia}/lib/qt-6/qml"
+      + ":${pkgs.kdePackages.syntax-highlighting}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml";
     CARGO_HOME = "$HOME/.config/cargo/";
   };
@@ -69,23 +72,6 @@ in {
       exec = "quickshell";
       terminal = false;
       categories = ["Application"];
-    };
-  };
-
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "x-scheme-handler/http" = "firefox.desktop";
-      "x-scheme-handler/https" = "firefox.desktop";
-      "x-scheme-handler/chrome" = "firefox.desktop";
-      "text/html" = "firefox.desktop";
-      "application/x-extension-htm" = "firefox.desktop";
-      "application/x-extension-html" = "firefox.desktop";
-      "application/x-extension-shtml" = "firefox.desktop";
-      "application/xhtml+xml" = "firefox.desktop";
-      "application/x-extension-xhtml" = "firefox.desktop";
-      "application/x-extension-xht" = "firefox.desktop";
-      "application/pdf" = "firefox.desktop";
     };
   };
 
@@ -119,8 +105,8 @@ in {
     size = 24;
     package = pkgs.catppuccin-cursors.latteLight;
     gtk.enable = true;
-    hyprcursor.enable = true;
-    hyprcursor.size = 24;
+    # hyprcursor.enable = true;
+    # hyprcursor.size = 24;
     x11.enable = true;
   };
 
