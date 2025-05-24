@@ -109,14 +109,6 @@
         hyprgraphics.follows = "hyprland/hyprgraphics";
       };
     };
-    xdg-desktop-portal-hyprland = {
-      url = "github:hyprwm/xdg-desktop-portal-hyprland";
-      inputs = {
-        nixpkgs.follows = "hyprland/nixpkgs";
-        hyprutils.follows = "hyprland/hyprutils";
-        hyprlang.follows = "hyprland/hyprlang";
-      };
-    };
     hyprsunset = {
       url = "github:hyprwm/hyprsunset";
       inputs = {
