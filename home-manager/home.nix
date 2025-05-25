@@ -77,8 +77,8 @@ in {
 
   programs.starship = {
     enable = true;
-    enableFishIntegration = true;
-    enableTransience = true;
+    # enableFishIntegration = true;
+    # enableTransience = true;
   };
 
   programs.fish = {
