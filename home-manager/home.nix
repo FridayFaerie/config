@@ -97,7 +97,14 @@ in {
     '';
   };
 
-  programs.kitty.enable = true;
+  programs.kitty = {
+    enable = true;
+
+    font = {
+      name = "droid-sans-mono";
+      size = 10;
+    };
+  };
 
   programs.nh.enable = true;
 
