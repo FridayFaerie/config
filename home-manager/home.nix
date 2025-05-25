@@ -97,6 +97,8 @@ in {
     '';
   };
 
+  programs.kitty.enable = true;
+
   programs.nh.enable = true;
 
   home.pointerCursor = {

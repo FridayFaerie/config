@@ -94,7 +94,7 @@ in {
     brightnessctl
     networkmanagerapplet
     yazi
-    kitty
+    # kitty
     # kando
 
     nvidia-offload
