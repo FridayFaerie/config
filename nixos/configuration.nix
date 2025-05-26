@@ -69,19 +69,19 @@ in {
     yt-dlp
 
     ## Hyprland things
-    hyprpaper
-    hypridle
-    hyprlock
-    hyprsunset
-    hyprshot
-    # inputs.hyprpaper.packages.${system}.hyprpaper
-    # inputs.hypridle.packages.${system}.hypridle
-    # inputs.hyprlock.packages.${system}.hyprlock
-    # inputs.hyprsunset.packages.${system}.hyprsunset
-    # (hyprshot.override {
-    #   hyprland = inputs.hyprland.packages.${system}.hyprland;
-    #   hyprpicker = inputs.hyprpicker.packages.${system}.hyprpicker;
-    # })
+    # hyprpaper
+    # hypridle
+    # hyprlock
+    # hyprsunset
+    # hyprshot
+    inputs.hyprpaper.packages.${system}.hyprpaper
+    inputs.hypridle.packages.${system}.hypridle
+    inputs.hyprlock.packages.${system}.hyprlock
+    inputs.hyprsunset.packages.${system}.hyprsunset
+    (hyprshot.override {
+      hyprland = inputs.hyprland.packages.${system}.hyprland;
+      hyprpicker = inputs.hyprpicker.packages.${system}.hyprpicker;
+    })
 
     ## DE things
     # waybar
