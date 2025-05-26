@@ -49,10 +49,10 @@
           "$mainMod, E, fullscreenstate, 0 3"
 
           # Move focus with mainMod + arrow keys
-          "$mainMod, H, movefocus, l"
-          "$mainMod, L, movefocus, r"
-          "$mainMod, K, movefocus, u"
-          "$mainMod, J, movefocus, d"
+          # "$mainMod, H, movefocus, l"
+          # "$mainMod, L, movefocus, r"
+          # "$mainMod, K, movefocus, u"
+          # "$mainMod, J, movefocus, d"
 
           # Example special workspace (scratchpad)
           "$mainMod, S, togglespecialworkspace, magic"
