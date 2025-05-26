@@ -105,8 +105,8 @@ in {
     size = 24;
     package = pkgs.catppuccin-cursors.latteLight;
     gtk.enable = true;
-    # hyprcursor.enable = true;
-    # hyprcursor.size = 24;
+    hyprcursor.enable = true;
+    hyprcursor.size = 24;
     x11.enable = true;
   };
 

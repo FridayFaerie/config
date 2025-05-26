@@ -5,7 +5,8 @@
 }: {
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
     plugins = [
       # pkgs.hyprlandPlugins.hypr-dynamic-cursors
       inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
