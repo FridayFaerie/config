@@ -18,9 +18,8 @@
 
     # Home-manager things
     quickshell = {
-      url = "github:quickshell-mirror/quickshell";
-      # url = "git+https://git.outfoxxed.me/outfoxxed/quickshell?ref=qt6.9.0";
-      # inputs.nixpkgs.follows = "altnixpkgs";
+      # url = "github:quickshell-mirror/quickshell";
+      url = "git+file:///home/friday/nix-inputs/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
