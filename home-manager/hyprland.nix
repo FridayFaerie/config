@@ -43,7 +43,6 @@
           "Control_L&Shift_L, PRINT, exec, hyprshot -m active -m output -o ~/Pictures"
           "SHIFT, PRINT, exec, hyprshot -m window -o ~/Pictures"
           ", PRINT, exec, hyprshot -m region -o ~/Pictures"
-          "$SUPER_SHIFT, L, exec, wlogout -p layer-shell "
           "$mainMod, C, fullscreen, 1"
           "$mainMod SHIFT, C, fullscreen, 0"
           "$mainMod, E, fullscreenstate, 0 3"
