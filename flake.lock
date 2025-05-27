@@ -40,11 +40,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1748363575,
+        "lastModified": 1748372346,
         "narHash": "sha256-7y7NZ6uW0GbT0h4gqfD2xvRuJj5IlPGw32oIc9Twga8=",
         "owner": "AdnanHodzic",
         "repo": "auto-cpufreq",
-        "rev": "a9a76de6eab29e2257ebb4a7d81f0191a75f9df8",
+        "rev": "becd5b89963fa54fef3566147f3fd2087f8a5842",
         "type": "github"
       },
       "original": {
@@ -794,11 +794,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1748354120,
-        "narHash": "sha256-R77ZmINyNzzgOLV/iRHN4x0keAC9N/vGAGd3luZpSno=",
+        "lastModified": 1748372643,
+        "narHash": "sha256-kFUzPUS8EG3qzrExpjwc7pb0UKQfBa4eAY0PcPmJ1Hg=",
         "owner": "wamserma",
         "repo": "flake-programs-sqlite",
-        "rev": "4f79e7dbc26b24885334d800ae6dbdc74ac511de",
+        "rev": "62c59d7a21a3dc77a77324073e6acd0be45f4557",
         "type": "github"
       },
       "original": {
