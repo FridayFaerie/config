@@ -68,6 +68,8 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
       # inputs.nixpkgs.follows = "hyprland/nixpkgs";
+
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     hyprlock = {
