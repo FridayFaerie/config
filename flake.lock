@@ -266,6 +266,7 @@
           "hyprland"
         ],
         "nixpkgs": [
+          "hyprland-plugins",
           "hyprland",
           "nixpkgs"
         ],
