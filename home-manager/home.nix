@@ -97,6 +97,11 @@ in {
     '';
   };
 
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
   programs.nh.enable = true;
 
   home.pointerCursor = {
