@@ -18,9 +18,8 @@
 
     # Home-manager things
     quickshell = {
-      url = "github:quickshell-mirror/quickshell";
-      # url = "git+https://git.outfoxxed.me/outfoxxed/quickshell?ref=qt6.9.0";
-      # inputs.nixpkgs.follows = "altnixpkgs";
+      # url = "github:quickshell-mirror/quickshell";
+      url = "git+file:///home/friday/nix-inputs/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -61,14 +60,18 @@
 
     hypr-dynamic-cursors = {
       url = "github:VirtCode/hypr-dynamic-cursors";
-      inputs.hyprland.follows = "hyprland";
-      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+      inputs = {
+        hyprland.follows = "hyprland";
+        nixpkgs.follows = "hyprland/nixpkgs";
+      };
     };
 
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+      inputs = {
+        hyprland.follows = "hyprland";
+        nixpkgs.follows = "hyprland/nixpkgs";
+      };
     };
 
     hyprlock = {
