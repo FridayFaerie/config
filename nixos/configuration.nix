@@ -43,6 +43,7 @@ in {
     busybox
     cachix
     dust
+    zoxide
 
     # Larger terminal things
     discordo
