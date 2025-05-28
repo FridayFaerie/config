@@ -12,6 +12,7 @@
       inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
       inputs.hyprland-plugins.packages.${pkgs.system}.borders-plus-plus
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
     ];
     #extraConfig = "bind = $mainMod, S, submap, resize";
     settings = {
