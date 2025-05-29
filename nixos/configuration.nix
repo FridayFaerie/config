@@ -207,12 +207,13 @@ in {
   programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
 
   # for nh
-  # programs.nh = {
-  #   enable = true;
-  #   clean.enable = true;
-  #   clean.extraArgs = "--keep-since 4d --keep 3";
-  #   flake = "/home/friday/config";
-  # };
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/home/friday/config";
+    package = inputs.nh.packages.${system}.default;
+  };
 
   programs.ssh.startAgent = true;
 
@@ -247,14 +248,15 @@ in {
   fonts.packages = with pkgs; [
     material-symbols
     nerd-fonts.jetbrains-mono
-    nerd-fonts.fira-code
     nerd-fonts.recursive-mono
-    cantarell-fonts
-    texlivePackages.fontawesome
+    # nerd-fonts.fira-code
+    # cantarell-fonts
+    # texlivePackages.fontawesome
     noto-fonts-cjk-sans
+    sil-padauk
 
-    roboto
-    source-sans
+    # roboto
+    # source-sans
   ];
 
   environment.sessionVariables = {

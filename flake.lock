@@ -98,11 +98,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1748455938,
-        "narHash": "sha256-mQ/iNzPra2WtDQ+x2r5IadcWNr0m3uHvLMzJkXKAG/8=",
+        "lastModified": 1748529677,
+        "narHash": "sha256-MJEX3Skt5EAIs/aGHD8/aXXZPcceMMHheyIGSjvxZN0=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "02077149e2921014511dac2729ae6dadb4ec50e2",
+        "rev": "da282034f4d30e787b8a10722431e8b650a907ef",
         "type": "github"
       },
       "original": {
@@ -276,11 +276,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1748436997,
-        "narHash": "sha256-kkTtt1Yqhks0i7w6aOhzry80TDq2mAE/p9VXlh0ytIk=",
+        "lastModified": 1748526041,
+        "narHash": "sha256-QyUACXhQJ2+K0YxwEuAfpyCXqbdCCHj1jNAWJy+vUxw=",
         "owner": "hyprwm",
         "repo": "hyprland-plugins",
-        "rev": "367f4fc6e9a903314c1f1eb227af35dccbe0b64c",
+        "rev": "2eee96fe52fa0923c0aae647eb7901b5b51df3db",
         "type": "github"
       },
       "original": {
@@ -645,6 +645,26 @@
         "type": "github"
       }
     },
+    "nh": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1748096601,
+        "narHash": "sha256-ji/9z1pRbosyKVVAIGBazyz6PjWV8bc2Ux2RdQrVDWY=",
+        "owner": "nix-community",
+        "repo": "nh",
+        "rev": "1ea27e73a3dcbc9950258e9054377ee677d12b9e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nh",
+        "type": "github"
+      }
+    },
     "nixCats": {
       "inputs": {
         "nixCats": "nixCats_2",
@@ -655,11 +675,11 @@
         "plugins-neopywal-nvim": "plugins-neopywal-nvim"
       },
       "locked": {
-        "lastModified": 1748377640,
-        "narHash": "sha256-GqymuQUkohXqCxbzpVKTKsp/f6BT0evyBUEcrC0OBBE=",
+        "lastModified": 1748477108,
+        "narHash": "sha256-d4AtKrZ4bV7BzEFBcTNoaMNBbwEMGKPq+1F5cRrqSeo=",
         "owner": "FridayFaerie",
         "repo": "nixCats",
-        "rev": "833aaa8c3383dc0bf14ba0f2a5fa35d9d69ee29a",
+        "rev": "a9d61dd03163434ca4df4ffcf9de77441aa3a676",
         "type": "github"
       },
       "original": {
@@ -794,11 +814,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1748462651,
-        "narHash": "sha256-RECo1CV9JmP/yFl+5brvR4rZ8k1hpYzQDF2r6m/ZYm4=",
+        "lastModified": 1748544943,
+        "narHash": "sha256-e+ZGSYQl0XBAc65xtP6cgSOkYa/9N0txvIjIT7fJ1Gg=",
         "owner": "wamserma",
         "repo": "flake-programs-sqlite",
-        "rev": "7d71b355c5c92ed3c7f943c9f32134d9b3dbbb98",
+        "rev": "82043e7a395724c590245e3c99f9c057f9ac987d",
         "type": "github"
       },
       "original": {
@@ -839,6 +859,7 @@
         "hyprpaper": "hyprpaper",
         "hyprpicker": "hyprpicker",
         "hyprsunset": "hyprsunset",
+        "nh": "nh",
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs_2",
         "programsdb": "programsdb",

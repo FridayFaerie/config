@@ -11,10 +11,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nh = {
-    #   url = "github:nix-community/nh";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    nh = {
+      url = "github:nix-community/nh";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Home-manager things
     quickshell = {
@@ -55,7 +55,7 @@
     };
 
     ## HYPRLAND THINGS
-    # no nixpkgs override for cache reasons
+    ## no nixpkgs override for cache reasons
     hyprland.url = "github:hyprwm/Hyprland";
 
     hypr-dynamic-cursors = {
