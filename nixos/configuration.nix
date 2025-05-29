@@ -247,14 +247,15 @@ in {
   fonts.packages = with pkgs; [
     material-symbols
     nerd-fonts.jetbrains-mono
-    nerd-fonts.fira-code
     nerd-fonts.recursive-mono
-    cantarell-fonts
-    texlivePackages.fontawesome
+    # nerd-fonts.fira-code
+    # cantarell-fonts
+    # texlivePackages.fontawesome
     noto-fonts-cjk-sans
+    sil-padauk
 
-    roboto
-    source-sans
+    # roboto
+    # source-sans
   ];
 
   environment.sessionVariables = {
