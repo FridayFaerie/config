@@ -30,8 +30,6 @@ in {
       withI3 = false;
     })
 
-    # inputs.nh.packages.${system}.default
-
     # inputs.zen-browser.packages.${system}.default
     # inputs.wl_shimeji.packages.${system}.default
 
@@ -100,8 +98,6 @@ in {
     enable = true;
     enableFishIntegration = true;
   };
-
-  programs.nh.enable = true;
 
   home.pointerCursor = {
     enable = true;

@@ -207,12 +207,13 @@ in {
   programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
 
   # for nh
-  # programs.nh = {
-  #   enable = true;
-  #   clean.enable = true;
-  #   clean.extraArgs = "--keep-since 4d --keep 3";
-  #   flake = "/home/friday/config";
-  # };
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/home/friday/config";
+    package = inputs.nh.packages.${system}.default;
+  };
 
   programs.ssh.startAgent = true;
 
