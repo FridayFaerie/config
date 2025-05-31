@@ -7,12 +7,11 @@
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
-    plugins = [
-      # pkgs.hyprlandPlugins.hypr-dynamic-cursors
-      inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-    ];
+    # plugins = [
+    #   inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+    #   inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
+    #   inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+    # ];
     #extraConfig = "bind = $mainMod, S, submap, resize";
     settings = {
       source = [
@@ -25,7 +24,7 @@
       "$fileManager" = "kitty yazi";
       "$menu" = "rofi -show drun -show-icons";
 
-      "exec-once" = "bash ~/.config/hypr/start.sh";
+      # "exec-once" = "bash ~/.config/hypr/start.sh";
 
       "$mainMod" = "SUPER";
       bind =
