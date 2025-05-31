@@ -40,7 +40,8 @@ in {
     ripgrep
     wallust
     wl-screenrec
-    toybox
+    busybox
+    file
     cachix
     dust
 
