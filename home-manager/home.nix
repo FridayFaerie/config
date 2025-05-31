@@ -50,8 +50,6 @@ in {
 
   #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
   home.sessionVariables = {
-    EDITOR = "nixCats";
-    MANPAGER = "nixCats +Man!";
     QML2_IMPORT_PATH =
       "${inputs.quickshell.packages.${system}.default}/lib/qt-6/qml"
       + ":${pkgs.qt6.qtdeclarative}/lib/qt-6/qml"
@@ -59,6 +57,9 @@ in {
       + ":${pkgs.kdePackages.qtmultimedia}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.syntax-highlighting}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml";
+
+    EDITOR = "nixCats";
+    MANPAGER = "nixCats +Man!";
     CARGO_HOME = "$HOME/.config/cargo/";
   };
 
