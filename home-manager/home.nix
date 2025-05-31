@@ -35,11 +35,11 @@ in {
 
     localbuilds.snitch.packages.${system}.default
 
-    # pkgs.kdePackages.qtdeclarative
-    # pkgs.kdePackages.qtmultimedia
-    # pkgs.kdePackages.qt5compat
-    # pkgs.kdePackages.kirigami.unwrapped
-    # pkgs.kdePackages.syntax-highlighting
+    pkgs.kdePackages.qtdeclarative
+    pkgs.kdePackages.qtmultimedia
+    pkgs.kdePackages.qt5compat
+    pkgs.kdePackages.kirigami.unwrapped
+    pkgs.kdePackages.syntax-highlighting
 
     # (pkgs.writeShellScriptBin "my-hello" '' echo "Hello, ${config.home.username}!" '')
   ];
