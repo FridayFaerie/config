@@ -265,7 +265,7 @@ in {
   };
 
   environment.variables = {
-    EDITOR = "nixCats";
+    TESTVAR = "hihi"
   };
 
   # nvidia things
