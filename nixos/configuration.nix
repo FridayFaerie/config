@@ -87,7 +87,6 @@ in {
     ## DE things
     # waybar
     rofi-wayland
-    wofi
     libnotify
     # swaynotificationcenter
     wl-clipboard
