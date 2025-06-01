@@ -56,9 +56,9 @@ in {
     # clolcat
     # fortune
     # nitch
+    # libcaca
     leaf
     sl
-    libcaca
 
     #usefuls
     typst
@@ -73,12 +73,12 @@ in {
     # hyprpaper
     # hypridle
     # hyprlock
-    hyprsunset
+    # hyprsunset
     # hyprshot
     inputs.hyprpaper.packages.${system}.hyprpaper
     inputs.hypridle.packages.${system}.hypridle
     inputs.hyprlock.packages.${system}.hyprlock
-    # inputs.hyprsunset.packages.${system}.hyprsunset
+    inputs.hyprsunset.packages.${system}.hyprsunset
     (hyprshot.override {
       hyprland = inputs.hyprland.packages.${system}.hyprland;
       hyprpicker = inputs.hyprpicker.packages.${system}.hyprpicker;
@@ -87,6 +87,7 @@ in {
     ## DE things
     # waybar
     rofi-wayland
+    wofi
     libnotify
     # swaynotificationcenter
     wl-clipboard
