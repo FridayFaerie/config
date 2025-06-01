@@ -265,7 +265,7 @@ in {
   };
 
   environment.variables = {
-    TESTVAR = "hihi";
+    XDG_SESSION_TYPE = "auto";
   };
 
   # nvidia things
