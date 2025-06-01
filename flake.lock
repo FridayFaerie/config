@@ -675,11 +675,11 @@
         "plugins-neopywal-nvim": "plugins-neopywal-nvim"
       },
       "locked": {
-        "lastModified": 1748745063,
-        "narHash": "sha256-WkfgV8I/3Uyf5VgdmldxaK3x/blRXRZqQZc/36YSkb4=",
+        "lastModified": 1748795016,
+        "narHash": "sha256-gf0iDGJKfjVeY/yujOZXqU/jnkXK3YJq5ynLKp2hBLw=",
         "owner": "FridayFaerie",
         "repo": "nixCats",
-        "rev": "bf25bc27a326835e426ee85f1ba91951590d9f2a",
+        "rev": "5f0885d7b5fa744ca59f13f0062cfb161ee57e37",
         "type": "github"
       },
       "original": {

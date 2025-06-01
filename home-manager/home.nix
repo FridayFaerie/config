@@ -53,7 +53,7 @@ in {
     extraQmlPaths = [
       # kirigami is wrapped, access the unwrapped version to retrieve binaries/source files
       "${pkgs.kdePackages.kirigami.passthru.unwrapped}/lib/qt-6/qml"
-      "${inputs.quickshell.packages.${pkgs.system}.default}/lib/qt-6/qml/"
+      "${inputs.quickshell.packages.${pkgs.system}.default}/lib/qt-6/qml"
       "${pkgs.kdePackages.qtbase}/lib/qt-6/qml"
       "${pkgs.kdePackages.qtdeclarative}/lib/qt-6/qml"
     ];
