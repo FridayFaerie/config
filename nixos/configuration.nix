@@ -265,7 +265,6 @@ in {
   };
 
   environment.variables = {
-    XDG_SESSION_TYPE = "auto";
   };
 
   # nvidia things
