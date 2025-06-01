@@ -49,24 +49,14 @@ in {
   ];
 
   #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  home.sessionVariables = let
-    extraQmlPaths = [
-      # kirigami is wrapped, access the unwrapped version to retrieve binaries/source files
-      "${pkgs.kdePackages.kirigami.passthru.unwrapped}/lib/qt-6/qml"
-      "${inputs.quickshell.packages.${pkgs.system}.default}/lib/qt-6/qml"
-      "${pkgs.kdePackages.qtbase}/lib/qt-6/qml"
-      "${pkgs.kdePackages.qtdeclarative}/lib/qt-6/qml"
-    ];
-  in {
-    # May not need to append here since pretty much everything we need is included
-    QML2_IMPORT_PATH = "$QML2_IMPORT_PATH:${lib.strings.concatStringsSep ":" extraQmlPaths}";
-    # QML2_IMPORT_PATH =
-    #   "${inputs.quickshell.packages.${system}.default}/lib/qt-6/qml"
-    #   + ":${pkgs.qt6.qtdeclarative}/lib/qt-6/qml"
-    #   + ":${pkgs.kdePackages.qt5compat}/lib/qt-6/qml"
-    #   + ":${pkgs.kdePackages.qtmultimedia}/lib/qt-6/qml"
-    #   + ":${pkgs.kdePackages.syntax-highlighting}/lib/qt-6/qml"
-    #   + ":${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml";
+  home.sessionVariables = {
+    QML2_IMPORT_PATH =
+      "${inputs.quickshell.packages.${system}.default}/lib/qt-6/qml"
+      + ":${pkgs.qt6.qtdeclarative}/lib/qt-6/qml"
+      + ":${pkgs.kdePackages.qt5compat}/lib/qt-6/qml"
+      + ":${pkgs.kdePackages.qtmultimedia}/lib/qt-6/qml"
+      + ":${pkgs.kdePackages.syntax-highlighting}/lib/qt-6/qml"
+      + ":${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml";
 
     EDITOR = "nixCats";
     MANPAGER = "nixCats +Man!";
