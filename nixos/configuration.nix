@@ -41,6 +41,7 @@ in {
     wallust
     wl-screenrec
     busybox
+    file
     cachix
     dust
 
@@ -55,9 +56,9 @@ in {
     # clolcat
     # fortune
     # nitch
+    # libcaca
     leaf
     sl
-    libcaca
 
     #usefuls
     typst
@@ -264,7 +265,6 @@ in {
   };
 
   environment.variables = {
-    EDITOR = "nixCats";
   };
 
   # nvidia things
