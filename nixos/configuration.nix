@@ -27,7 +27,7 @@ in {
 
   services.kanata = {
     enable = true;
-    keyboards.config = ./kanata.cfg;
+    keyboards.default.configFile = ./kanata.cfg;
   };
 
   nixpkgs.overlays = [
