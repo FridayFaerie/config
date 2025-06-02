@@ -25,6 +25,11 @@ in {
     # ./hardware-configuration.nix
   ];
 
+  services.kanata = {
+    enable = true;
+    keyboards.config = ./kanata.cfg;
+  };
+
   nixpkgs.overlays = [
   ];
 
