@@ -225,7 +225,7 @@ in {
 
   # Hyprland things
   programs.hyprland = {
-    enable = true;
+    enable = false;
     xwayland.enable = true;
     withUWSM = true;
     package = inputs.hyprland.packages.${system}.hyprland;

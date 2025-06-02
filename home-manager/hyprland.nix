@@ -4,7 +4,7 @@
   ...
 }: {
   wayland.windowManager.hyprland = {
-    enable = true;
+    enable = false;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
     plugins = [
@@ -16,7 +16,7 @@
     settings = {
       source = [
         "~/.config/wallust/themes/hypr.conf"
-        # "~/.config/hypr/extrahyprland.conf"
+        "~/.config/hypr/extrahyprland.conf"
       ];
 
       xwayland.force_zero_scaling = true;
