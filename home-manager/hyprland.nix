@@ -16,7 +16,7 @@
     settings = {
       source = [
         "~/.config/wallust/themes/hypr.conf"
-        "~/.config/hypr/extrahyprland.conf"
+        # "~/.config/hypr/extrahyprland.conf"
       ];
 
       xwayland.force_zero_scaling = true;
