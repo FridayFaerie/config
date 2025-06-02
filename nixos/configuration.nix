@@ -25,6 +25,11 @@ in {
     # ./hardware-configuration.nix
   ];
 
+  services.kanata = {
+    enable = true;
+    keyboards.default.configFile = ./kanata.cfg;
+  };
+
   nixpkgs.overlays = [
   ];
 
@@ -265,6 +270,7 @@ in {
   };
 
   environment.variables = {
+    EDITOR = "nixCats";
   };
 
   # nvidia things

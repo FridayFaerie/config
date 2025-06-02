@@ -162,7 +162,7 @@
           ./iso/configuration.nix
         ];
         specialArgs = {
-          inherit inputs outputs;
+          inherit inputs;
         };
       };
     };
