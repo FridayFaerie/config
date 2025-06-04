@@ -675,11 +675,11 @@
         "plugins-neopywal-nvim": "plugins-neopywal-nvim"
       },
       "locked": {
-        "lastModified": 1748795016,
-        "narHash": "sha256-gf0iDGJKfjVeY/yujOZXqU/jnkXK3YJq5ynLKp2hBLw=",
+        "lastModified": 1749000284,
+        "narHash": "sha256-9F2V8h+Un5HZggBWB6Zt9GyFb9NVSBV+E5q6NJc3C0w=",
         "owner": "FridayFaerie",
         "repo": "nixCats",
-        "rev": "5f0885d7b5fa744ca59f13f0062cfb161ee57e37",
+        "rev": "f57c7ba34df19ac9c4cbf892f72e3266aab712b0",
         "type": "github"
       },
       "original": {
@@ -690,11 +690,11 @@
     },
     "nixCats_2": {
       "locked": {
-        "lastModified": 1748230488,
-        "narHash": "sha256-CktYY2rcFPJ3Tbz5H/nDnkhaO18nrLGdWa1mH7V9X5Q=",
+        "lastModified": 1748760778,
+        "narHash": "sha256-i0xBOGCDtrJ29sIelwbSATUJK4AP6McPMxBA0dthK0o=",
         "owner": "BirdeeHub",
         "repo": "nixCats-nvim",
-        "rev": "2a2f15a6c085524ac121f5da9a73ee2155c53d70",
+        "rev": "88cde33af841e2aa1ea0c83c4d9dcfefdde54fb3",
         "type": "github"
       },
       "original": {
