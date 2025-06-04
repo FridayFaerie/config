@@ -232,7 +232,7 @@ in {
     portalPackage = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
   };
 
-  # programs.ladybird.enable = true;
+  programs.ladybird.enable = true;
 
   # for dark theme
   programs.dconf.enable = true;
