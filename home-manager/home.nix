@@ -113,14 +113,14 @@ in {
 
   gtk = {
     enable = true;
-    iconTheme = {
-      name = "oomox-gruvbox-dark";
-      package = pkgs.gruvbox-dark-icons-gtk;
-    };
-    theme = {
-      name = "Colloid-Dark";
-      package = pkgs.colloid-gtk-theme;
-    };
+    # iconTheme = {
+    #   name = "oomox-gruvbox-dark";
+    #   package = pkgs.gruvbox-dark-icons-gtk;
+    # };
+    # theme = {
+    #   name = "Colloid-Dark";
+    #   package = pkgs.colloid-gtk-theme;
+    # };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = true;
     };
