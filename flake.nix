@@ -56,7 +56,7 @@
 
     ## HYPRLAND THINGS
     ## no nixpkgs override for cache reasons
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:FridayFaerie/Hyprland";
 
     hypr-dynamic-cursors = {
       url = "github:VirtCode/hypr-dynamic-cursors";
@@ -112,13 +112,27 @@
         hyprgraphics.follows = "hyprland/hyprgraphics";
       };
     };
+
+    #FAZZI CODE
+    systems.url = "github:nix-systems/x86_64-linux";
     hyprsunset = {
       url = "github:hyprwm/hyprsunset";
       inputs = {
-        nixpkgs.follows = "hyprland/nixpkgs";
+        nixpkgs.follows = "nixpkgs";
         hyprutils.follows = "hyprland/hyprutils";
+        hyprland-protocols.follows = "hyprland/hyprland-protocols";
+        hyprwayland-scanner.follows = "hyprland/hyprwayland-scanner";
+        # systems.follows = "systems";
       };
     };
+
+    # hyprsunset = {
+    #   url = "github:hyprwm/hyprsunset";
+    #   inputs = {
+    #     nixpkgs.follows = "hyprland/nixpkgs";
+    #     hyprutils.follows = "hyprland/hyprutils";
+    #   };
+    # };
   };
 
   outputs = {
