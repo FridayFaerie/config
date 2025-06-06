@@ -537,15 +537,15 @@
         "systems": "systems_6"
       },
       "locked": {
-        "lastModified": 1746481417,
-        "narHash": "sha256-mal2vIpRz5BU/0ll6gP/N2FqjFtgFNDgMBgoI6tLWag=",
-        "owner": "hyprwm",
+        "lastModified": 1749167641,
+        "narHash": "sha256-4PMO6bm0hHEOzGEhXRYSCLpkGT6lGwvax8GkLo+nK5w=",
+        "owner": "FridayFaerie",
         "repo": "hyprsunset",
-        "rev": "2a8ef76c6a77ca249e4613fefcd96bad74b5f9b2",
+        "rev": "443320b4f576c841e95e33f22e93bd8f21938f0b",
         "type": "github"
       },
       "original": {
-        "owner": "hyprwm",
+        "owner": "FridayFaerie",
         "repo": "hyprsunset",
         "type": "github"
       }
@@ -819,7 +819,6 @@
         "nixpkgs": "nixpkgs_2",
         "programsdb": "programsdb",
         "quickshell": "quickshell",
-        "systems": "systems_7",
         "textfox": "textfox"
       }
     },
@@ -910,21 +909,6 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default-linux",
-        "type": "github"
-      }
-    },
-    "systems_7": {
-      "locked": {
-        "lastModified": 1680978846,
-        "narHash": "sha256-Gtqg8b/v49BFDpDetjclCYXm8mAnTrUzR0JnE2nv5aw=",
-        "owner": "nix-systems",
-        "repo": "x86_64-linux",
-        "rev": "2ecfcac5e15790ba6ce360ceccddb15ad16d08a8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "x86_64-linux",
         "type": "github"
       }
     },
