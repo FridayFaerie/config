@@ -274,7 +274,7 @@ in {
   };
 
   # nvidia things
-  # note: I'm using NVIDIA GeForce MX550
+  # NOTE: I'm using NVIDIA GeForce MX550
   # https://nixos.wiki/wiki/Nvidia
   services.xserver.videoDrivers = ["nvidia"];
   hardware = {
