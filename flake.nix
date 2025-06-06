@@ -113,26 +113,15 @@
       };
     };
 
-    #FAZZI CODE
-    systems.url = "github:nix-systems/x86_64-linux";
     hyprsunset = {
-      url = "github:hyprwm/hyprsunset";
+      url = "github:FridayFaerie/hyprsunset";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         hyprutils.follows = "hyprland/hyprutils";
         hyprland-protocols.follows = "hyprland/hyprland-protocols";
         hyprwayland-scanner.follows = "hyprland/hyprwayland-scanner";
-        # systems.follows = "systems";
       };
     };
-
-    # hyprsunset = {
-    #   url = "github:hyprwm/hyprsunset";
-    #   inputs = {
-    #     nixpkgs.follows = "hyprland/nixpkgs";
-    #     hyprutils.follows = "hyprland/hyprutils";
-    #   };
-    # };
   };
 
   outputs = {
