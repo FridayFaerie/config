@@ -56,7 +56,7 @@
 
     ## HYPRLAND THINGS
     ## no nixpkgs override for cache reasons
-    hyprland.url = "github:FridayFaerie/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland";
 
     hypr-dynamic-cursors = {
       url = "github:VirtCode/hypr-dynamic-cursors";
@@ -114,7 +114,7 @@
     };
 
     hyprsunset = {
-      url = "github:FridayFaerie/hyprsunset";
+      url = "github:hyprwm/hyprsunset";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         hyprutils.follows = "hyprland/hyprutils";
