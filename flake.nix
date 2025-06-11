@@ -30,7 +30,7 @@
 
     nixCats = {
       # url = "github:FridayFaerie/nixCats/";
-      url = "github:FridayFaerie/nixCats";
+      url = "git+file:///home/friday/nix-inputs/nixCats";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -56,8 +56,8 @@
 
     ## HYPRLAND THINGS
     ## no nixpkgs override for cache reasons
-    # hyprland.url = "github:hyprwm/Hyprland";
     hyprland.url = "github:hyprwm/Hyprland";
+    # hyprland.url = "git+file:///home/friday/projects/hypr/Hyprland";
 
     hypr-dynamic-cursors = {
       url = "github:VirtCode/hypr-dynamic-cursors";

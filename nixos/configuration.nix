@@ -235,6 +235,8 @@ in {
     portalPackage = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
   };
 
+  programs.niri.enable = true;
+
   programs.ladybird.enable = true;
 
   # for dark theme
@@ -258,14 +260,8 @@ in {
     material-symbols
     nerd-fonts.jetbrains-mono
     nerd-fonts.recursive-mono
-    # nerd-fonts.fira-code
-    # cantarell-fonts
-    # texlivePackages.fontawesome
+    cantarell-fonts
     noto-fonts-cjk-sans
-    sil-padauk
-
-    # roboto
-    # source-sans
   ];
 
   environment.sessionVariables = {
