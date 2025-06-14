@@ -36,7 +36,8 @@ in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # Terminal things
+    # small terminal things
+    eza
     btop
     tealdeer
     mpv
