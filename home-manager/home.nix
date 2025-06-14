@@ -40,6 +40,7 @@ in {
     pkgs.kdePackages.qt5compat
     pkgs.kdePackages.kirigami.unwrapped
     pkgs.kdePackages.syntax-highlighting
+    pkgs.kdePackages.qqc2-desktop-style
 
     # (pkgs.writeShellScriptBin "my-hello" '' echo "Hello, ${config.home.username}!" '')
   ];
@@ -55,8 +56,9 @@ in {
       + ":${pkgs.qt6.qtdeclarative}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.qt5compat}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.qtmultimedia}/lib/qt-6/qml"
-      + ":${pkgs.kdePackages.syntax-highlighting}/lib/qt-6/qml"
-      + ":${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml";
+      + ":${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml"
+      + ":${pkgs.kdePackages.qqc2-desktop-style}/lib/qt-6/qml"
+      + ":${pkgs.kdePackages.syntax-highlighting}/lib/qt-6/qml";
 
     EDITOR = "nixCats";
     MANPAGER = "nixCats +Man!";
