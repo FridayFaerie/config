@@ -54,8 +54,8 @@ in {
   home.sessionVariables = {
     QML2_IMPORT_PATH =
       "${inputs.quickshell.packages.${system}.default}/lib/qt-6/qml"
-      + ":${pkgs.qt6.sonnet}/lib/qt-6/qml"
       + ":${pkgs.qt6.qtdeclarative}/lib/qt-6/qml"
+      + ":${pkgs.kdePackages.sonnet}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.qt5compat}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.qtmultimedia}/lib/qt-6/qml"
       + ":${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml"
