@@ -63,7 +63,7 @@ in {
     #   + ":${pkgs.kdePackages.qqc2-desktop-style}/lib/qt-6/qml"
     #   + ":${pkgs.kdePackages.syntax-highlighting}/lib/qt-6/qml";
 
-    QML2_IMPORT_PATH = lib.makeSearchPath "/lib/qt-6/qml" [
+    QML2_IMPORT_PATH = lib.makeSearchPath "lib/qt-6/qml" [
       inputs.quickshell.packages.${system}.default
       pkgs.kdePackages.sonnet
       pkgs.kdePackages.qt5compat
