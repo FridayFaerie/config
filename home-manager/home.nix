@@ -34,14 +34,6 @@ in {
     # inputs.wl_shimeji.packages.${system}.default
 
     localbuilds.snitch.packages.${system}.default
-
-    pkgs.kdePackages.qtdeclarative
-    pkgs.kdePackages.qtmultimedia
-    pkgs.kdePackages.qt5compat
-    pkgs.kdePackages.kirigami.unwrapped
-    pkgs.kdePackages.syntax-highlighting
-
-    # (pkgs.writeShellScriptBin "my-hello" '' echo "Hello, ${config.home.username}!" '')
   ];
 
   home.sessionPath = [
@@ -50,13 +42,16 @@ in {
 
   #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
   home.sessionVariables = {
-    QML2_IMPORT_PATH =
-      "${inputs.quickshell.packages.${system}.default}/lib/qt-6/qml"
-      + ":${pkgs.qt6.qtdeclarative}/lib/qt-6/qml"
-      + ":${pkgs.kdePackages.qt5compat}/lib/qt-6/qml"
-      + ":${pkgs.kdePackages.qtmultimedia}/lib/qt-6/qml"
-      + ":${pkgs.kdePackages.syntax-highlighting}/lib/qt-6/qml"
-      + ":${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml";
+    QML2_IMPORT_PATH = lib.makeSearchPath "lib/qt-6/qml" [
+      inputs.quickshell.packages.${system}.default
+      pkgs.kdePackages.sonnet
+      pkgs.kdePackages.qt5compat
+      pkgs.kdePackages.qtmultimedia
+      pkgs.kdePackages.qtdeclarative
+      pkgs.kdePackages.kirigami.unwrapped
+      pkgs.kdePackages.qqc2-desktop-style
+      pkgs.kdePackages.syntax-highlighting
+    ];
 
     EDITOR = "nixCats";
     MANPAGER = "nixCats +Man!";

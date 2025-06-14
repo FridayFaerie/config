@@ -36,7 +36,8 @@ in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # Terminal things
+    # small terminal things
+    eza
     btop
     tealdeer
     mpv
@@ -213,7 +214,8 @@ in {
   #   ];
   # };
 
-  programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
+  # programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
+  programs.command-not-found.enable = false;
 
   # for nh
   programs.nh = {
@@ -221,7 +223,7 @@ in {
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
     flake = "/home/friday/config";
-    package = inputs.nh.packages.${system}.default;
+    # package = inputs.nh.packages.${system}.default;
   };
 
   programs.ssh.startAgent = true;
