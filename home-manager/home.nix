@@ -35,13 +35,13 @@ in {
 
     localbuilds.snitch.packages.${system}.default
 
-    pkgs.kdePackages.sonnet
-    pkgs.kdePackages.qt5compat
-    pkgs.kdePackages.qtmultimedia
-    pkgs.kdePackages.qtdeclarative
-    pkgs.kdePackages.kirigami.unwrapped
-    pkgs.kdePackages.qqc2-desktop-style
-    pkgs.kdePackages.syntax-highlighting
+    # pkgs.kdePackages.sonnet
+    # pkgs.kdePackages.qt5compat
+    # pkgs.kdePackages.qtmultimedia
+    # pkgs.kdePackages.qtdeclarative
+    # pkgs.kdePackages.kirigami.unwrapped
+    # pkgs.kdePackages.qqc2-desktop-style
+    # pkgs.kdePackages.syntax-highlighting
 
     # (pkgs.writeShellScriptBin "my-hello" '' echo "Hello, ${config.home.username}!" '')
   ];
@@ -52,6 +52,7 @@ in {
 
   #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
   home.sessionVariables = {
+    # TODO: do I like this more than using lib. functions? maybe?
     QML2_IMPORT_PATH =
       "${inputs.quickshell.packages.${system}.default}/lib/qt-6/qml"
       + ":${pkgs.qt6.qtdeclarative}/lib/qt-6/qml"
