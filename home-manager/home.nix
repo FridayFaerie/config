@@ -47,7 +47,7 @@ in {
     # TODO: is pkgs.kdePackages.qtbase.qtQmlPrefix really necessary? :/
     QML2_IMPORT_PATH = lib.makeSearchPath pkgs.kdePackages.qtbase.qtQmlPrefix [
       inputs.quickshell.packages.${system}.default
-      pkgs.kdePackages.sonnet
+      # pkgs.kdePackages.sonnet
       pkgs.kdePackages.qt5compat
       pkgs.kdePackages.qtmultimedia
       pkgs.kdePackages.qtdeclarative
