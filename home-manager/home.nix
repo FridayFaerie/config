@@ -30,6 +30,8 @@ in {
       withI3 = false;
     })
 
+    pkgs.kdePackages.qtdeclarative
+
     # inputs.zen-browser.packages.${system}.default
     # inputs.wl_shimeji.packages.${system}.default
 
