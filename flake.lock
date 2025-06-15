@@ -122,17 +122,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1748038505,
-        "narHash": "sha256-7L2MRMB2ONEh7wlgQzraEoA+0o88EOV87KNqZg7vpHA=",
-        "owner": "VirtCode",
-        "repo": "hypr-dynamic-cursors",
-        "rev": "761acf0e602e0f6549e5e6c0289a0402e6073489",
-        "type": "github"
+        "lastModified": 1750004859,
+        "narHash": "sha256-7Iq2gpe8WXyUMZ/moKFejkdfm9alXAzppM5jUOjXrsk=",
+        "ref": "refs/heads/main",
+        "rev": "0757be056d30f98f80654f93f8e9ad38fe78365c",
+        "revCount": 91,
+        "type": "git",
+        "url": "file:///home/friday/projects/hypr-dynamic-cursors"
       },
       "original": {
-        "owner": "VirtCode",
-        "repo": "hypr-dynamic-cursors",
-        "type": "github"
+        "type": "git",
+        "url": "file:///home/friday/projects/hypr-dynamic-cursors"
       }
     },
     "hyprcursor": {
@@ -247,17 +247,16 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1749981087,
-        "narHash": "sha256-8eqq3jybiTFNELHhdG5cyaIii0UqwwiyG5QWFaTaQTA=",
+        "lastModified": 1749982876,
+        "narHash": "sha256-HRHDJMxBGFMhnz+QTPpEbnNttBi1RyfAFFStBFawkRk=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "57d20a1bf67676dc63347e4f1df2e4b66133733f",
+        "rev": "d037c54260d4f55c7f7b5ca69faa2ebe10289ef8",
         "type": "github"
       },
       "original": {
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "57d20a1bf67676dc63347e4f1df2e4b66133733f",
         "type": "github"
       }
     },
