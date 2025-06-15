@@ -7,7 +7,7 @@
   # altpkgs,
   ...
 }: let
-  system = "x86_64-linux";
+  system = pkgs.system;
 in {
   home.username = "friday";
   home.homeDirectory = "/home/friday";
@@ -42,7 +42,8 @@ in {
 
   #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
   home.sessionVariables = {
-    QML2_IMPORT_PATH = lib.makeSearchPath "lib/qt-6/qml" [
+    # TODO: is pkgs.kdePackages.qtbase.qtQmlPrefix really necessary? :/
+    QML2_IMPORT_PATH = lib.makeSearchPath pkgs.kdePackages.qtbase.qtQmlPrefix [
       inputs.quickshell.packages.${system}.default
       pkgs.kdePackages.sonnet
       pkgs.kdePackages.qt5compat

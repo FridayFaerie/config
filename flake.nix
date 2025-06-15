@@ -141,12 +141,6 @@
       snitch = import ./packages/snitch.nix {inherit nixpkgs;};
       unifont = import ./packages/unifont.nix {inherit nixpkgs;};
     };
-    # pkgs = import nixpkgs {
-    #   inherit system;
-    #   config = {
-    #     # allowUnfree = true;
-    #   };
-    # };
   in {
     nixosConfigurations = {
       friday = nixpkgs.lib.nixosSystem {
