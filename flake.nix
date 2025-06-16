@@ -61,8 +61,8 @@
     # hyprland.url = "git+file:///home/friday/projects/hypr/Hyprland";
 
     hypr-dynamic-cursors = {
-      # url = "github:VirtCode/hypr-dynamic-cursors";
-      url = "github:FridayFaerie/hypr-dynamic-cursors";
+      url = "github:VirtCode/hypr-dynamic-cursors";
+      # url = "github:FridayFaerie/hypr-dynamic-cursors";
       inputs = {
         hyprland.follows = "hyprland";
         nixpkgs.follows = "hyprland/nixpkgs";
