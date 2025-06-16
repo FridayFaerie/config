@@ -600,26 +600,6 @@
         "type": "github"
       }
     },
-    "nh": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1750012662,
-        "narHash": "sha256-oqwScFXSJavR16ffd090wnUkoHn9t28C3gRkTn2///4=",
-        "owner": "nix-community",
-        "repo": "nh",
-        "rev": "f5aa53599ab28f83f5e45b88ed6fef531e747cde",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "nh",
-        "type": "github"
-      }
-    },
     "nixCats": {
       "inputs": {
         "nixCats": "nixCats_2",
@@ -814,7 +794,6 @@
         "hyprpaper": "hyprpaper",
         "hyprpicker": "hyprpicker",
         "hyprsunset": "hyprsunset",
-        "nh": "nh",
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs_2",
         "programsdb": "programsdb",
