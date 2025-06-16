@@ -13,7 +13,7 @@
       });
 in {
   packages = forAllSystems ({pkgs}: {
-    default = pkgs.buildGoModule rec {
+    default = pkgs.buildGoModule {
       pname = "snitch";
       version = "1.0.2";
       src = pkgs.fetchFromGitHub {

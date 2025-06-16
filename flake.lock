@@ -122,17 +122,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1750004859,
-        "narHash": "sha256-7Iq2gpe8WXyUMZ/moKFejkdfm9alXAzppM5jUOjXrsk=",
-        "ref": "refs/heads/main",
-        "rev": "0757be056d30f98f80654f93f8e9ad38fe78365c",
-        "revCount": 91,
-        "type": "git",
-        "url": "file:///home/friday/projects/hypr-dynamic-cursors"
+        "lastModified": 1750005630,
+        "narHash": "sha256-8a1Doy7ToR3Mtadv0AT67hg5n4E/RP1ELGe2qStJBnE=",
+        "owner": "FridayFaerie",
+        "repo": "hypr-dynamic-cursors",
+        "rev": "ad7811019875cbbd789b76cfc58cf04b55291260",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/friday/projects/hypr-dynamic-cursors"
+        "owner": "FridayFaerie",
+        "repo": "hypr-dynamic-cursors",
+        "type": "github"
       }
     },
     "hyprcursor": {

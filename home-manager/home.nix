@@ -52,7 +52,7 @@ in {
       pkgs.kdePackages.qtmultimedia
       pkgs.kdePackages.qtdeclarative
       pkgs.kdePackages.kirigami.unwrapped
-      pkgs.kdePackages.qqc2-desktop-style
+      # pkgs.kdePackages.qqc2-desktop-style
       pkgs.kdePackages.syntax-highlighting
     ];
 
