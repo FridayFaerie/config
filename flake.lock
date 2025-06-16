@@ -98,11 +98,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1750033262,
-        "narHash": "sha256-TcFN78w6kPspxpbPsxW/8vQ1GAtY8Y3mjBaC+oB8jo4=",
+        "lastModified": 1750099781,
+        "narHash": "sha256-6EVPi3XzioPzwxLZ/2nD6jbKCLA2ZXRdOWFgHg2ozrA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "66523b0efe93ce5b0ba96dcddcda15d36673c1f0",
+        "rev": "1db3cb415da14c81d8e0fdd3a5edeba82ad13a1f",
         "type": "github"
       },
       "original": {
@@ -122,15 +122,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1750005630,
+        "lastModified": 1750077890,
         "narHash": "sha256-8a1Doy7ToR3Mtadv0AT67hg5n4E/RP1ELGe2qStJBnE=",
-        "owner": "FridayFaerie",
+        "owner": "VirtCode",
         "repo": "hypr-dynamic-cursors",
-        "rev": "ad7811019875cbbd789b76cfc58cf04b55291260",
+        "rev": "6d3f6098509e7ed0217ac84a485b56755fa220f2",
         "type": "github"
       },
       "original": {
-        "owner": "FridayFaerie",
+        "owner": "VirtCode",
         "repo": "hypr-dynamic-cursors",
         "type": "github"
       }
@@ -247,11 +247,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1750074186,
-        "narHash": "sha256-QZItKFdQRXGTFoZ7+JoIFdPSYOW8qLPkNNZDyor1Ou8=",
+        "lastModified": 1750086128,
+        "narHash": "sha256-WT/vpu5Sn4gz2yYY84sm/xvmHVfyHqCndQBapeNAIow=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "d4e8a440874bebed07a5908009a3d854120277ed",
+        "rev": "aba2cfe7a8d5c1658fe8df0095a089cc73db43ab",
         "type": "github"
       },
       "original": {
@@ -749,11 +749,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1750082817,
-        "narHash": "sha256-qbL4JfbcUDNB2usmq5wclOuBOJyjYlj7ksGM2odR95w=",
+        "lastModified": 1750095577,
+        "narHash": "sha256-FjJcAtElact4zhFmNi+HJ9erPnjQRKPEjbu1RrzBz5E=",
         "owner": "wamserma",
         "repo": "flake-programs-sqlite",
-        "rev": "74da0f422fa1daa4166783d71daddb537c686628",
+        "rev": "b109d44b73c3069fad44e2f77eb91f79ae3c260d",
         "type": "github"
       },
       "original": {
