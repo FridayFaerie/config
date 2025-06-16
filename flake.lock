@@ -98,11 +98,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1749999552,
-        "narHash": "sha256-iCUuEq9qXUh8L1c2bRyCayAqfuUEs9nGAUlXv2RcoF8=",
+        "lastModified": 1750033262,
+        "narHash": "sha256-TcFN78w6kPspxpbPsxW/8vQ1GAtY8Y3mjBaC+oB8jo4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "04672588c61aebd18c0d0ada66dd7bb4d8edab0d",
+        "rev": "66523b0efe93ce5b0ba96dcddcda15d36673c1f0",
         "type": "github"
       },
       "original": {
@@ -122,17 +122,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1750004859,
-        "narHash": "sha256-7Iq2gpe8WXyUMZ/moKFejkdfm9alXAzppM5jUOjXrsk=",
-        "ref": "refs/heads/main",
-        "rev": "0757be056d30f98f80654f93f8e9ad38fe78365c",
-        "revCount": 91,
-        "type": "git",
-        "url": "file:///home/friday/projects/hypr-dynamic-cursors"
+        "lastModified": 1750005630,
+        "narHash": "sha256-8a1Doy7ToR3Mtadv0AT67hg5n4E/RP1ELGe2qStJBnE=",
+        "owner": "FridayFaerie",
+        "repo": "hypr-dynamic-cursors",
+        "rev": "ad7811019875cbbd789b76cfc58cf04b55291260",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/friday/projects/hypr-dynamic-cursors"
+        "owner": "FridayFaerie",
+        "repo": "hypr-dynamic-cursors",
+        "type": "github"
       }
     },
     "hyprcursor": {
@@ -247,11 +247,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1749982876,
-        "narHash": "sha256-HRHDJMxBGFMhnz+QTPpEbnNttBi1RyfAFFStBFawkRk=",
+        "lastModified": 1750022037,
+        "narHash": "sha256-mwpZzrN/Jl2ydR81r0+n6m5kTlhKK56Nc1U6GQHUvCg=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "d037c54260d4f55c7f7b5ca69faa2ebe10289ef8",
+        "rev": "bd5703d5c6f09e07321de58b19da438ac715b668",
         "type": "github"
       },
       "original": {
@@ -600,26 +600,6 @@
         "type": "github"
       }
     },
-    "nh": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1749896124,
-        "narHash": "sha256-+jwRKYksHw/XpLClxpSYQzEadsC0X3EHcIhtBD3p1AE=",
-        "owner": "nix-community",
-        "repo": "nh",
-        "rev": "6000f87a413bb91b7a546b95f303766bf659ac30",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "nh",
-        "type": "github"
-      }
-    },
     "nixCats": {
       "inputs": {
         "nixCats": "nixCats_2",
@@ -769,11 +749,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1749995124,
-        "narHash": "sha256-rx/D2z5X+tgXw9J+ibApf+RMXhsKk67PAge685jBuGY=",
+        "lastModified": 1750018595,
+        "narHash": "sha256-t1V6PgQhNUXKYri78LpYbaW3RxFVLn4BwmXXcw38fV4=",
         "owner": "wamserma",
         "repo": "flake-programs-sqlite",
-        "rev": "46a9bc70530d22d83f537c2ff9310a7604f643e2",
+        "rev": "a62429f5de66cdf292db5f78b67f193bc8ac2df8",
         "type": "github"
       },
       "original": {
@@ -814,7 +794,6 @@
         "hyprpaper": "hyprpaper",
         "hyprpicker": "hyprpicker",
         "hyprsunset": "hyprsunset",
-        "nh": "nh",
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs_2",
         "programsdb": "programsdb",

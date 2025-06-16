@@ -30,6 +30,7 @@ in {
       withI3 = false;
     })
 
+    # TODO: try using qt.enable instead
     pkgs.kdePackages.qtdeclarative
 
     # inputs.zen-browser.packages.${system}.default
@@ -45,14 +46,14 @@ in {
   #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
   home.sessionVariables = {
     # TODO: is pkgs.kdePackages.qtbase.qtQmlPrefix really necessary? :/
-    QML2_IMPORT_PATH = lib.makeSearchPath pkgs.kdePackages.qtbase.qtQmlPrefix [
+    QML2_IMPORT_PATH = lib.makeSearchPath "/lib/qt-6/qml" [
       inputs.quickshell.packages.${system}.default
-      pkgs.kdePackages.sonnet
+      # pkgs.kdePackages.sonnet
       pkgs.kdePackages.qt5compat
       pkgs.kdePackages.qtmultimedia
       pkgs.kdePackages.qtdeclarative
       pkgs.kdePackages.kirigami.unwrapped
-      pkgs.kdePackages.qqc2-desktop-style
+      # pkgs.kdePackages.qqc2-desktop-style
       pkgs.kdePackages.syntax-highlighting
     ];
 

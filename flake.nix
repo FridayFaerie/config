@@ -11,10 +11,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nh = {
-      url = "github:nix-community/nh";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nh = {
+    #   url = "github:nix-community/nh";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     # Home-manager things
     quickshell = {
@@ -62,7 +62,7 @@
 
     hypr-dynamic-cursors = {
       # url = "github:VirtCode/hypr-dynamic-cursors";
-      url = "git+file:///home/friday/projects/hypr-dynamic-cursors";
+      url = "github:FridayFaerie/hypr-dynamic-cursors";
       inputs = {
         hyprland.follows = "hyprland";
         nixpkgs.follows = "hyprland/nixpkgs";
