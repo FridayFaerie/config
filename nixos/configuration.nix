@@ -363,7 +363,7 @@ in {
       };
       tuigreet_session = {
         # command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd uwsm start default";
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --sessions ${config.services.xserver.displayManager.sessionData.desktops}/share/xsessions:${config.services.xserver.displayManager.sessionData.desktops}/share/wayland-sessions --remember --remember-user-session";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --sessions ${config.services.displayManager.sessionData.desktops}/share/xsessions:${config.services.displayManager.sessionData.desktops}/share/wayland-sessions --remember --remember-user-session";
         user = "greeter";
       };
       # default_session = initial_session;
