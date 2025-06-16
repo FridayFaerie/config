@@ -362,7 +362,7 @@ in {
         user = "friday";
       };
       tuigreet_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd Hyprland";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd uwsm start default";
         user = "greeter";
       };
       # default_session = initial_session;
