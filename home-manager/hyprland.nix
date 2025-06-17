@@ -7,11 +7,11 @@
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
-    plugins = [
-      inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-    ];
+    # plugins = [
+    #   inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+    #   inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
+    #   inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+    # ];
     #extraConfig = "bind = $mainMod, S, submap, resize";
     settings = {
       source = [

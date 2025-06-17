@@ -98,11 +98,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1750033262,
-        "narHash": "sha256-TcFN78w6kPspxpbPsxW/8vQ1GAtY8Y3mjBaC+oB8jo4=",
+        "lastModified": 1750107071,
+        "narHash": "sha256-yfuHCO4m+gu3OBNGnP0/TL5W8nLXrC/EV1fs/+YcoL8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "66523b0efe93ce5b0ba96dcddcda15d36673c1f0",
+        "rev": "0edffd088e42fdc48598b37d88eb5345e2ca3937",
         "type": "github"
       },
       "original": {
@@ -122,15 +122,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1750005630,
+        "lastModified": 1750077890,
         "narHash": "sha256-8a1Doy7ToR3Mtadv0AT67hg5n4E/RP1ELGe2qStJBnE=",
-        "owner": "FridayFaerie",
+        "owner": "VirtCode",
         "repo": "hypr-dynamic-cursors",
-        "rev": "ad7811019875cbbd789b76cfc58cf04b55291260",
+        "rev": "6d3f6098509e7ed0217ac84a485b56755fa220f2",
         "type": "github"
       },
       "original": {
-        "owner": "FridayFaerie",
+        "owner": "VirtCode",
         "repo": "hypr-dynamic-cursors",
         "type": "github"
       }
@@ -247,11 +247,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1750022037,
-        "narHash": "sha256-mwpZzrN/Jl2ydR81r0+n6m5kTlhKK56Nc1U6GQHUvCg=",
+        "lastModified": 1750106438,
+        "narHash": "sha256-zaTFR6NLaXkveEGl2kdl4UlvT7eHm3cYSbgSkibCO+M=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "bd5703d5c6f09e07321de58b19da438ac715b668",
+        "rev": "0ece4af36a988ad06b28ed666011d84372d9e4dc",
         "type": "github"
       },
       "original": {
@@ -749,11 +749,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1750018595,
-        "narHash": "sha256-t1V6PgQhNUXKYri78LpYbaW3RxFVLn4BwmXXcw38fV4=",
+        "lastModified": 1750111434,
+        "narHash": "sha256-xxilNHyiSxnsivPNd6vic3fcki7CtwL1s0nMW+9EQE4=",
         "owner": "wamserma",
         "repo": "flake-programs-sqlite",
-        "rev": "a62429f5de66cdf292db5f78b67f193bc8ac2df8",
+        "rev": "0e14b72f7b5bdd886286a9cef9d7e09791d8dc2e",
         "type": "github"
       },
       "original": {
@@ -769,11 +769,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1749772873,
-        "narHash": "sha256-ZsFQIs3ZpUud1QmR1TyhAW0LGbjHzCkA79YCLBbJ12A=",
+        "lastModified": 1750053656,
+        "narHash": "sha256-RLICfwDvIEFtLc3GrVsPu46sdGLlPe3ULGz4gSgLxCA=",
         "ref": "refs/heads/master",
-        "rev": "517143adf97fb0df7e9a7584061deecdffb19faf",
-        "revCount": 576,
+        "rev": "9a3033340529881ae5e564d1aedf6884f53e3ea1",
+        "revCount": 582,
         "type": "git",
         "url": "file:///home/friday/nix-inputs/quickshell"
       },

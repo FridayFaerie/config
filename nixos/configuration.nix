@@ -258,6 +258,7 @@ in {
       }
     ];
   };
+
   fonts.packages = with pkgs; [
     material-symbols
     nerd-fonts.jetbrains-mono
@@ -268,6 +269,16 @@ in {
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
+    HYPR_PLUGIN_DIR =
+      pkgs.symlinkJoin {
+        name = "hyprland-plugins";
+        paths = [
+          inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
+          inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+          inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+        ];
+      }
+      + "/lib";
   };
 
   environment.variables = {
@@ -357,19 +368,16 @@ in {
     enable = true;
     settings = rec {
       initial_session = {
-        command = "${inputs.hyprland.packages.${system}.hyprland}/bin/Hyprland";
-        # command = "${pkgs.hyprland}/bin/Hyprland";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd uwsm start default";
         user = "friday";
       };
-      tuigreet_session = {
+      default_session = {
         # command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd uwsm start default";
 
         # from https://ryjelsum.me/homelab/greetd-session-choose/
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --sessions ${config.services.displayManager.sessionData.desktops}/share/xsessions:${config.services.displayManager.sessionData.desktops}/share/wayland-sessions --remember --remember-user-session";
         user = "greeter";
       };
-      # default_session = initial_session;
-      default_session = tuigreet_session;
     };
   };
 
