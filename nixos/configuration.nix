@@ -365,21 +365,19 @@ in {
   services.greetd = {
     enable = true;
     settings = rec {
-      initial_session = {
+      hyprland_session = {
         command = "${inputs.hyprland.packages.${system}.hyprland}/bin/Hyprland";
-        # command = "${pkgs.hyprland}/bin/Hyprland";
         user = "friday";
       };
-      tuigreet_session = {
+      uwsm_session = {
         # command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd uwsm start default";
 
         # from https://ryjelsum.me/homelab/greetd-session-choose/
-        # command = "${pkgs.greetd.tuigreet}/bin/tuigreet --sessions ${config.services.displayManager.sessionData.desktops}/share/xsessions:${config.services.displayManager.sessionData.desktops}/share/wayland-sessions --remember --remember-user-session";
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --sessions ${config.services.displayManager.sessionData.desktops}/share/xsessions:${config.services.displayManager.sessionData.desktops}/share/wayland-sessions";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --sessions ${config.services.displayManager.sessionData.desktops}/share/xsessions:${config.services.displayManager.sessionData.desktops}/share/wayland-sessions --remember --remember-user-session";
         user = "greeter";
       };
-      # default_session = initial_session;
-      default_session = tuigreet_session;
+      default_session = uwsm_session;
+      initial_session = uwsm_session;
     };
   };
 
