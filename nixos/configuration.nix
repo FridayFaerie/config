@@ -269,14 +269,16 @@ in {
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-    HYPR_PLUGIN_DIR = pkgs.symlinkJoin {
-      name = "hyprland-plugins";
-      paths = [
-        inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
-        inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-        inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
-      ];
-    };
+    HYPR_PLUGIN_DIR =
+      pkgs.symlinkJoin {
+        name = "hyprland-plugins";
+        paths = [
+          inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
+          inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+          inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+        ];
+      }
+      + "/lib";
   };
 
   environment.variables = {
