@@ -38,45 +38,46 @@ in {
   environment.systemPackages = with pkgs; [
     # small terminal things
     eza
-    btop
-    tealdeer
-    mpv
     git
-    stow
-    ripgrep
-    wallust
-    wl-screenrec
-    busybox
-    file
-    cachix
+    btop
     dust
+    file
+    stow
+    cachix
+    ripgrep
+    busybox
+    tealdeer
     caligula
-    pastel
-    astroterm
+    nix-output-monitor
 
     # Larger terminal things
     discordo
 
     # just-for-pretty terminal things
     # neo
+    # nitch
     # lavat
-    # asciiquarium
-    # globe-cli
+    # libcaca
     # clolcat
     # fortune
-    # nitch
-    # libcaca
-    leaf
+    # globe-cli
+    # asciiquarium
     sl
+    leaf
+    pastel
+    astroterm
 
-    #usefuls
+    # usefuls
+    mpv
     typst
     clang
-    clang-tools
-    home-manager
-    nix-tree
     ffmpeg
     yt-dlp
+    wallust
+    nix-tree
+    clang-tools
+    home-manager
+    wl-screenrec
 
     ## Hyprland things
     # hyprpaper
@@ -84,9 +85,9 @@ in {
     # hyprlock
     # hyprsunset
     # hyprshot
-    inputs.hyprpaper.packages.${system}.hyprpaper
     inputs.hypridle.packages.${system}.hypridle
     inputs.hyprlock.packages.${system}.hyprlock
+    inputs.hyprpaper.packages.${system}.hyprpaper
     inputs.hyprsunset.packages.${system}.hyprsunset
     (hyprshot.override {
       hyprland = inputs.hyprland.packages.${system}.hyprland;
@@ -94,30 +95,26 @@ in {
     })
 
     ## DE things
-    # waybar
-    rofi-wayland
-    libnotify
-    # swaynotificationcenter
-    wl-clipboard
-    wlogout
-    pamixer
-    brightnessctl
-    networkmanagerapplet
     yazi
     kitty
-    # kando
-
+    pamixer
+    wlogout
+    libnotify
+    rofi-wayland
+    wl-clipboard
+    brightnessctl
     nvidia-offload
+    networkmanagerapplet
 
     # Bigger programs
     firefox
-    signal-desktop
-    prismlauncher
     legcord
-    qutebrowser
     inkscape
-    onlyoffice-desktopeditors
     lutris-free
+    qutebrowser
+    prismlauncher
+    signal-desktop
+    onlyoffice-desktopeditors
   ];
 
   # Bootloader.
