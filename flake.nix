@@ -68,12 +68,17 @@
         nixpkgs.follows = "hyprland/nixpkgs";
       };
     };
-
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs = {
         hyprland.follows = "hyprland";
         nixpkgs.follows = "hyprland/nixpkgs";
+      };
+    };
+    hypr-darkwindow = {
+      url = "github:micha4w/Hypr-DarkWindow";
+      inputs.hyprland = {
+        follows = "hyprland";
       };
     };
 
@@ -115,11 +120,10 @@
         hyprgraphics.follows = "hyprland/hyprgraphics";
       };
     };
-
     hyprsunset = {
       url = "github:hyprwm/hyprsunset";
       inputs = {
-        nixpkgs.follows = "nixpkgs";
+        nixpkgs.follows = "hyprland/nixpkgs";
         hyprutils.follows = "hyprland/hyprutils";
         hyprland-protocols.follows = "hyprland/hyprland-protocols";
         hyprwayland-scanner.follows = "hyprland/hyprwayland-scanner";
