@@ -276,6 +276,7 @@ in {
           inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
           inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
           inputs.hypr-darkwindow.packages.${pkgs.system}.Hypr-DarkWindow
+          inputs.hyprchroma.packages.${pkgs.system}.Hypr-DarkWindow
         ];
       }
       + "/lib";

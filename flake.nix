@@ -57,9 +57,8 @@
     ## HYPRLAND THINGS
     ## no nixpkgs override for cache reasons
     hyprland.url = "github:hyprwm/Hyprland";
-    # hyprland.url = "github:hyprwm/Hyprland/57d20a1bf67676dc63347e4f1df2e4b66133733f";
-    # hyprland.url = "git+file:///home/friday/projects/hypr/Hyprland";
 
+    ## hyprland plugins
     hypr-dynamic-cursors = {
       url = "github:VirtCode/hypr-dynamic-cursors";
       # url = "github:FridayFaerie/hypr-dynamic-cursors";
@@ -77,6 +76,12 @@
     };
     hypr-darkwindow = {
       url = "github:micha4w/Hypr-DarkWindow";
+      inputs.hyprland = {
+        follows = "hyprland";
+      };
+    };
+    hyprchroma = {
+      url = "github:alexhulbert/Hyprchroma";
       inputs.hyprland = {
         follows = "hyprland";
       };
