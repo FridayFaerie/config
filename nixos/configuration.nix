@@ -223,7 +223,9 @@ in {
     # package = inputs.nh.packages.${system}.default;
   };
 
+  # TODO: why is gcr-ssh-agent enabled... :(
   programs.ssh.startAgent = true;
+  services.gnome.gcr-ssh-agent.enable = false;
 
   # Hyprland things
   programs.hyprland = {
