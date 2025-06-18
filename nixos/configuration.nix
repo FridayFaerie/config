@@ -275,7 +275,7 @@ in {
           inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
           inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
           inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
-          inputs.hypr-darkwindow.packages.${pkgs.system}.hypr-darkwindow
+          inputs.something.packages.${pkgs.system}.hypr-darkwindow
         ];
       }
       + "/lib";
