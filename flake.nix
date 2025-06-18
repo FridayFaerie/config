@@ -75,7 +75,7 @@
         nixpkgs.follows = "hyprland/nixpkgs";
       };
     };
-    something = {
+    hypr-darkwindow = {
       url = "github:micha4w/Hypr-DarkWindow";
       inputs.hyprland = {
         follows = "hyprland";
