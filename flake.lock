@@ -297,17 +297,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1750372112,
-        "narHash": "sha256-vkSWTAGpDnXExzsWhjULSX6dL47FUlM0fw7OJooRF8E=",
-        "owner": "hyprwm",
-        "repo": "hyprland-plugins",
-        "rev": "03b07176286ba66d8c55ed67ce9b904f7777f41d",
-        "type": "github"
+        "lastModified": 1750377207,
+        "narHash": "sha256-Zkhs+rPxnbbbe+A9CpSNohx47lpj11fHWfYYJxLBqfo=",
+        "ref": "refs/heads/main",
+        "rev": "f31ae3e590fe9b745d93d4d9883f143d872b7674",
+        "revCount": 305,
+        "type": "git",
+        "url": "file:///home/friday/projects/hypr/hyprland-plugins"
       },
       "original": {
-        "owner": "hyprwm",
-        "repo": "hyprland-plugins",
-        "type": "github"
+        "type": "git",
+        "url": "file:///home/friday/projects/hypr/hyprland-plugins"
       }
     },
     "hyprland-protocols": {

@@ -68,7 +68,8 @@
       };
     };
     hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
+      # url = "github:hyprwm/hyprland-plugins";
+      url = "git+file:///home/friday/projects/hypr/hyprland-plugins";
       inputs = {
         hyprland.follows = "hyprland";
         nixpkgs.follows = "hyprland/nixpkgs";
