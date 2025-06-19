@@ -2,7 +2,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   imports = [
     # ../../nixos
   ];
@@ -10,13 +11,10 @@
   environment.systemPackages = with pkgs; [
     git
     gum
-    (
-      writeShellScriptBin "nix-installer"
-      ''
-        #!/usr/bin/env bash
-        echo TODO: nixinstaller
-      ''
-    )
+    (writeShellScriptBin "nix-installer" ''
+      #!/usr/bin/env bash
+      echo TODO: nixinstaller
+    '')
   ];
 
   nixpkgs = {
@@ -24,7 +22,10 @@
     config.allowUnfree = true;
   };
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   services = {
     qemuGuest.enable = true;
@@ -33,7 +34,15 @@
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
-    supportedFilesystems = lib.mkForce ["btrfs" "reiserfs" "vfat" "f2fs" "xfs" "ntfs" "cifs"];
+    supportedFilesystems = lib.mkForce [
+      "btrfs"
+      "reiserfs"
+      "vfat"
+      "f2fs"
+      "xfs"
+      "ntfs"
+      "cifs"
+    ];
   };
 
   networking = {

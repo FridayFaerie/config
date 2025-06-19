@@ -136,74 +136,77 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    # altnixpkgs,
-    auto-cpufreq,
-    home-manager,
-    ...
-  } @ inputs: let
-    inherit (self) outputs;
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+  outputs =
+    {
+      self,
+      nixpkgs,
+      # altnixpkgs,
+      auto-cpufreq,
+      home-manager,
+      ...
+    }@inputs:
+    let
+      inherit (self) outputs;
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
 
-    localbuilds = {
-      snitch = import ./packages/snitch.nix {inherit nixpkgs;};
-      unifont = import ./packages/unifont.nix {inherit nixpkgs;};
-    };
-  in {
-    nixosConfigurations = {
-      friday = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        modules = [
-          ./nixos/configuration.nix
-          ./nixos/hardware-configuration.nix
-          auto-cpufreq.nixosModules.default
-        ];
+      localbuilds = {
+        snitch = import ./packages/snitch.nix { inherit nixpkgs; };
+        unifont = import ./packages/unifont.nix { inherit nixpkgs; };
       };
+    in
+    {
+      nixosConfigurations = {
+        friday = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./nixos/configuration.nix
+            ./nixos/hardware-configuration.nix
+            auto-cpufreq.nixosModules.default
+          ];
+        };
 
-      # from https://haseebmajid.dev/posts/2024-02-04-how-to-create-a-custom-nixos-iso/
-      iso = nixpkgs.lib.nixosSystem {
-        modules = [
-          "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
-          "${nixpkgs}/nixos/modules/installer/cd-dvd/channel.nix"
-          ./iso/configuration.nix
-        ];
-        specialArgs = {
-          inherit inputs;
+        # from https://haseebmajid.dev/posts/2024-02-04-how-to-create-a-custom-nixos-iso/
+        iso = nixpkgs.lib.nixosSystem {
+          modules = [
+            "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
+            "${nixpkgs}/nixos/modules/installer/cd-dvd/channel.nix"
+            ./iso/configuration.nix
+          ];
+          specialArgs = {
+            inherit inputs;
+          };
         };
       };
-    };
 
-    homeConfigurations."friday" = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
+      homeConfigurations."friday" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
-      modules = [
-        ./home-manager/hyprland.nix
-        inputs.textfox.homeManagerModules.default
-        ./home-manager/home.nix
-      ];
+        modules = [
+          ./home-manager/hyprland.nix
+          inputs.textfox.homeManagerModules.default
+          ./home-manager/home.nix
+        ];
 
-      extraSpecialArgs = {
-        inherit inputs;
-        inherit localbuilds;
+        extraSpecialArgs = {
+          inherit inputs;
+          inherit localbuilds;
+        };
       };
-    };
 
-    homeConfigurations."bun" = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
+      homeConfigurations."bun" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
-      modules = [
-        ./bun/home.nix
-      ];
+        modules = [
+          ./bun/home.nix
+        ];
 
-      extraSpecialArgs = {
-        inherit inputs;
-        inherit localbuilds;
+        extraSpecialArgs = {
+          inherit inputs;
+          inherit localbuilds;
+        };
       };
-    };
 
-    formatter.x86_64-linux = pkgs.alejandra;
-  };
+      formatter.x86_64-linux = pkgs.nixfmt-rfc-style;
+    };
 }
