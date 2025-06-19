@@ -278,10 +278,11 @@ in
       pkgs.symlinkJoin {
         name = "hyprland-plugins";
         paths = [
-          inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
           inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-          inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+          inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
+          inputs.hyprland-plugins.packages.${pkgs.system}.hyprfocus
           inputs.hypr-darkwindow.packages.${pkgs.system}.Hypr-DarkWindow
+          inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
           # inputs.hyprchroma.packages.${pkgs.system}.Hypr-DarkWindow
         ];
       }
