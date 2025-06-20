@@ -172,7 +172,11 @@ in {
   };
 
   # Flakes
-  nix.settings.experimental-features = ["nix-command" "flakes" "ca-derivations"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+    "ca-derivations"
+  ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -211,8 +215,8 @@ in {
   #   ];
   # };
 
-  # programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
-  programs.command-not-found.enable = false;
+  programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
+  # programs.command-not-found.enable = false;
 
   # for nh
   programs.nh = {
@@ -223,7 +227,9 @@ in {
     # package = inputs.nh.packages.${system}.default;
   };
 
+  # TODO: why is gcr-ssh-agent enabled... :(
   programs.ssh.startAgent = true;
+  services.gnome.gcr-ssh-agent.enable = false;
 
   # Hyprland things
   programs.hyprland = {
@@ -270,9 +276,12 @@ in {
       pkgs.symlinkJoin {
         name = "hyprland-plugins";
         paths = [
-          inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
           inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+          inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
+          inputs.hyprland-plugins.packages.${pkgs.system}.hyprfocus
+          inputs.hypr-darkwindow.packages.${pkgs.system}.Hypr-DarkWindow
           inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+          # inputs.hyprchroma.packages.${pkgs.system}.Hypr-DarkWindow
         ];
       }
       + "/lib";
@@ -389,7 +398,14 @@ in {
   users.users.friday = {
     isNormalUser = true;
     description = "friday";
-    extraGroups = ["networkmanager" "wheel" "libvirtd" "adbusers" "audio" "video"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "libvirtd"
+      "adbusers"
+      "audio"
+      "video"
+    ];
     packages = with pkgs; [];
   };
 

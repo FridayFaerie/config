@@ -57,9 +57,8 @@
     ## HYPRLAND THINGS
     ## no nixpkgs override for cache reasons
     hyprland.url = "github:hyprwm/Hyprland";
-    # hyprland.url = "github:hyprwm/Hyprland/57d20a1bf67676dc63347e4f1df2e4b66133733f";
-    # hyprland.url = "git+file:///home/friday/projects/hypr/Hyprland";
 
+    ## hyprland plugins
     hypr-dynamic-cursors = {
       url = "github:VirtCode/hypr-dynamic-cursors";
       # url = "github:FridayFaerie/hypr-dynamic-cursors";
@@ -68,14 +67,26 @@
         nixpkgs.follows = "hyprland/nixpkgs";
       };
     };
-
     hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
+      # url = "github:hyprwm/hyprland-plugins";
+      url = "github:FridayFaerie/hyprland-plugins";
       inputs = {
         hyprland.follows = "hyprland";
         nixpkgs.follows = "hyprland/nixpkgs";
       };
     };
+    hypr-darkwindow = {
+      url = "github:micha4w/Hypr-DarkWindow";
+      inputs.hyprland = {
+        follows = "hyprland";
+      };
+    };
+    # hyprchroma = {
+    #   url = "github:alexhulbert/Hyprchroma";
+    #   inputs.hyprland = {
+    #     follows = "hyprland";
+    #   };
+    # };
 
     hyprlock = {
       url = "github:hyprwm/hyprlock";
@@ -115,11 +126,10 @@
         hyprgraphics.follows = "hyprland/hyprgraphics";
       };
     };
-
     hyprsunset = {
       url = "github:hyprwm/hyprsunset";
       inputs = {
-        nixpkgs.follows = "nixpkgs";
+        nixpkgs.follows = "hyprland/nixpkgs";
         hyprutils.follows = "hyprland/hyprutils";
         hyprland-protocols.follows = "hyprland/hyprland-protocols";
         hyprwayland-scanner.follows = "hyprland/hyprwayland-scanner";

@@ -5,14 +5,8 @@
 }: {
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
-    # plugins = [
-    #   inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
-    #   inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
-    #   inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-    # ];
-    #extraConfig = "bind = $mainMod, S, submap, resize";
+    package = null;
+    portalPackage = null;
     settings = {
       source = [
         "~/.config/wallust/themes/hypr.conf"
@@ -67,7 +61,8 @@
         ++ (
           # workspaces
           # binds $mainMod + [shift +] {1..9} to [move to] workspace {1..9}
-          builtins.concatLists (builtins.genList (
+          builtins.concatLists (
+            builtins.genList (
               i: let
                 ws = i + 1;
               in [
@@ -75,7 +70,8 @@
                 "$mainMod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
               ]
             )
-            9)
+            9
+          )
         );
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
