@@ -2,9 +2,8 @@
   # stdenvNoCC,
   # lib,
   # fetchFromGitHub,
-  pkgs ? import <nixpkgs> { },
-}:
-{
+  pkgs ? import <nixpkgs> {},
+}: {
   default = pkgs.stdenvNoCC.mkDerivation {
     pname = "unifont";
     version = "0.0.2";

@@ -6,11 +6,9 @@
   localbuilds,
   # altpkgs,
   ...
-}@inputs:
-let
+} @ inputs: let
   system = "x86_64-linux";
-in
-{
+in {
   home.username = "bun";
   home.homeDirectory = "/home/bun";
 

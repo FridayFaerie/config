@@ -6,8 +6,7 @@
   pkgs,
   inputs,
   ...
-}:
-let
+}: let
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
     export __NV_PRIME_RENDER_OFFLOAD=1
     export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
@@ -19,8 +18,7 @@ let
   # hyprlandpkgs = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
 
   system = pkgs.system;
-in
-{
+in {
   imports = [
     # Include the results of the hardware scan.
     # moved to flake
@@ -296,7 +294,7 @@ in
   # nvidia things
   # NOTE: I'm using NVIDIA GeForce MX550
   # https://nixos.wiki/wiki/Nvidia
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = ["nvidia"];
   hardware = {
     graphics = {
       # package = hyprlandpkgs.mesa;
@@ -355,7 +353,7 @@ in
   };
 
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
   xdg.mime.defaultApplications = {
     "x-scheme-handler/http" = "firefox.desktop";
     "x-scheme-handler/https" = "firefox.desktop";
@@ -408,7 +406,7 @@ in
       "audio"
       "video"
     ];
-    packages = with pkgs; [ ];
+    packages = with pkgs; [];
   };
 
   # Allow unfree packages

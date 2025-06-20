@@ -6,11 +6,9 @@
   localbuilds,
   # altpkgs,
   ...
-}:
-let
+}: let
   system = pkgs.system;
-in
-{
+in {
   home.username = "friday";
   home.homeDirectory = "/home/friday";
 
@@ -70,7 +68,7 @@ in
       genericName = "QtQuick Shell";
       exec = "quickshell";
       terminal = false;
-      categories = [ "Application" ];
+      categories = ["Application"];
     };
   };
 
