@@ -297,11 +297,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1750377207,
-        "narHash": "sha256-Zkhs+rPxnbbbe+A9CpSNohx47lpj11fHWfYYJxLBqfo=",
+        "lastModified": 1750377610,
+        "narHash": "sha256-E2J32NE2ee7Q/dJNqo93gmvEwhBqh7LEyvIaYb4m7xA=",
         "ref": "refs/heads/main",
-        "rev": "f31ae3e590fe9b745d93d4d9883f143d872b7674",
-        "revCount": 305,
+        "rev": "03b708714c14e3ab96b2e56b70b5878b643101a0",
+        "revCount": 307,
         "type": "git",
         "url": "file:///home/friday/projects/hypr/hyprland-plugins"
       },
