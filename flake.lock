@@ -299,15 +299,15 @@
       "locked": {
         "lastModified": 1750379585,
         "narHash": "sha256-SDhYYByonfW1jdKSe68GukGWSbOuuxzkMVRTXSsU7g0=",
-        "ref": "refs/heads/main",
+        "owner": "FridayFaerie",
+        "repo": "hyprland-plugins",
         "rev": "822ea49f34e1a4a7d89e7b4ec9a1e7db4eac7f20",
-        "revCount": 305,
-        "type": "git",
-        "url": "file:///home/friday/projects/hypr/hyprland-plugins"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/friday/projects/hypr/hyprland-plugins"
+        "owner": "FridayFaerie",
+        "repo": "hyprland-plugins",
+        "type": "github"
       }
     },
     "hyprland-protocols": {
