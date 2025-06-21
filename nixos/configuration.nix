@@ -111,7 +111,7 @@ in {
     legcord
     inkscape
     lutris-free
-    qutebrowser
+    # qutebrowser
     prismlauncher
     signal-desktop
     onlyoffice-desktopeditors
