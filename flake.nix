@@ -81,6 +81,7 @@
         follows = "hyprland";
       };
     };
+# TODO: fix
     # hyprchroma = {
     #   url = "github:alexhulbert/Hyprchroma";
     #   inputs.hyprland = {
@@ -140,7 +141,6 @@
   outputs = {
     self,
     nixpkgs,
-    # altnixpkgs,
     auto-cpufreq,
     home-manager,
     ...
