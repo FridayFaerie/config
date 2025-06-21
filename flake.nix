@@ -81,7 +81,7 @@
         follows = "hyprland";
       };
     };
-# TODO: fix
+    # TODO: fix
     # hyprchroma = {
     #   url = "github:alexhulbert/Hyprchroma";
     #   inputs.hyprland = {
