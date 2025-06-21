@@ -14,7 +14,6 @@
     # nh = {
     #   url = "github:nix-community/nh";
     #   inputs.nixpkgs.follows = "nixpkgs";
-    #
     # };
 
     # Home-manager things
