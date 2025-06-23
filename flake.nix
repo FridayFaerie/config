@@ -69,7 +69,7 @@
     };
     hyprland-plugins = {
       # url = "github:hyprwm/hyprland-plugins";
-      url = "github:FridayFaerie/hyprland-plugins";
+      url = "github:hyprwm/hyprland-plugins";
       inputs = {
         hyprland.follows = "hyprland";
         nixpkgs.follows = "hyprland/nixpkgs";
