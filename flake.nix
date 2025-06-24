@@ -69,7 +69,7 @@
     };
     hyprland-plugins = {
       # url = "github:hyprwm/hyprland-plugins";
-      url = "github:FridayFaerie/hyprland-plugins";
+      url = "github:hyprwm/hyprland-plugins";
       inputs = {
         hyprland.follows = "hyprland";
         nixpkgs.follows = "hyprland/nixpkgs";
@@ -81,12 +81,12 @@
         follows = "hyprland";
       };
     };
-    # hyprchroma = {
-    #   url = "github:alexhulbert/Hyprchroma";
-    #   inputs.hyprland = {
-    #     follows = "hyprland";
-    #   };
-    # };
+    hyprgreen = {
+      url = "github:FridayFaerie/hyprgreen";
+      inputs.hyprland = {
+        follows = "hyprland";
+      };
+    };
 
     hyprlock = {
       url = "github:hyprwm/hyprlock";
@@ -140,7 +140,6 @@
   outputs = {
     self,
     nixpkgs,
-    # altnixpkgs,
     auto-cpufreq,
     home-manager,
     ...
