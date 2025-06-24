@@ -81,13 +81,12 @@
         follows = "hyprland";
       };
     };
-    # TODO: fix
-    # hyprchroma = {
-    #   url = "github:alexhulbert/Hyprchroma";
-    #   inputs.hyprland = {
-    #     follows = "hyprland";
-    #   };
-    # };
+    hyprgreen = {
+      url = "github:FridayFaerie/hyprgreen";
+      inputs.hyprland = {
+        follows = "hyprland";
+      };
+    };
 
     hyprlock = {
       url = "github:hyprwm/hyprlock";

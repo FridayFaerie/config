@@ -214,6 +214,27 @@
         "type": "github"
       }
     },
+    "hyprgreen": {
+      "inputs": {
+        "hyprland": [
+          "hyprland"
+        ],
+        "nix-filter": "nix-filter_2"
+      },
+      "locked": {
+        "lastModified": 1750735314,
+        "narHash": "sha256-Ze1orYwHx265sNRPjo/4Ut4qcThIRaxOLWiqv2b4alU=",
+        "owner": "FridayFaerie",
+        "repo": "hyprgreen",
+        "rev": "bc0676b442c5c1e3e22d26a2dd97b46bf9923bd6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "FridayFaerie",
+        "repo": "hyprgreen",
+        "type": "github"
+      }
+    },
     "hypridle": {
       "inputs": {
         "hyprland-protocols": [
@@ -637,6 +658,21 @@
         "type": "github"
       }
     },
+    "nix-filter_2": {
+      "locked": {
+        "lastModified": 1731533336,
+        "narHash": "sha256-oRam5PS1vcrr5UPgALW0eo1m/5/pls27Z/pabHNy2Ms=",
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "rev": "f7653272fd234696ae94229839a99b73c9ab7de0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "type": "github"
+      }
+    },
     "nixCats": {
       "inputs": {
         "nixCats": "nixCats_2",
@@ -825,6 +861,7 @@
         "home-manager": "home-manager",
         "hypr-darkwindow": "hypr-darkwindow",
         "hypr-dynamic-cursors": "hypr-dynamic-cursors",
+        "hyprgreen": "hyprgreen",
         "hypridle": "hypridle",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
