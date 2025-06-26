@@ -271,6 +271,14 @@ in {
   ];
 
   environment.sessionVariables = {
+    QML2_IMPORT_PATH = lib.makeSearchPath "/lib/qt-6/qml" [
+      pkgs.quickshell
+      pkgs.kdePackages.qt5compat
+      pkgs.kdePackages.qtmultimedia
+      pkgs.kdePackages.qtdeclarative
+      pkgs.kdePackages.kirigami.unwrapped
+      pkgs.kdePackages.syntax-highlighting
+    ];
     NIXOS_OZONE_WL = "1";
     HYPR_PLUGIN_DIR =
       pkgs.symlinkJoin {

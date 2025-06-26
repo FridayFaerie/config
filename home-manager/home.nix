@@ -45,19 +45,6 @@ in {
 
   #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
   home.sessionVariables = {
-    # TODO: is pkgs.kdePackages.qtbase.qtQmlPrefix really necessary? :/
-    QML2_IMPORT_PATH = lib.makeSearchPath "/lib/qt-6/qml" [
-      # inputs.quickshell.packages.${system}.default
-      pkgs.quickshell
-      # pkgs.kdePackages.sonnet
-      pkgs.kdePackages.qt5compat
-      pkgs.kdePackages.qtmultimedia
-      pkgs.kdePackages.qtdeclarative
-      pkgs.kdePackages.kirigami.unwrapped
-      # pkgs.kdePackages.qqc2-desktop-style
-      pkgs.kdePackages.syntax-highlighting
-    ];
-
     EDITOR = "nixCats";
     MANPAGER = "nixCats +Man!";
     CARGO_HOME = "$HOME/.config/cargo/";
