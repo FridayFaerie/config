@@ -5,6 +5,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }: let
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
