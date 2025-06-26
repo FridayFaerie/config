@@ -61,8 +61,7 @@
 
     ## hyprland plugins
     hypr-dynamic-cursors = {
-      url = "github:VirtCode/hypr-dynamic-cursors";
-      # url = "github:FridayFaerie/hypr-dynamic-cursors";
+      url = "github:VirtCode/hypr-dynamic-cursors?rev=e95d32863664744057b61984a87d2ab487f4b858";
       inputs = {
         hyprland.follows = "hyprland";
         nixpkgs.follows = "hyprland/nixpkgs";
