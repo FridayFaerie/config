@@ -222,11 +222,11 @@
         "nix-filter": "nix-filter_2"
       },
       "locked": {
-        "lastModified": 1750775685,
-        "narHash": "sha256-AOcfbh8qw/TbluCWKgwDvx+y+LYvAsif63ryxtsx+uE=",
+        "lastModified": 1750897402,
+        "narHash": "sha256-t9xNVlAraFuEMHYHAup2ZXutHLD2/whTlMgFVr++caA=",
         "owner": "FridayFaerie",
         "repo": "hyprgreen",
-        "rev": "ba8a3b617c32e19bb317bd5ab04b5ae3274cb35e",
+        "rev": "619e1a9222698ca6af671b4d359b4d0520418e30",
         "type": "github"
       },
       "original": {
