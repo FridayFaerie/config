@@ -56,7 +56,8 @@
 
     ## HYPRLAND THINGS
     ## no nixpkgs override for cache reasons
-    hyprland.url = "github:hyprwm/Hyprland";
+    # hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/hyprland?rev=5a348fb7dfaf398922c119d21acb7d7f831f8688";
 
     ## hyprland plugins
     hypr-dynamic-cursors = {
