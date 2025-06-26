@@ -17,11 +17,11 @@
     # };
 
     # Home-manager things
-    quickshell = {
-      # url = "github:quickshell-mirror/quickshell";
-      url = "git+file:///home/friday/nix-inputs/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # quickshell = {
+    #   # url = "github:quickshell-mirror/quickshell";
+    #   url = "git+file:///home/friday/nix-inputs/quickshell";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     home-manager = {
       url = "github:nix-community/home-manager";

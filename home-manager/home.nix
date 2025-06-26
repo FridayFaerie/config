@@ -18,17 +18,17 @@ in {
   home.packages = [
     inputs.nixCats.packages.${system}.nixCats
 
-    # inputs.quickshell.packages.${system}.default
-    (inputs.quickshell.packages.${system}.default.override {
-      withJemalloc = true;
-      withQtSvg = true;
-      withWayland = true;
-      withX11 = false;
-      withPipewire = true;
-      withPam = true;
-      withHyprland = true;
-      withI3 = false;
-    })
+    # (inputs.quickshell.packages.${system}.default.override {
+    #   withJemalloc = true;
+    #   withQtSvg = true;
+    #   withWayland = true;
+    #   withX11 = false;
+    #   withPipewire = true;
+    #   withPam = true;
+    #   withHyprland = true;
+    #   withI3 = false;
+    # })
+    pkgs.quickshell
 
     # TODO: try using qt.enable instead
     pkgs.kdePackages.qtdeclarative
@@ -47,7 +47,8 @@ in {
   home.sessionVariables = {
     # TODO: is pkgs.kdePackages.qtbase.qtQmlPrefix really necessary? :/
     QML2_IMPORT_PATH = lib.makeSearchPath "/lib/qt-6/qml" [
-      inputs.quickshell.packages.${system}.default
+      # inputs.quickshell.packages.${system}.default
+      pkgs.quickshell
       # pkgs.kdePackages.sonnet
       pkgs.kdePackages.qt5compat
       pkgs.kdePackages.qtmultimedia
