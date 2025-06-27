@@ -176,7 +176,7 @@ in {
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
-    "ca-derivations"
+    # "ca-derivations"
   ];
 
   networking.hostName = "nixos"; # Define your hostname.
