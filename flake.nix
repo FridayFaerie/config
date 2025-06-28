@@ -87,12 +87,13 @@
       };
     };
 
+    # TODO: re-add hyprutils follows
     hyprlock = {
       url = "github:hyprwm/hyprlock";
       inputs = {
         nixpkgs.follows = "hyprland/nixpkgs";
         hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
+        # hyprutils.follows = "hyprland/hyprutils";
         hyprwayland-scanner.follows = "hyprland/hyprwayland-scanner";
         hyprgraphics.follows = "hyprland/hyprgraphics";
       };
