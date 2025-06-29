@@ -858,6 +858,26 @@
         "type": "github"
       }
     },
+    "quickshell": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1751022554,
+        "narHash": "sha256-+REvWf68WLbwacOsjs4CmJauE2vF+sPh++Jcxn3wSeQ=",
+        "ref": "refs/heads/master",
+        "rev": "1d02292fbf24c41f947cf72dd7de57f6dedf2173",
+        "revCount": 598,
+        "type": "git",
+        "url": "file:///home/friday/nix-inputs/quickshell"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/friday/nix-inputs/quickshell"
+      }
+    },
     "root": {
       "inputs": {
         "auto-cpufreq": "auto-cpufreq",
@@ -875,6 +895,7 @@
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs_2",
         "programsdb": "programsdb",
+        "quickshell": "quickshell",
         "textfox": "textfox"
       }
     },

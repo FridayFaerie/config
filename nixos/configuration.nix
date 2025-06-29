@@ -125,32 +125,6 @@ in {
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # # plymouth things - https://wiki.nixos.org/wiki/Plymouth
-  # boot = {
-  #   plymouth = {
-  #     enable = true;
-  #     theme = "rings";
-  #     themePackages = with pkgs; [
-  #       (adi1090x-plymouth-themes.override {
-  #         selected_themes = ["rings"];
-  #       })
-  #     ];
-  #   };
-  #
-  #   # silent boot
-  #   consoleLogLevel = 3;
-  #   initrd.verbose = false;
-  #   kernelParams = [
-  #     "quiet"
-  #     "splash"
-  #     "boot.shell_on_fail"
-  #     "udev.log_priority=3"
-  #     "rd.systemd.show_status=auto"
-  #   ];
-  #   # hides OS choice for bootloaders
-  #   # loader.timeout = 0
-  # };
-
   # Automatic updating
   system.autoUpgrade.enable = true;
   system.autoUpgrade.dates = "weekly";
@@ -206,15 +180,6 @@ in {
     LC_TELEPHONE = "en_GB.UTF-8";
     LC_TIME = "en_GB.UTF-8";
   };
-
-  # i18n.inputMethod = {
-  #   enable = "fcitx5";
-  #   fcitx5.addons = with pkgs; [
-  #     fcitx5-rime
-  #     fcitx5-chinese-addons
-  #     rime-data
-  #   ];
-  # };
 
   programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
   # programs.command-not-found.enable = false;
@@ -273,7 +238,7 @@ in {
 
   environment.sessionVariables = {
     QML2_IMPORT_PATH = lib.makeSearchPath "/lib/qt-6/qml" [
-      pkgs.quickshell
+      # pkgs.quickshell
       pkgs.kdePackages.qt5compat
       pkgs.kdePackages.qtmultimedia
       pkgs.kdePackages.qtdeclarative
