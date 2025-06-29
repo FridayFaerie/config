@@ -243,7 +243,9 @@ in {
       pkgs.kdePackages.qtmultimedia
       pkgs.kdePackages.qtdeclarative
       pkgs.kdePackages.kirigami.unwrapped
+      pkgs.kdePackages.qqc2-desktop-style
       pkgs.kdePackages.syntax-highlighting
+      pkgs.kdePackages.kirigami.passthru.unwrapped
     ];
     NIXOS_OZONE_WL = "1";
     HYPR_PLUGIN_DIR =
