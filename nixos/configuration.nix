@@ -107,6 +107,17 @@ in {
     nvidia-offload
     networkmanagerapplet
 
+    # QT theming
+    quickshell
+    kdePackages.qt6ct
+    kdePackages.qt5compat
+    kdePackages.qtmultimedia
+    kdePackages.qtdeclarative
+    kdePackages.kirigami.unwrapped
+    # kdePackages.qqc2-desktop-style
+    kdePackages.syntax-highlighting
+    # kdePackages.kirigami.passthru.unwrapped
+
     # Bigger programs
     firefox
     legcord
@@ -236,19 +247,26 @@ in {
     noto-fonts-cjk-sans
   ];
 
+  # QT theming
+  qt = {
+    enable = true;
+    style = "kvantum";
+    # platformTheme = "qt5ct";
+  };
+
   environment.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = "qt6ct";
-    QML2_IMPORT_PATH = lib.makeSearchPath "/lib/qt-6/qml" [
-      pkgs.quickshell
-      pkgs.kdePackages.qt6ct
-      pkgs.kdePackages.qt5compat
-      pkgs.kdePackages.qtmultimedia
-      pkgs.kdePackages.qtdeclarative
-      pkgs.kdePackages.kirigami.unwrapped
-      # pkgs.kdePackages.qqc2-desktop-style
-      pkgs.kdePackages.syntax-highlighting
-      # pkgs.kdePackages.kirigami.passthru.unwrapped
-    ];
+    # TODO: remove this
+    # QML2_IMPORT_PATH = lib.makeSearchPath "lib/qt-6/qml" [
+    #   pkgs.quickshell
+    #   pkgs.kdePackages.qt6ct
+    #   pkgs.kdePackages.qt5compat
+    #   pkgs.kdePackages.qtmultimedia
+    #   pkgs.kdePackages.qtdeclarative
+    #   pkgs.kdePackages.kirigami.unwrapped
+    #   # pkgs.kdePackages.qqc2-desktop-style
+    #   pkgs.kdePackages.syntax-highlighting
+    #   # pkgs.kdePackages.kirigami.passthru.unwrapped
+    # ];
     NIXOS_OZONE_WL = "1";
     HYPR_PLUGIN_DIR =
       pkgs.symlinkJoin {
