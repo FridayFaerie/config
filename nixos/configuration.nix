@@ -237,15 +237,17 @@ in {
   ];
 
   environment.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qt6ct";
     QML2_IMPORT_PATH = lib.makeSearchPath "/lib/qt-6/qml" [
       pkgs.quickshell
+      pkgs.kdePackages.qt6ct
       pkgs.kdePackages.qt5compat
       pkgs.kdePackages.qtmultimedia
       pkgs.kdePackages.qtdeclarative
       pkgs.kdePackages.kirigami.unwrapped
-      pkgs.kdePackages.qqc2-desktop-style
+      # pkgs.kdePackages.qqc2-desktop-style
       pkgs.kdePackages.syntax-highlighting
-      pkgs.kdePackages.kirigami.passthru.unwrapped
+      # pkgs.kdePackages.kirigami.passthru.unwrapped
     ];
     NIXOS_OZONE_WL = "1";
     HYPR_PLUGIN_DIR =
