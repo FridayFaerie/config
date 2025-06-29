@@ -238,7 +238,7 @@ in {
 
   environment.sessionVariables = {
     QML2_IMPORT_PATH = lib.makeSearchPath "/lib/qt-6/qml" [
-      # pkgs.quickshell
+      pkgs.quickshell
       pkgs.kdePackages.qt5compat
       pkgs.kdePackages.qtmultimedia
       pkgs.kdePackages.qtdeclarative
