@@ -119,15 +119,15 @@
         "nix-filter": "nix-filter"
       },
       "locked": {
-        "lastModified": 1750938857,
+        "lastModified": 1751112329,
         "narHash": "sha256-uFPYJcISMjpzfryvk0e2KVXuFHPnhxry4YBGAsvMZVk=",
-        "owner": "VirtCode",
+        "owner": "micha4w",
         "repo": "Hypr-DarkWindow",
-        "rev": "ded69290859dafd47aa92529c5ecc1eeb3276fad",
+        "rev": "0fdc90be38aa655c20d075f8e5342f1ba7524042",
         "type": "github"
       },
       "original": {
-        "owner": "VirtCode",
+        "owner": "micha4w",
         "repo": "Hypr-DarkWindow",
         "type": "github"
       }
