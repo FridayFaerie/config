@@ -140,9 +140,16 @@ in {
   system.autoUpgrade.enable = true;
   system.autoUpgrade.dates = "weekly";
 
-  nix.settings.auto-optimise-store = true;
+  nix.package = pkgs.lix;
 
   nix.settings = {
+    auto-optimise-store = true;
+    experimental-features = [
+      "nix-command"
+      "flakes"
+      # "ca-derivations"
+    ];
+
     substituters = [
       "https://hyprland.cachix.org"
       "https://nix-community.cachix.org"
@@ -156,13 +163,6 @@ in {
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
     ];
   };
-
-  # Flakes
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-    # "ca-derivations"
-  ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
