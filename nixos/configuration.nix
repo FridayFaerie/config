@@ -140,7 +140,7 @@ in {
   system.autoUpgrade.enable = true;
   system.autoUpgrade.dates = "weekly";
 
-  nix.package = pkgs.lix;
+  # nix.package = pkgs.lix;
 
   nix.settings = {
     auto-optimise-store = true;
