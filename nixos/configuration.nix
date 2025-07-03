@@ -245,6 +245,7 @@ in {
     nerd-fonts.recursive-mono
     cantarell-fonts
     noto-fonts-cjk-sans
+    font-awesome
   ];
 
   # QT theming
