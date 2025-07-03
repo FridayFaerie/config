@@ -246,6 +246,9 @@ in {
     cantarell-fonts
     noto-fonts-cjk-sans
     font-awesome
+    roboto
+    source-sans
+    source-sans-pro
   ];
 
   # QT theming
