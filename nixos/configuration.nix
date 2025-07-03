@@ -192,8 +192,8 @@ in {
     LC_TIME = "en_GB.UTF-8";
   };
 
-  programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
-  # programs.command-not-found.enable = false;
+  # programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
+  programs.command-not-found.enable = false;
 
   # for nh
   programs.nh = {
