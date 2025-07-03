@@ -18,20 +18,20 @@ in {
   home.packages = [
     inputs.nixCats.packages.${system}.nixCats
 
-    # inputs.quickshell.packages.${system}.default
-    (inputs.quickshell.packages.${system}.default.override {
-      withJemalloc = true;
-      withQtSvg = true;
-      withWayland = true;
-      withX11 = false;
-      withPipewire = true;
-      withPam = true;
-      withHyprland = true;
-      withI3 = false;
-    })
+    # (inputs.quickshell.packages.${system}.default.override {
+    #   withJemalloc = true;
+    #   withQtSvg = true;
+    #   withWayland = true;
+    #   withX11 = true;
+    #   withPipewire = true;
+    #   withPam = true;
+    #   withHyprland = true;
+    #   withI3 = true;
+    # })
+    pkgs.quickshell
 
-    # TODO: try using qt.enable instead
-    pkgs.kdePackages.qtdeclarative
+    # # TODO: try using qt.enable instead
+    # pkgs.kdePackages.qtdeclarative
 
     # inputs.zen-browser.packages.${system}.default
     # inputs.wl_shimeji.packages.${system}.default
@@ -45,18 +45,6 @@ in {
 
   #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
   home.sessionVariables = {
-    # TODO: is pkgs.kdePackages.qtbase.qtQmlPrefix really necessary? :/
-    QML2_IMPORT_PATH = lib.makeSearchPath "/lib/qt-6/qml" [
-      inputs.quickshell.packages.${system}.default
-      # pkgs.kdePackages.sonnet
-      pkgs.kdePackages.qt5compat
-      pkgs.kdePackages.qtmultimedia
-      pkgs.kdePackages.qtdeclarative
-      pkgs.kdePackages.kirigami.unwrapped
-      # pkgs.kdePackages.qqc2-desktop-style
-      pkgs.kdePackages.syntax-highlighting
-    ];
-
     EDITOR = "nixCats";
     MANPAGER = "nixCats +Man!";
     CARGO_HOME = "$HOME/.config/cargo/";

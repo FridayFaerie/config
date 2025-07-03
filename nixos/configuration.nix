@@ -5,6 +5,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }: let
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
@@ -106,6 +107,17 @@ in {
     nvidia-offload
     networkmanagerapplet
 
+    # QT theming
+    quickshell
+    kdePackages.qt6ct
+    kdePackages.qt5compat
+    kdePackages.qtmultimedia
+    kdePackages.qtdeclarative
+    kdePackages.kirigami.unwrapped
+    # kdePackages.qqc2-desktop-style
+    kdePackages.syntax-highlighting
+    # kdePackages.kirigami.passthru.unwrapped
+
     # Bigger programs
     firefox
     legcord
@@ -124,39 +136,20 @@ in {
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # # plymouth things - https://wiki.nixos.org/wiki/Plymouth
-  # boot = {
-  #   plymouth = {
-  #     enable = true;
-  #     theme = "rings";
-  #     themePackages = with pkgs; [
-  #       (adi1090x-plymouth-themes.override {
-  #         selected_themes = ["rings"];
-  #       })
-  #     ];
-  #   };
-  #
-  #   # silent boot
-  #   consoleLogLevel = 3;
-  #   initrd.verbose = false;
-  #   kernelParams = [
-  #     "quiet"
-  #     "splash"
-  #     "boot.shell_on_fail"
-  #     "udev.log_priority=3"
-  #     "rd.systemd.show_status=auto"
-  #   ];
-  #   # hides OS choice for bootloaders
-  #   # loader.timeout = 0
-  # };
-
   # Automatic updating
   system.autoUpgrade.enable = true;
   system.autoUpgrade.dates = "weekly";
 
-  nix.settings.auto-optimise-store = true;
+  # nix.package = pkgs.lix;
 
   nix.settings = {
+    auto-optimise-store = true;
+    experimental-features = [
+      "nix-command"
+      "flakes"
+      # "ca-derivations"
+    ];
+
     substituters = [
       "https://hyprland.cachix.org"
       "https://nix-community.cachix.org"
@@ -171,13 +164,6 @@ in {
     ];
   };
 
-  # Flakes
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-    "ca-derivations"
-  ];
-
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -189,7 +175,7 @@ in {
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/London";
+  time.timeZone = "Etc/UTC";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
@@ -206,17 +192,8 @@ in {
     LC_TIME = "en_GB.UTF-8";
   };
 
-  # i18n.inputMethod = {
-  #   enable = "fcitx5";
-  #   fcitx5.addons = with pkgs; [
-  #     fcitx5-rime
-  #     fcitx5-chinese-addons
-  #     rime-data
-  #   ];
-  # };
-
-  programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
-  # programs.command-not-found.enable = false;
+  # programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
+  programs.command-not-found.enable = false;
 
   # for nh
   programs.nh = {
@@ -268,9 +245,32 @@ in {
     nerd-fonts.recursive-mono
     cantarell-fonts
     noto-fonts-cjk-sans
+    font-awesome
+    roboto
+    source-sans
+    source-sans-pro
   ];
 
+  # QT theming
+  qt = {
+    enable = true;
+    style = "adwaita-dark";
+    # platformTheme = "qt5ct";
+  };
+
   environment.sessionVariables = {
+    # TODO: remove this
+    # QML2_IMPORT_PATH = lib.makeSearchPath "lib/qt-6/qml" [
+    #   pkgs.quickshell
+    #   pkgs.kdePackages.qt6ct
+    #   pkgs.kdePackages.qt5compat
+    #   pkgs.kdePackages.qtmultimedia
+    #   pkgs.kdePackages.qtdeclarative
+    #   pkgs.kdePackages.kirigami.unwrapped
+    #   # pkgs.kdePackages.qqc2-desktop-style
+    #   pkgs.kdePackages.syntax-highlighting
+    #   # pkgs.kdePackages.kirigami.passthru.unwrapped
+    # ];
     NIXOS_OZONE_WL = "1";
     HYPR_PLUGIN_DIR =
       pkgs.symlinkJoin {
