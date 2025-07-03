@@ -273,7 +273,7 @@ in {
         name = "hyprland-plugins";
         paths = [
           inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-          inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
+          # inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
           inputs.hyprland-plugins.packages.${pkgs.system}.hyprfocus
           inputs.hypr-darkwindow.packages.${pkgs.system}.Hypr-DarkWindow
           inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
