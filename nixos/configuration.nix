@@ -123,7 +123,7 @@ in {
     legcord
     inkscape
     lutris-free
-    # qutebrowser
+    qutebrowser
     prismlauncher
     signal-desktop
     onlyoffice-desktopeditors
@@ -259,22 +259,10 @@ in {
   };
 
   environment.sessionVariables = {
-    # TODO: remove this
-    # QML2_IMPORT_PATH = lib.makeSearchPath "lib/qt-6/qml" [
-    #   pkgs.quickshell
-    #   pkgs.kdePackages.qt6ct
-    #   pkgs.kdePackages.qt5compat
-    #   pkgs.kdePackages.qtmultimedia
-    #   pkgs.kdePackages.qtdeclarative
-    #   pkgs.kdePackages.kirigami.unwrapped
-    #   # pkgs.kdePackages.qqc2-desktop-style
-    #   pkgs.kdePackages.syntax-highlighting
-    #   # pkgs.kdePackages.kirigami.passthru.unwrapped
-    # ];
     NIXOS_OZONE_WL = "1";
     HYPR_PLUGIN_DIR =
       pkgs.symlinkJoin {
-        name = "hyprland-plugins";
+        name = "hyprplugins";
         paths = [
           inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
           inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
