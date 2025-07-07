@@ -136,9 +136,9 @@ in {
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # Automatic updating
-  system.autoUpgrade.enable = true;
-  system.autoUpgrade.dates = "weekly";
+  # # Automatic updating
+  # system.autoUpgrade.enable = true;
+  # system.autoUpgrade.dates = "weekly";
 
   # nix.package = pkgs.lix;
 
