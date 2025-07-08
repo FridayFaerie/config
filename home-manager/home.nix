@@ -30,9 +30,6 @@ in {
     # })
     pkgs.quickshell
 
-    # # TODO: try using qt.enable instead
-    # pkgs.kdePackages.qtdeclarative
-
     # inputs.zen-browser.packages.${system}.default
     # inputs.wl_shimeji.packages.${system}.default
 
