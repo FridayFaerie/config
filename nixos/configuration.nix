@@ -79,6 +79,7 @@ in {
     clang-tools
     home-manager
     wl-screenrec
+    grim
 
     ## Hyprland things
     # hyprpaper
