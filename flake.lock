@@ -843,17 +843,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1751022554,
-        "narHash": "sha256-+REvWf68WLbwacOsjs4CmJauE2vF+sPh++Jcxn3wSeQ=",
-        "ref": "refs/heads/master",
-        "rev": "1d02292fbf24c41f947cf72dd7de57f6dedf2173",
-        "revCount": 598,
-        "type": "git",
-        "url": "file:///home/friday/nix-inputs/quickshell"
+        "lastModified": 1752007746,
+        "narHash": "sha256-iFgYM6lYfEJrCHaqvXjr+tbrUQHxptXomi+nMKe7SJk=",
+        "owner": "quickshell-mirror",
+        "repo": "quickshell",
+        "rev": "3d594e16dd3850973336c70014a948dc97837d39",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/friday/nix-inputs/quickshell"
+        "owner": "quickshell-mirror",
+        "repo": "quickshell",
+        "type": "github"
       }
     },
     "root": {
