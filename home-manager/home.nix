@@ -22,11 +22,11 @@ in {
       withJemalloc = true;
       withQtSvg = true;
       withWayland = true;
-      withX11 = true;
+      withX11 = false;
       withPipewire = true;
       withPam = true;
       withHyprland = true;
-      withI3 = true;
+      withI3 = false;
     })
     # pkgs.quickshell
 
