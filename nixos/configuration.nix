@@ -112,7 +112,7 @@ in {
     # quickshell
     # kdePackages.breeze
     # kdePackages.breeze-icons
-    kdePackages.qtstyleplugin-kvantum
+    # kdePackages.qtstyleplugin-kvantum
     qt6.qtsvg
     kdePackages.qt6ct
     kdePackages.qt5compat
@@ -259,7 +259,7 @@ in {
   # QT theming
   qt = {
     enable = true;
-    style = "breeze";
+    style = "adwaita-dark";
     # platformTheme = "qt5ct";
   };
 
