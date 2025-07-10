@@ -259,7 +259,7 @@ in {
   # QT theming
   qt = {
     enable = true;
-    style = "adwaita-dark";
+    style = "breeze";
     # platformTheme = "qt5ct";
   };
 
