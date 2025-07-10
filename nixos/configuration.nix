@@ -256,7 +256,7 @@ in {
   qt = {
     enable = true;
     # style = "adwaita-dark";
-    # platformTheme = "qt5ct";
+    platformTheme = "qt5ct";
   };
 
   environment.sessionVariables = {
