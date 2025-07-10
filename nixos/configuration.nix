@@ -118,9 +118,9 @@ in {
     kdePackages.qtmultimedia
     kdePackages.qtdeclarative
     kdePackages.kirigami.unwrapped
-    # kdePackages.qqc2-desktop-style
+    kdePackages.qqc2-desktop-style
     kdePackages.syntax-highlighting
-    # kdePackages.kirigami.passthru.unwrapped
+    kdePackages.kirigami.passthru.unwrapped
 
     # Bigger programs
     firefox
