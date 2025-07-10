@@ -112,6 +112,7 @@ in {
     # quickshell
     # kdePackages.breeze
     # kdePackages.breeze-icons
+    kdePackages.qtstyleplugin-kvantum
     qt6.qtsvg
     kdePackages.qt6ct
     kdePackages.qt5compat
