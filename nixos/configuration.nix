@@ -255,7 +255,7 @@ in {
   # QT theming
   qt = {
     enable = true;
-    # style = "adwaita-dark";
+    style = "adwaita-dark";
     platformTheme = "qt5ct";
   };
 
