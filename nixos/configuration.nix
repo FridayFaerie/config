@@ -109,7 +109,10 @@ in {
     networkmanagerapplet
 
     # QT theming
-    quickshell
+    # quickshell
+    kdePackages.breeze
+    kdePackages.breeze-icons
+    qt6.qtsvg
     kdePackages.qt6ct
     kdePackages.qt5compat
     kdePackages.qtmultimedia
@@ -255,7 +258,7 @@ in {
   # QT theming
   qt = {
     enable = true;
-    style = "adwaita-dark";
+    # style = "adwaita-dark";
     platformTheme = "qt5ct";
   };
 
