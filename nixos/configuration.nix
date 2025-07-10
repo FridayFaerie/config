@@ -110,8 +110,8 @@ in {
 
     # QT theming
     # quickshell
-    kdePackages.breeze
-    kdePackages.breeze-icons
+    # kdePackages.breeze
+    # kdePackages.breeze-icons
     qt6.qtsvg
     kdePackages.qt6ct
     kdePackages.qt5compat
@@ -258,8 +258,8 @@ in {
   # QT theming
   qt = {
     enable = true;
-    # style = "adwaita-dark";
-    platformTheme = "qt5ct";
+    style = "adwaita-dark";
+    # platformTheme = "qt5ct";
   };
 
   environment.sessionVariables = {
