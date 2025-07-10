@@ -241,7 +241,8 @@ in {
   };
 
   fonts.packages = with pkgs; [
-    material-symbols
+    # material-symbols
+    material-icons
     nerd-fonts.jetbrains-mono
     nerd-fonts.recursive-mono
     cantarell-fonts
