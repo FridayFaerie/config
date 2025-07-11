@@ -130,7 +130,6 @@ in {
     lutris-free
     qutebrowser
     prismlauncher
-    android-studio-full
     signal-desktop
     onlyoffice-desktopeditors
   ];
@@ -200,6 +199,8 @@ in {
 
   # programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
   programs.command-not-found.enable = false;
+
+  programs.direnv.enable = true;
 
   # for nh
   programs.nh = {
@@ -406,9 +407,6 @@ in {
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # accept license
-  nixpkgs.config.android_sdk.accept_license = true;
 
   # virtualisation setup from jacinth samuel: https://www.youtube.com/watch?v=BuzjA1ghJsw
   virtualisation.libvirtd.enable = true;
