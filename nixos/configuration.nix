@@ -130,6 +130,7 @@ in {
     lutris-free
     qutebrowser
     prismlauncher
+    android-studio
     signal-desktop
     onlyoffice-desktopeditors
   ];
@@ -398,12 +399,16 @@ in {
       "adbusers"
       "audio"
       "video"
+      "kvm"
     ];
     packages = with pkgs; [];
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # accept license
+  nixpkgs.config.android_sdk.accept_license = true;
 
   # virtualisation setup from jacinth samuel: https://www.youtube.com/watch?v=BuzjA1ghJsw
   virtualisation.libvirtd.enable = true;
