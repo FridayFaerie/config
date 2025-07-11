@@ -130,7 +130,7 @@ in {
     lutris-free
     qutebrowser
     prismlauncher
-    android-studio
+    android-studio-full
     signal-desktop
     onlyoffice-desktopeditors
   ];
