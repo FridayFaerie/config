@@ -845,15 +845,15 @@
       "locked": {
         "lastModified": 1752382953,
         "narHash": "sha256-kx1kWu0/LILp/QvwL7Fsk28bOjDEfuhwgtnHwMhNyIU=",
-        "owner": "quickshell-mirror",
-        "repo": "quickshell",
+        "ref": "refs/heads/master",
         "rev": "bb206e3a19b48af987977d86ad77822439f37360",
-        "type": "github"
+        "revCount": 620,
+        "type": "git",
+        "url": "file:///home/friday/nix-inputs/quickshell"
       },
       "original": {
-        "owner": "quickshell-mirror",
-        "repo": "quickshell",
-        "type": "github"
+        "type": "git",
+        "url": "file:///home/friday/nix-inputs/quickshell"
       }
     },
     "root": {
