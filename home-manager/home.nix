@@ -18,17 +18,17 @@ in {
   home.packages = [
     inputs.nixCats.packages.${system}.nixCats
 
-    # (inputs.quickshell.packages.${system}.default.override {
-    #   withJemalloc = true;
-    #   withQtSvg = true;
-    #   withWayland = true;
-    #   withX11 = true;
-    #   withPipewire = true;
-    #   withPam = true;
-    #   withHyprland = true;
-    #   withI3 = true;
-    # })
-    pkgs.quickshell
+    (inputs.quickshell.packages.${system}.default.override {
+      withJemalloc = true;
+      withQtSvg = true;
+      withWayland = true;
+      withX11 = false;
+      withPipewire = true;
+      withPam = true;
+      withHyprland = true;
+      withI3 = false;
+    })
+    # pkgs.quickshell
 
     # inputs.zen-browser.packages.${system}.default
     # inputs.wl_shimeji.packages.${system}.default

@@ -109,15 +109,19 @@ in {
     networkmanagerapplet
 
     # QT theming
-    quickshell
+    # quickshell
+    # kdePackages.breeze
+    # kdePackages.breeze-icons
+    # kdePackages.qtstyleplugin-kvantum
+    qt6.qtsvg
     kdePackages.qt6ct
     kdePackages.qt5compat
     kdePackages.qtmultimedia
     kdePackages.qtdeclarative
     kdePackages.kirigami.unwrapped
-    # kdePackages.qqc2-desktop-style
+    kdePackages.qqc2-desktop-style
     kdePackages.syntax-highlighting
-    # kdePackages.kirigami.passthru.unwrapped
+    kdePackages.kirigami.passthru.unwrapped
 
     # Bigger programs
     firefox
@@ -195,6 +199,8 @@ in {
 
   # programs.command-not-found.dbPath = inputs.programsdb.packages.${system}.programs-sqlite;
   programs.command-not-found.enable = false;
+
+  programs.direnv.enable = true;
 
   # for nh
   programs.nh = {
@@ -394,6 +400,7 @@ in {
       "adbusers"
       "audio"
       "video"
+      "kvm"
     ];
     packages = with pkgs; [];
   };
