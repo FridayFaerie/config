@@ -843,11 +843,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752382953,
-        "narHash": "sha256-kx1kWu0/LILp/QvwL7Fsk28bOjDEfuhwgtnHwMhNyIU=",
+        "lastModified": 1752486994,
+        "narHash": "sha256-/11zPRDdPPn61GXDyvDes9otFTP5lLqmETAtwMdeYWI=",
         "ref": "refs/heads/master",
-        "rev": "bb206e3a19b48af987977d86ad77822439f37360",
-        "revCount": 620,
+        "rev": "5ac9096c1c63f6940c6b95f1118b540dfe029278",
+        "revCount": 632,
         "type": "git",
         "url": "file:///home/friday/nix-inputs/quickshell"
       },
