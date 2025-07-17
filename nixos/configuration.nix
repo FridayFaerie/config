@@ -145,7 +145,7 @@ in {
   # system.autoUpgrade.enable = true;
   # system.autoUpgrade.dates = "weekly";
 
-  # nix.package = pkgs.nixVersions.git;
+  nix.package = pkgs.nixVersions.nix_2_30;
 
   nix.settings = {
     auto-optimise-store = true;
