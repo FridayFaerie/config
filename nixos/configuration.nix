@@ -226,7 +226,7 @@ in {
 
   programs.niri.enable = true;
 
-  programs.ladybird.enable = true;
+  # programs.ladybird.enable = true;
 
   # for dark theme
   programs.dconf.enable = true;
