@@ -442,6 +442,8 @@ in {
 
   services.upower.enable = true;
 
+  zramSwap.enable = true;
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
