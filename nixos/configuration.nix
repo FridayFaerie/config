@@ -119,6 +119,7 @@ in {
     kdePackages.qt5compat
     kdePackages.qtmultimedia
     kdePackages.qtdeclarative
+    kdePackages.qtpositioning
     kdePackages.kirigami.unwrapped
     kdePackages.qqc2-desktop-style
     kdePackages.syntax-highlighting
