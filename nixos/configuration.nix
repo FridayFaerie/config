@@ -145,7 +145,7 @@ in {
   # system.autoUpgrade.enable = true;
   # system.autoUpgrade.dates = "weekly";
 
-  # nix.package = pkgs.lix;
+  nix.package = pkgs.nixVersions.nix_2_30;
 
   nix.settings = {
     auto-optimise-store = true;
@@ -226,7 +226,7 @@ in {
 
   programs.niri.enable = true;
 
-  programs.ladybird.enable = true;
+  # programs.ladybird.enable = true;
 
   # for dark theme
   programs.dconf.enable = true;
@@ -441,6 +441,8 @@ in {
   services.auto-cpufreq.enable = true;
 
   services.upower.enable = true;
+
+  zramSwap.enable = true;
 
   services.pipewire = {
     enable = true;
