@@ -80,6 +80,7 @@ in {
     home-manager
     wl-screenrec
     grim
+    npins
 
     ## Hyprland things
     # hyprpaper
