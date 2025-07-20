@@ -129,7 +129,7 @@ in {
     inkscape
     lutris-free
     qutebrowser
-    (prismlauncher.override {jdk8 = pkgs.temurin-bin-8;})
+    prismlauncher
     signal-desktop
     onlyoffice-desktopeditors
   ];
