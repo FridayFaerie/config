@@ -44,6 +44,7 @@ in {
     dust
     file
     stow
+    p7zip
     cachix
     ripgrep
     busybox
