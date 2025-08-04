@@ -134,6 +134,14 @@
         hyprwayland-scanner.follows = "hyprland/hyprwayland-scanner";
       };
     };
+    hyprpolkitagent = {
+      url = "github:hyprwm/hyprpolkitagent";
+      inputs = {
+        nixpkgs.follows = "hyprland/nixpkgs";
+        hyprutils.follows = "hyprland/hyprutils";
+        hyprland-qt-support.follows = "hyprland/hyprland-qt-support";
+      };
+    };
   };
 
   outputs = {

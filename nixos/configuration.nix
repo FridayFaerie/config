@@ -98,6 +98,7 @@ in {
       hyprland = inputs.hyprland.packages.${system}.hyprland;
       hyprpicker = inputs.hyprpicker.packages.${system}.hyprpicker;
     })
+    inputs.hyprpolkitagent.packages.${system}.hyprpolkitagent
 
     ## DE things
     yazi
