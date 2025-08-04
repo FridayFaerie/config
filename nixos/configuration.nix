@@ -76,6 +76,7 @@ in {
     ffmpeg
     yt-dlp
     wallust
+    gparted
     nix-tree
     clang-tools
     home-manager
