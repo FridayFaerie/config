@@ -139,7 +139,6 @@
       inputs = {
         nixpkgs.follows = "hyprland/nixpkgs";
         hyprutils.follows = "hyprland/hyprutils";
-        hyprland-qt-support.follows = "hyprland/hyprland-qt-support";
       };
     };
   };
