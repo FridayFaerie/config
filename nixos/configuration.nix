@@ -44,6 +44,7 @@ in {
     dust
     file
     stow
+    p7zip
     cachix
     ripgrep
     busybox
@@ -80,6 +81,7 @@ in {
     home-manager
     wl-screenrec
     grim
+    npins
 
     ## Hyprland things
     # hyprpaper
@@ -118,6 +120,7 @@ in {
     kdePackages.qt5compat
     kdePackages.qtmultimedia
     kdePackages.qtdeclarative
+    kdePackages.qtpositioning
     kdePackages.kirigami.unwrapped
     kdePackages.qqc2-desktop-style
     kdePackages.syntax-highlighting
