@@ -76,6 +76,7 @@ in {
     ffmpeg
     yt-dlp
     wallust
+    gparted
     nix-tree
     clang-tools
     home-manager
@@ -97,6 +98,7 @@ in {
       hyprland = inputs.hyprland.packages.${system}.hyprland;
       hyprpicker = inputs.hyprpicker.packages.${system}.hyprpicker;
     })
+    inputs.hyprpolkitagent.packages.${system}.hyprpolkitagent
 
     ## DE things
     yazi
@@ -367,6 +369,7 @@ in {
   };
 
   security.rtkit.enable = true;
+  security.polkit.enable = true;
 
   services.greetd = {
     enable = true;
